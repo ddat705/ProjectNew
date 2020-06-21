@@ -35,10 +35,10 @@ namespace FinalProject
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Form f = new FormTaiKhoan();
-            //this.Hide();
-            //f.ShowDialog();
-            //this.Show();
+            Form f = new FormPermissionAdmin();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
