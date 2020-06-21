@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormClone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClone.Designer.cs">
+      <DependentUpon>FormClone.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
