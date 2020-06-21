@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class FormPermissionAdmin : Form
+    public partial class FormQuanLiNV : Form
     {
-        public FormPermissionAdmin()
+        public FormQuanLiNV()
         {
             InitializeComponent();
         }
-
-
     }
 }

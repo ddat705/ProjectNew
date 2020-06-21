@@ -64,6 +64,12 @@
     <Compile Include="FormQuanLi.Designer.cs">
       <DependentUpon>FormQuanLi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQuanLiNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanLiNV.Designer.cs">
+      <DependentUpon>FormQuanLiNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXuLi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPermissionAdmin.resx">
       <DependentUpon>FormPermissionAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLi.resx">
+      <DependentUpon>FormQuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanLiNV.resx">
+      <DependentUpon>FormQuanLiNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
