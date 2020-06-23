@@ -19,7 +19,7 @@ namespace FinalProject.DB_Layer
             conn = new SqlConnection(ConnStr);
             comm = conn.CreateCommand();
         }
-        public DataTable ExecuteQueryDataSet(string strSQL, CommandType ct)
+        public DataTable ExecuteQueryDataTable(string strSQL, CommandType ct)
         {
             if (conn.State == ConnectionState.Open)
                 conn.Close();
@@ -27,8 +27,8 @@ namespace FinalProject.DB_Layer
             comm.CommandText = strSQL;
             comm.CommandType = ct;
             da = new SqlDataAdapter(comm);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
+            //DataSet ds = new DataSet();
+            //da.Fill(ds);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;

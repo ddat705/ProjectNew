@@ -17,7 +17,12 @@ namespace FinalProject.BS_Layer
         }
         public DataTable LAYTAIKHOAN()
         {
-            return db.ExecuteQueryDataSet("select * from TAIKHOAN", CommandType.Text);
+            return db.ExecuteQueryDataTable("select * from TAIKHOAN", CommandType.Text);
+        }
+
+        public DataTable LayTaiKhoanByUsername(string Username, string Password)
+        {
+            return db.ExecuteQueryDataTable("select * from TAIKHOAN Where Username = '" + Username + "' and Password = '" + Password + "'", CommandType.Text);
         }
     }
 }

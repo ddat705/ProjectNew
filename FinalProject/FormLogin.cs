@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.BS_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,10 @@ namespace FinalProject
 {
     public partial class FormLogin : Form
     {
+
+        BLAccount BLacc = new BLAccount();
+        DataTable DTacc = new DataTable();
+
         public FormLogin()
         {
             InitializeComponent();
@@ -26,24 +31,42 @@ namespace FinalProject
         {
             if (e.KeyChar == 13)
             {
-                //Form f = new FormTaiKhoan();
-                //this.Hide();
-                //f.ShowDialog();
-                //this.Show();
+                this.Login();
             }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form f = new FormPermissionAdmin();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+                this.Login();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Login()
+        {
+            DTacc = this.BLacc.LayTaiKhoanByUsername(txtUsername.Text, txtPassword.Text);
+            if (DTacc.Rows.Count != 0)
+            {
+                Form f = new FormPermissionAdmin();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                this.Login();
+            }
         }
     }
 }
