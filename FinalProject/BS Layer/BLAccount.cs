@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject.BS_Layer
 {
-    class BLAccount
+    public class BLAccount
     {
         DBMain db = null;
         public BLAccount()
@@ -27,18 +27,18 @@ namespace FinalProject.BS_Layer
 
         public DataTable getMenuAll()
         {
-            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN" +
-                                            "FROM THUCDON" +
-                                            "INNER JOIN LOAI" +
-                                            "ON THUCDON.LOAI = LOAI.ID", CommandType.Text);
+            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN as Tên,THUCDON.GIA as Giá, LOAI.TEN as Loại " +
+                                            "FROM THUCDON " +
+                                            "INNER JOIN LOAI " +
+                                            "ON THUCDON.LOAI = LOAI.ID ", CommandType.Text);
         }
 
         public DataTable getMenuByID(string id)
         {
-            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN" +
-                                            "FROM THUCDON" +
-                                            "INNER JOIN LOAI" +
-                                            "ON THUCDON.LOAI = LOAI.ID" + 
+            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN " +
+                                            "FROM THUCDON " +
+                                            "INNER JOIN LOAI " +
+                                            "ON THUCDON.LOAI = LOAI.ID " + 
                                             "WHERE LOAI.ID = " + id, CommandType.Text);
         }
     }

@@ -19,6 +19,15 @@ namespace FinalProject
 
         private void MenuManager_Click(object sender, EventArgs e)
         {
+            Form fMenuManager = new FormMenuManager();
+            this.Hide();
+            fMenuManager.ShowDialog();
+            this.Show();
+        }
+
+        private void FormXuLi_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

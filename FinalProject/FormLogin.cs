@@ -47,7 +47,7 @@ namespace FinalProject
 
         private void Login()
         {
-            DTacc = this.BLacc.LayTaiKhoanByUsername(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+            DTacc = BLacc.LayTaiKhoanByUsername(txtUsername.Text.Trim(), txtPassword.Text.Trim());
             if (DTacc.Rows.Count != 0)
             {
                 Form f = new FormXuLi();

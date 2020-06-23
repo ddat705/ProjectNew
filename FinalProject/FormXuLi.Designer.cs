@@ -67,15 +67,15 @@
             this.lblSlogan = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.thôngTinNhàHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.StaffManager = new System.Windows.Forms.ToolStripMenuItem();
-            this.SaleManager = new System.Windows.Forms.ToolStripMenuItem();
-            this.MenuManager = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InfoAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.CreateAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.Logout = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.thôngTinNhàHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.StaffManager = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaleManager = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuManager = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.NumberUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan5)).BeginInit();
@@ -441,34 +441,6 @@
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // thôngTinNhàHàngToolStripMenuItem
-            // 
-            this.thôngTinNhàHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StaffManager,
-            this.SaleManager,
-            this.MenuManager});
-            this.thôngTinNhàHàngToolStripMenuItem.Name = "thôngTinNhàHàngToolStripMenuItem";
-            this.thôngTinNhàHàngToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
-            this.thôngTinNhàHàngToolStripMenuItem.Text = "Thông tin nhà hàng";
-            // 
-            // StaffManager
-            // 
-            this.StaffManager.Name = "StaffManager";
-            this.StaffManager.Size = new System.Drawing.Size(180, 22);
-            this.StaffManager.Text = "Quản lý nhân viên";
-            // 
-            // SaleManager
-            // 
-            this.SaleManager.Name = "SaleManager";
-            this.SaleManager.Size = new System.Drawing.Size(180, 22);
-            this.SaleManager.Text = "Thống kê bán hàng";
-            // 
-            // MenuManager
-            // 
-            this.MenuManager.Name = "MenuManager";
-            this.MenuManager.Size = new System.Drawing.Size(180, 22);
-            this.MenuManager.Text = "Quản lý Menu";
-            // 
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -483,26 +455,55 @@
             // InfoAccount
             // 
             this.InfoAccount.Name = "InfoAccount";
-            this.InfoAccount.Size = new System.Drawing.Size(180, 22);
+            this.InfoAccount.Size = new System.Drawing.Size(177, 22);
             this.InfoAccount.Text = "Thông tin tài khoản";
             // 
             // CreateAccount
             // 
             this.CreateAccount.Name = "CreateAccount";
-            this.CreateAccount.Size = new System.Drawing.Size(180, 22);
+            this.CreateAccount.Size = new System.Drawing.Size(177, 22);
             this.CreateAccount.Text = "Thêm tài khoản";
             // 
             // Logout
             // 
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(180, 22);
+            this.Logout.Size = new System.Drawing.Size(177, 22);
             this.Logout.Text = "Đăng xuất";
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(177, 22);
             this.Exit.Text = "Thoát";
+            // 
+            // thôngTinNhàHàngToolStripMenuItem
+            // 
+            this.thôngTinNhàHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StaffManager,
+            this.SaleManager,
+            this.MenuManager});
+            this.thôngTinNhàHàngToolStripMenuItem.Name = "thôngTinNhàHàngToolStripMenuItem";
+            this.thôngTinNhàHàngToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
+            this.thôngTinNhàHàngToolStripMenuItem.Text = "Thông tin nhà hàng";
+            // 
+            // StaffManager
+            // 
+            this.StaffManager.Name = "StaffManager";
+            this.StaffManager.Size = new System.Drawing.Size(176, 22);
+            this.StaffManager.Text = "Quản lý nhân viên";
+            // 
+            // SaleManager
+            // 
+            this.SaleManager.Name = "SaleManager";
+            this.SaleManager.Size = new System.Drawing.Size(176, 22);
+            this.SaleManager.Text = "Thống kê bán hàng";
+            // 
+            // MenuManager
+            // 
+            this.MenuManager.Name = "MenuManager";
+            this.MenuManager.Size = new System.Drawing.Size(176, 22);
+            this.MenuManager.Text = "Quản lý Menu";
+            this.MenuManager.Click += new System.EventHandler(this.MenuManager_Click);
             // 
             // FormXuLi
             // 
@@ -531,6 +532,7 @@
             this.Controls.Add(this.PanelBan);
             this.Name = "FormXuLi";
             this.Text = "FormQuanLi";
+            this.Load += new System.EventHandler(this.FormXuLi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NumberUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan5)).EndInit();
