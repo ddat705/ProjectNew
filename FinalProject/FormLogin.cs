@@ -54,7 +54,7 @@ namespace FinalProject
                 {
                     Form f = new FormXuLi();
                     this.Hide();
-                    f.ShowDialog();
+                    f.ShowDialog();             
                     this.txtUsername.Text = "";
                     this.txtPassword.Text = "";
                     this.Show();
@@ -77,6 +77,16 @@ namespace FinalProject
             if (e.KeyChar == 13)
             {
                 this.Login();
+            }
+        }
+
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult rep;
+            rep = MessageBox.Show("Bạn muốn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (rep != DialogResult.OK)
+            {
+                e.Cancel = true;
             }
         }
     }

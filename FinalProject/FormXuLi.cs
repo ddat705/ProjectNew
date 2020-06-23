@@ -12,6 +12,7 @@ namespace FinalProject
 {
     public partial class FormXuLi : Form
     {
+
         public FormXuLi()
         {
             InitializeComponent();
@@ -69,12 +70,18 @@ namespace FinalProject
             
         }
 
-        private void Exit_Click(object sender, EventArgs e)
+        private void FormXuLi_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult traloi;
-            traloi = MessageBox.Show("Bạn muốn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (traloi == DialogResult.OK)
-                Application.Exit();
+            DialogResult rep;
+            rep = MessageBox.Show("Bạn muốn thoát?", "Trả lời", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(rep != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+            }
         }
     }
 }
