@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class FormQuanLi : Form
+    public partial class FormMenuManager : Form
     {
-        public FormQuanLi()
+        public FormMenuManager()
         {
             InitializeComponent();
         }

@@ -60,11 +60,11 @@
     <Compile Include="FormPermissionAdmin.Designer.cs">
       <DependentUpon>FormPermissionAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQuanLi.cs">
+    <Compile Include="FormMenuManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormQuanLi.Designer.cs">
-      <DependentUpon>FormQuanLi.cs</DependentUpon>
+    <Compile Include="FormMenuManager.Designer.cs">
+      <DependentUpon>FormMenuManager.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuanLiNV.cs">
       <SubType>Form</SubType>
@@ -92,8 +92,8 @@
     <EmbeddedResource Include="FormPermissionAdmin.resx">
       <DependentUpon>FormPermissionAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLi.resx">
-      <DependentUpon>FormQuanLi.cs</DependentUpon>
+    <EmbeddedResource Include="FormMenuManager.resx">
+      <DependentUpon>FormMenuManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLiNV.resx">
       <DependentUpon>FormQuanLiNV.cs</DependentUpon>

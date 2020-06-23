@@ -1,6 +1,6 @@
 ﻿namespace FinalProject
 {
-    partial class FormQuanLi
+    partial class FormMenuManager
     {
         /// <summary>
         /// Required designer variable.
@@ -200,7 +200,7 @@
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 18;
             // 
-            // FormQuanLi
+            // FormMenuManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,7 +223,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvThongtin);
-            this.Name = "FormQuanLi";
+            this.Name = "FormMenuManager";
             this.Text = "FormMenu";
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtin)).EndInit();
             this.ResumeLayout(false);
