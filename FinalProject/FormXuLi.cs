@@ -16,5 +16,15 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void QuảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThốngKêBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
