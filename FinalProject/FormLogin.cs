@@ -58,6 +58,7 @@ namespace FinalProject
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsername.Focus();
             }
         }
 

@@ -24,5 +24,22 @@ namespace FinalProject.BS_Layer
         {
             return db.ExecuteQueryDataTable("select * from TAIKHOAN Where Username = '" + Username + "' and Password = '" + Password + "'", CommandType.Text);
         }
+
+        public DataTable getMenuAll()
+        {
+            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN" +
+                                            "FROM THUCDON" +
+                                            "INNER JOIN LOAI" +
+                                            "ON THUCDON.LOAI = LOAI.ID", CommandType.Text);
+        }
+
+        public DataTable getMenuByID(string id)
+        {
+            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN" +
+                                            "FROM THUCDON" +
+                                            "INNER JOIN LOAI" +
+                                            "ON THUCDON.LOAI = LOAI.ID" + 
+                                            "WHERE LOAI.ID = " + id, CommandType.Text);
+        }
     }
 }
