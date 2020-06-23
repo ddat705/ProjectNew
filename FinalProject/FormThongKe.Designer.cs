@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvXemThongKe = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbBoxThongKeTheo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtpBatDau = new System.Windows.Forms.DateTimePicker();
+            this.cbBoxChucVu = new System.Windows.Forms.ComboBox();
+            this.dtpKetThuc = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXemThongKe)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvXemThongKe
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(39, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(283, 321);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvXemThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXemThongKe.Location = new System.Drawing.Point(39, 83);
+            this.dgvXemThongKe.Name = "dgvXemThongKe";
+            this.dgvXemThongKe.Size = new System.Drawing.Size(283, 321);
+            this.dgvXemThongKe.TabIndex = 0;
             // 
             // label1
             // 
@@ -57,13 +57,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "THỐNG KÊ";
             // 
-            // comboBox1
+            // cbBoxThongKeTheo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(454, 83);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cbBoxThongKeTheo.FormattingEnabled = true;
+            this.cbBoxThongKeTheo.Location = new System.Drawing.Point(454, 83);
+            this.cbBoxThongKeTheo.Name = "cbBoxThongKeTheo";
+            this.cbBoxThongKeTheo.Size = new System.Drawing.Size(121, 21);
+            this.cbBoxThongKeTheo.TabIndex = 2;
             // 
             // label2
             // 
@@ -92,45 +92,45 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Chức vụ";
             // 
-            // dateTimePicker1
+            // dtpBatDau
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(454, 124);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtpBatDau.Location = new System.Drawing.Point(454, 124);
+            this.dtpBatDau.Name = "dtpBatDau";
+            this.dtpBatDau.Size = new System.Drawing.Size(200, 20);
+            this.dtpBatDau.TabIndex = 6;
             // 
-            // comboBox2
+            // cbBoxChucVu
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(454, 194);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 7;
+            this.cbBoxChucVu.FormattingEnabled = true;
+            this.cbBoxChucVu.Location = new System.Drawing.Point(454, 194);
+            this.cbBoxChucVu.Name = "cbBoxChucVu";
+            this.cbBoxChucVu.Size = new System.Drawing.Size(121, 21);
+            this.cbBoxChucVu.TabIndex = 7;
             // 
-            // dateTimePicker2
+            // dtpKetThuc
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(454, 159);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 8;
+            this.dtpKetThuc.Location = new System.Drawing.Point(454, 159);
+            this.dtpKetThuc.Name = "dtpKetThuc";
+            this.dtpKetThuc.Size = new System.Drawing.Size(200, 20);
+            this.dtpKetThuc.TabIndex = 8;
             // 
             // FormThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpKetThuc);
+            this.Controls.Add(this.cbBoxChucVu);
+            this.Controls.Add(this.dtpBatDau);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbBoxThongKeTheo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvXemThongKe);
             this.Name = "FormThongKe";
             this.Text = "FormThongKe";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXemThongKe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,14 +138,14 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvXemThongKe;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbBoxThongKeTheo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpBatDau;
+        private System.Windows.Forms.ComboBox cbBoxChucVu;
+        private System.Windows.Forms.DateTimePicker dtpKetThuc;
     }
 }
