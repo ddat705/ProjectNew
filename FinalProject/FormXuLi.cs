@@ -16,5 +16,9 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void MenuManager_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
