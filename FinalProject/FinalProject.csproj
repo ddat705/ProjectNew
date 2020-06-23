@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="BS Layer\BLAccount.cs" />
     <Compile Include="DB Layer\DBMain.cs" />
+    <Compile Include="FormAddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddAccount.Designer.cs">
+      <DependentUpon>FormAddAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddAccount.resx">
+      <DependentUpon>FormAddAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>

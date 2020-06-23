@@ -45,15 +45,25 @@ namespace FinalProject
 
         }
 
-        private void Login()
+        public void Login()
         {
             DTacc = this.BLacc.LayTaiKhoanByUsername(txtUsername.Text.Trim(), txtPassword.Text.Trim());
             if (DTacc.Rows.Count != 0)
             {
-                Form f = new FormXuLi();
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
+                try
+                {
+                    Form f = new FormXuLi();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.txtUsername.Text = "";
+                    this.txtPassword.Text = "";
+                    this.Show();
+                }
+                catch
+                {
+
+                }
+
             }
             else
             {
