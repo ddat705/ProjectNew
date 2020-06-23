@@ -50,7 +50,7 @@ namespace FinalProject
             DTacc = this.BLacc.LayTaiKhoanByUsername(txtUsername.Text.Trim(), txtPassword.Text.Trim());
             if (DTacc.Rows.Count != 0)
             {
-                Form f = new FormPermissionAdmin();
+                Form f = new FormXuLi();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
