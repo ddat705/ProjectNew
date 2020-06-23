@@ -449,7 +449,7 @@
             this.Logout,
             this.Exit});
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // InfoAccount
@@ -457,24 +457,58 @@
             this.InfoAccount.Name = "InfoAccount";
             this.InfoAccount.Size = new System.Drawing.Size(177, 22);
             this.InfoAccount.Text = "Thông tin tài khoản";
+            this.InfoAccount.Click += new System.EventHandler(this.InfoAccount_Click);
             // 
             // CreateAccount
             // 
             this.CreateAccount.Name = "CreateAccount";
             this.CreateAccount.Size = new System.Drawing.Size(177, 22);
             this.CreateAccount.Text = "Thêm tài khoản";
+            this.CreateAccount.Click += new System.EventHandler(this.CreateAccount_Click);
             // 
             // Logout
             // 
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(177, 22);
             this.Logout.Text = "Đăng xuất";
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // Exit
             // 
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(177, 22);
             this.Exit.Text = "Thoát";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // thôngTinNhàHàngToolStripMenuItem
+            // 
+            this.thôngTinNhàHàngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StaffManager,
+            this.SaleManager,
+            this.MenuManager});
+            this.thôngTinNhàHàngToolStripMenuItem.Name = "thôngTinNhàHàngToolStripMenuItem";
+            this.thôngTinNhàHàngToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
+            this.thôngTinNhàHàngToolStripMenuItem.Text = "Thông tin nhà hàng";
+            // 
+            // StaffManager
+            // 
+            this.StaffManager.Name = "StaffManager";
+            this.StaffManager.Size = new System.Drawing.Size(180, 22);
+            this.StaffManager.Text = "Quản lý nhân viên";
+            this.StaffManager.Click += new System.EventHandler(this.StaffManager_Click);
+            // 
+            // SaleManager
+            // 
+            this.SaleManager.Name = "SaleManager";
+            this.SaleManager.Size = new System.Drawing.Size(180, 22);
+            this.SaleManager.Text = "Thống kê bán hàng";
+            this.SaleManager.Click += new System.EventHandler(this.SaleManager_Click);
+            // 
+            // MenuManager
+            // 
+            this.MenuManager.Name = "MenuManager";
+            this.MenuManager.Size = new System.Drawing.Size(180, 22);
+            this.MenuManager.Text = "Quản lý Menu";
             // 
             // thôngTinNhàHàngToolStripMenuItem
             // 
