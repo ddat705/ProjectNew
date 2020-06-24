@@ -251,9 +251,6 @@ namespace FinalProject
             }
         }
 
-        private void DtpNamsinh_ValueChanged(object sender, EventArgs e)
-        {
-            label8.Text = this.txtID.Text + "\n" + this.txtBoxHoTen.Text + "\n" + this.txtBoxCMND.Text + "\n" + this.dtpNamsinh.Text + "\n" + this.txtBoxLuong.Text + "\n" + Convert.ToString(cbBoxChucVu.SelectedIndex + 1);
-        }
+
     }
 }

@@ -271,7 +271,6 @@
             this.dtpNamsinh.Name = "dtpNamsinh";
             this.dtpNamsinh.Size = new System.Drawing.Size(100, 20);
             this.dtpNamsinh.TabIndex = 35;
-            this.dtpNamsinh.ValueChanged += new System.EventHandler(this.DtpNamsinh_ValueChanged);
             // 
             // FormQuanLiNV
             // 
