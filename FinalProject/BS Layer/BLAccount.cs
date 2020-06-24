@@ -180,5 +180,67 @@ namespace FinalProject.BS_Layer
         {
             db.ExecuteQueryDataTable("DELETE FROM NHANVIEN WHERE NHANVIEN.ID = " + id, CommandType.Text);
         }
+
+
+        public DataTable getStaffDHaveAcc()
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
+                                                          "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.CHUCVU = 1 OR NHANVIEN.CHUCVU = 2)", CommandType.Text);
+        }
+        public DataTable getStaffDHaveAccByPosition(string id)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
+                                                          "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.CHUCVU =" +id, CommandType.Text);
+        }
+        public DataTable getStaffDHaveAccbyID(string id)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
+                                                          "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.ID =" + id, CommandType.Text);
+        }
+        public DataTable getStaffDHaveAccbyName(string ten)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
+                                                          "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.HOTEN LIKE N'%" + ten + "%'", CommandType.Text);
+        }
+        public DataTable getStaffDHaveAccByIDAndPosition(string id, string chucvu)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
+                                                          "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.ID =" + id + " AND CHUCVU.ID = " + chucvu, CommandType.Text);
+        }
+        public DataTable getStaffDHaveAccByNameAndPosition(string hoten, string chucvu)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
+                                                          "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.HOTEN LIKE N'%" + hoten + "%'" + " AND CHUCVU.ID = " + chucvu, CommandType.Text);
+        }
     }
 }
