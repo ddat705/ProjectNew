@@ -52,7 +52,7 @@ namespace FinalProject
             {
                 try
                 {
-                    Form f = new FormXuLi();
+                    Form f = new FormXuLi(DTacc);
                     this.Hide();
                     f.ShowDialog();       
                     this.txtPassword.Text = "";

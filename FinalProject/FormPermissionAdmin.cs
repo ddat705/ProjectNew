@@ -17,6 +17,20 @@ namespace FinalProject
             InitializeComponent();
         }
 
+        public FormPermissionAdmin(DataTable root)
+        {
+            InitializeComponent();
+            lbTextUsername.Text = root.Rows[0][0].ToString();
+            lbTextChucVu.Text = root.Rows[0][5].ToString();
+            lbTextID.Text = root.Rows[0][2].ToString();
+            lbTextName.Text = root.Rows[0][3].ToString();
+            lbTextCMND.Text = root.Rows[0][4].ToString();
+            lbTextRoleAcc.Text = root.Rows[0][1].ToString();
+        }
 
+        private void FormPermissionAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

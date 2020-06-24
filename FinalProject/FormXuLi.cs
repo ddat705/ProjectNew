@@ -12,10 +12,16 @@ namespace FinalProject
 {
     public partial class FormXuLi : Form
     {
-
+        DataTable inforAcc = new DataTable();
         public FormXuLi()
         {
             InitializeComponent();
+        }
+
+        public FormXuLi(DataTable root)
+        {
+            InitializeComponent();
+            inforAcc = root;
         }
 
         private void MenuManager_Click(object sender, EventArgs e)
@@ -49,7 +55,7 @@ namespace FinalProject
 
         private void InfoAccount_Click(object sender, EventArgs e)
         {
-            Form fInfoAccount = new FormPermissionAdmin();
+            Form fInfoAccount = new FormPermissionAdmin(this.inforAcc);
             this.Hide();
             fInfoAccount.ShowDialog();
             this.Show();

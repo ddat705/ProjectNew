@@ -22,7 +22,20 @@ namespace FinalProject.BS_Layer
 
         public DataTable LayTaiKhoanByUsername(string Username, string Password)
         {
-            return db.ExecuteQueryDataTable("select * from TAIKHOAN Where Username = '" + Username + "' and Password = '" + Password + "'", CommandType.Text);
+            return db.ExecuteQueryDataTable(" Select C.* " +
+                                  " From(SELECT A.username, A.LoaiTaiKhoan, B.MaNV, B.HoVaTen, B.cmnd, B.ChucVu " +
+                                  " FROM(Select TAIKHOAN.USERNAME AS username, TAIKHOAN.IDNhanVien, TYPEACCOUNT.name as LoaiTaiKhoan" +
+                                  " FROM TAIKHOAN " +
+                                  " INNER JOIN TYPEACCOUNT " +
+                                  " ON TAIKHOAN.TYPEACCOUNT = TYPEACCOUNT.ID) A " +
+                                  " INNER JOIN(Select NHANVIEN.ID as MaNV, NHANVIEN.HOTEN as HoVaTen, NHANVIEN.CMND as cmnd, CHUCVU.CHUCVU as ChucVu " +
+                                  " FROM NHANVIEN " +
+                                  " INNER JOIN CHUCVU " +
+                                  " ON NHANVIEN.CHUCVU = CHUCVU.ID) B " +
+                                  " ON A.IDNhanVien = B.MaNV) C , TAIKHOAN " +
+                                  " WHERE TAIKHOAN.USERNAME = C.username and TAIKHOAN.USERNAME = '" + Username + "' and TAIKHOAN.PASSWORD = '" + Password + "'; ", CommandType.Text);
+
+            //return db.ExecuteQueryDataTable("select * from TAIKHOAN Where Username = '" + Username + "' and Password = '" + Password + "'", CommandType.Text);
         }
 
         public DataTable getMenuAll()
