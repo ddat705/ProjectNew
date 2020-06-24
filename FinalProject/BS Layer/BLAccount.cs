@@ -119,11 +119,9 @@ namespace FinalProject.BS_Layer
                                             "WHERE CHUCVU.ID = " + id + "AND NHANVIEN.HOTEN LIKE N'%" + search + "%' OR NHANVIEN.ID = "+search, CommandType.Text);
 
         }
-        public bool AddNV(string Hoten, string cmnd, DateTime namsinh, int Luong, int Chucvu, ref string error)
+        public bool AddNV(string Hoten, string cmnd, string namsinh, string Luong, string Chucvu, string error)
         {
-            string sqlString = "Insert Into NHANVIEN(HOTEN,CMND,NAMSINH,LUONG,CHUCVU) Values(N'" + Hoten + "','" + cmnd + "','"+ namsinh +"',"+Luong+","+ Chucvu +")";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref error);
-
+            return db.MyExecuteNonQuery("Insert Into NHANVIEN(HOTEN,CMND,NAMSINH,LUONG,CHUCVU) Values(N'" + Hoten + "','" + cmnd + "','"+ namsinh +"',"+Luong+","+ Chucvu +")", CommandType.Text, ref error);
         }
 
         public void deleteMenuByID(string id)

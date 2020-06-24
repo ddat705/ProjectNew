@@ -158,7 +158,7 @@ namespace FinalProject
                 {
 
                     BLAccount blacc = new BLAccount();
-                    blacc.AddNV(this.txtBoxHoTen.Text, this.txtBoxCMND.Text, Convert.ToDateTime(this.dtpNamsinh.Value.ToString()), Convert.ToInt32(this.txtBoxLuong.Text), this.cbBoxChucVu.SelectedIndex, ref err);
+                    blacc.AddNV(this.txtBoxHoTen.Text, this.txtBoxCMND.Text, this.dtpNamsinh.Text, this.txtBoxLuong.Text, Convert.ToString(cbBoxChucVu.SelectedIndex+1), err);
                     LoadData();
                     this.dgvThongTinNV.Enabled = true;
                     MessageBox.Show("Đã thêm xong!");
@@ -262,5 +262,6 @@ namespace FinalProject
                 this.dgvThongTinNV.DataSource = dataTable;
             }
         }
+
     }
 }

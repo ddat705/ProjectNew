@@ -265,10 +265,13 @@
             // 
             // dtpNamsinh
             // 
+            this.dtpNamsinh.CustomFormat = "yyyy-MM-dd";
+            this.dtpNamsinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNamsinh.Location = new System.Drawing.Point(670, 186);
             this.dtpNamsinh.Name = "dtpNamsinh";
             this.dtpNamsinh.Size = new System.Drawing.Size(100, 20);
             this.dtpNamsinh.TabIndex = 35;
+
             // 
             // FormQuanLiNV
             // 
