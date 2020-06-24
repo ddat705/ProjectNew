@@ -44,15 +44,15 @@
             // dgvXemThongKe
             // 
             this.dgvXemThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvXemThongKe.Location = new System.Drawing.Point(39, 83);
+            this.dgvXemThongKe.Location = new System.Drawing.Point(39, 42);
             this.dgvXemThongKe.Name = "dgvXemThongKe";
-            this.dgvXemThongKe.Size = new System.Drawing.Size(283, 321);
+            this.dgvXemThongKe.Size = new System.Drawing.Size(434, 362);
             this.dgvXemThongKe.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(349, 35);
+            this.label1.Location = new System.Drawing.Point(479, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 1;
@@ -61,7 +61,7 @@
             // cbBoxThongKeTheo
             // 
             this.cbBoxThongKeTheo.FormattingEnabled = true;
-            this.cbBoxThongKeTheo.Location = new System.Drawing.Point(454, 83);
+            this.cbBoxThongKeTheo.Location = new System.Drawing.Point(584, 148);
             this.cbBoxThongKeTheo.Name = "cbBoxThongKeTheo";
             this.cbBoxThongKeTheo.Size = new System.Drawing.Size(121, 21);
             this.cbBoxThongKeTheo.TabIndex = 2;
@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(382, 89);
+            this.label2.Location = new System.Drawing.Point(512, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 3;
@@ -78,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(382, 130);
+            this.label3.Location = new System.Drawing.Point(512, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 4;
@@ -87,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(382, 202);
+            this.label4.Location = new System.Drawing.Point(512, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 5;
@@ -95,7 +95,7 @@
             // 
             // dtpBatDau
             // 
-            this.dtpBatDau.Location = new System.Drawing.Point(454, 124);
+            this.dtpBatDau.Location = new System.Drawing.Point(584, 189);
             this.dtpBatDau.Name = "dtpBatDau";
             this.dtpBatDau.Size = new System.Drawing.Size(200, 20);
             this.dtpBatDau.TabIndex = 6;
@@ -104,14 +104,14 @@
             // cbBoxChucVu
             // 
             this.cbBoxChucVu.FormattingEnabled = true;
-            this.cbBoxChucVu.Location = new System.Drawing.Point(454, 194);
+            this.cbBoxChucVu.Location = new System.Drawing.Point(584, 259);
             this.cbBoxChucVu.Name = "cbBoxChucVu";
             this.cbBoxChucVu.Size = new System.Drawing.Size(121, 21);
             this.cbBoxChucVu.TabIndex = 7;
             // 
             // dtpKetThuc
             // 
-            this.dtpKetThuc.Location = new System.Drawing.Point(454, 159);
+            this.dtpKetThuc.Location = new System.Drawing.Point(584, 224);
             this.dtpKetThuc.Name = "dtpKetThuc";
             this.dtpKetThuc.Size = new System.Drawing.Size(200, 20);
             this.dtpKetThuc.TabIndex = 8;
@@ -119,7 +119,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(426, 312);
+            this.label5.Location = new System.Drawing.Point(556, 377);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 9;
