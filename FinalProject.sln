@@ -5,12 +5,6 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject", "FinalProject\FinalProject.csproj", "{5CC79E2A-D08D-4BD3-9B9B-14186C631344}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{35206926-ABBC-47EE-ABCE-9747DC618F00}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationImage", "ApplicationImage", "{A82BC484-4AE9-443B-95EF-464E0E56289B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UsersImage", "UsersImage", "{F1E17C98-74D0-4F2D-8BE5-D41D1C47152D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,10 +18,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{A82BC484-4AE9-443B-95EF-464E0E56289B} = {35206926-ABBC-47EE-ABCE-9747DC618F00}
-		{F1E17C98-74D0-4F2D-8BE5-D41D1C47152D} = {35206926-ABBC-47EE-ABCE-9747DC618F00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {677727CC-963A-4B4E-8395-92CA30987041}
