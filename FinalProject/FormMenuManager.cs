@@ -256,7 +256,7 @@ namespace FinalProject
             {
                 MessageBox.Show("Chưa chọn món để xoá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+            this.reload();
         }
     }
 }
