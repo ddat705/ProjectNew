@@ -158,7 +158,7 @@ namespace FinalProject
                 {
 
                     BLAccount blacc = new BLAccount();
-                    blacc.AddNV(this.txtBoxHoTen.Text, this.txtBoxCMND.Text, Convert.ToDateTime(this.dtpNamsinh.Value.ToString()), Convert.ToInt32(this.txtBoxLuong.Text), this.cbBoxChucVu.SelectedIndex, ref err);
+                    blacc.AddNV(this.txtBoxHoTen.Text, this.txtBoxCMND.Text, this.dtpNamsinh.Text, this.txtBoxLuong.Text, Convert.ToString(cbBoxChucVu.SelectedIndex+1), err);
                     LoadData();
                     this.dgvThongTinNV.Enabled = true;
                     MessageBox.Show("Đã thêm xong!");
@@ -172,8 +172,7 @@ namespace FinalProject
             {
 
                 BLAccount blacc = new BLAccount();
-                //  blTp.CapNhatThanhPho(this.txtThanhPho.Text, this.txtTenThanhPho.Text, ref err);
-
+                blacc.UpdateNV(this.txtID.Text, this.txtBoxHoTen.Text, this.txtBoxCMND.Text, this.dtpNamsinh.Text, this.txtBoxLuong.Text, Convert.ToString(cbBoxChucVu.SelectedIndex + 1), err);
                 LoadData();
                 this.dgvThongTinNV.Enabled = true;
                 MessageBox.Show("Đã sửa xong!");
@@ -203,30 +202,19 @@ namespace FinalProject
 
         private void BtnXoa_Click(object sender, EventArgs e)
         {
-            try
+            if (txtID.Text != "")
             {
-
-                int r = dgvThongTinNV.CurrentCell.RowIndex;
-                string strTHANHPHO =
-                dgvThongTinNV.Rows[r].Cells[0].Value.ToString();
-                DialogResult traloi;
-                traloi = MessageBox.Show("Bạn có chắc muốn xóa nhân viên này không?", "Trả lời",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (traloi == DialogResult.Yes)
+                DialogResult a = MessageBox.Show("Bạn chắc chắn xoá", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (a == DialogResult.OK)
                 {
-                    //dbTP.XoaThanhPho(ref err, strTHANHPHO);
-                    LoadData();
-                    MessageBox.Show("Đã xóa xong!");
-                }
-                else
-                {
-                    MessageBox.Show("Không xóa nhân viên này!");
+                    this.BLAcc.DeleteStaff(txtID.Text);
                 }
             }
-            catch (SqlException)
+            else
             {
-                MessageBox.Show("Không xóa được. Lỗi rồi!");
+                MessageBox.Show("Chưa nhan vien xoá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            this.LoadData();
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
@@ -262,5 +250,7 @@ namespace FinalProject
                 this.dgvThongTinNV.DataSource = dataTable;
             }
         }
+
+
     }
 }
