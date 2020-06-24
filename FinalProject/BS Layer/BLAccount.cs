@@ -148,5 +148,13 @@ namespace FinalProject.BS_Layer
                       loai + " WHERE ID = " + 
                       id, CommandType.Text, ref err);
         }
+        public bool UpdateNV(string id, string Hoten, string cmnd, string namsinh, string Luong, string Chucvu, string error)
+        {
+            return db.MyExecuteNonQuery("Update NHANVIEN Set HOTEN = '" + Hoten + "', CMND = '" + cmnd + "', NAMSINH = '" + namsinh + "', LUONG = " + Luong + ", CHUCVU = " + Chucvu + " WHERE ID = "+id, CommandType.Text, ref error);
+        }
+        public void DeleteStaff(string id)
+        {
+            db.ExecuteQueryDataTable("DELETE FROM NHANVIEN WHERE NHANVIEN.ID = " + id, CommandType.Text);
+        }
     }
 }
