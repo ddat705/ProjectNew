@@ -28,6 +28,8 @@ namespace FinalProject
             this.dataTable = BLAcc.getStaffAll();
             this.dgvThongTinNV.DataSource = dataTable;
             txtSearchBox.ResetText();
+            this.cbBoxOptionSearch.SelectedIndex=4;
+            this.cbBoxOptionIDName.SelectedIndex = 2;
             this.btnHuy.Enabled = false;
             this.btnLuu.Enabled = false;
             this.cbBoxChucVu.Enabled = false;
@@ -75,25 +77,25 @@ namespace FinalProject
             {
                 txtSearchBox.Enabled = true;
             }
-            if (cbBoxOptionSearch.Text.CompareTo("ThuNgan") == 0)
+            if (cbBoxOptionSearch.Text.CompareTo("Thu Ngân") == 0)
             {
-                this.dataTable = this.BLAcc.getChucVu(2);
+                this.dataTable = this.BLAcc.getChucVu("2");
                 this.dgvThongTinNV.DataSource = dataTable;
 
             }
-            else if (cbBoxOptionSearch.Text.CompareTo("QuanLi") == 0)
+            else if (cbBoxOptionSearch.Text.CompareTo("Quản Lí") == 0)
             {
-                this.dataTable = this.BLAcc.getChucVu(1);
+                this.dataTable = this.BLAcc.getChucVu("1");
                 this.dgvThongTinNV.DataSource = dataTable;
             }
-            else if (cbBoxOptionSearch.Text.CompareTo("Phucvu") == 0)
+            else if (cbBoxOptionSearch.Text.CompareTo("Phục Vụ") == 0)
             {
-                this.dataTable = this.BLAcc.getChucVu(3);
+                this.dataTable = this.BLAcc.getChucVu("3");
                 this.dgvThongTinNV.DataSource = dataTable;
             }
-            else if (cbBoxOptionSearch.Text.CompareTo("Baove") == 0)
+            else if (cbBoxOptionSearch.Text.CompareTo("Bảo Vệ") == 0)
             {
-                this.dataTable = this.BLAcc.getChucVu(4);
+                this.dataTable = this.BLAcc.getChucVu("4");
                 this.dgvThongTinNV.DataSource = dataTable;
             }
             else
@@ -219,36 +221,104 @@ namespace FinalProject
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            if (cbBoxOptionSearch.Text.CompareTo("ID") == 0 && txtSearchBox.Text != null)
+            try
             {
-                this.dataTable = this.BLAcc.getNVbyID(txtSearchBox.Text);
-                this.dgvThongTinNV.DataSource = dataTable;
+                if (cbBoxOptionSearch.SelectedIndex == 4)
+                {
+                    if (cbBoxOptionIDName.SelectedIndex == 0)
+                    {
+                        this.dataTable = BLAcc.getNVbyID(txtSearchBox.Text);
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else if (cbBoxOptionIDName.SelectedIndex == 1)
+                    {
+                        this.dataTable = BLAcc.getNVbyName(txtSearchBox.Text);
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else
+                    {
+                        this.dataTable = BLAcc.getStaffAll();
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                }
+                else if (cbBoxOptionSearch.SelectedIndex == 0)
+                {
+                    if (cbBoxOptionIDName.SelectedIndex == 0)
+                    {
+                        this.dataTable = BLAcc.getStaffByIDAndPosition(txtSearchBox.Text, "2");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else if (cbBoxOptionIDName.SelectedIndex == 1)
+                    {
+                        this.dataTable = BLAcc.getStaffByNameAndPosition(txtSearchBox.Text, "2");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else
+                    {
+                        this.dataTable = BLAcc.getChucVu("2");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                }
+                else if (cbBoxOptionSearch.SelectedIndex == 1)
+                {
+                    if (cbBoxOptionIDName.SelectedIndex == 0)
+                    {
+                        this.dataTable = BLAcc.getStaffByIDAndPosition(txtSearchBox.Text, "1");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else if (cbBoxOptionIDName.SelectedIndex == 1)
+                    {
+                        this.dataTable = BLAcc.getStaffByNameAndPosition(txtSearchBox.Text, "1");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else
+                    {
+                        this.dataTable = BLAcc.getMenuByLoai("1");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                }
+                else if (cbBoxOptionSearch.SelectedIndex == 2)
+                {
+                    if (cbBoxOptionIDName.SelectedIndex == 0)
+                    {
+                        this.dataTable = BLAcc.getStaffByIDAndPosition(txtSearchBox.Text, "3");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else if (cbBoxOptionIDName.SelectedIndex == 1)
+                    {
+                        this.dataTable = BLAcc.getStaffByNameAndPosition(txtSearchBox.Text, "3");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else
+                    {
+                        this.dataTable = BLAcc.getMenuByLoai("3");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                }
+                else if (cbBoxOptionSearch.SelectedIndex == 3)
+                {
+                    if (cbBoxOptionIDName.SelectedIndex == 0)
+                    {
+                        this.dataTable = BLAcc.getStaffByIDAndPosition(txtSearchBox.Text, "4");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else if (cbBoxOptionIDName.SelectedIndex == 1)
+                    {
+                        this.dataTable = BLAcc.getStaffByNameAndPosition(txtSearchBox.Text, "4");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                    else
+                    {
+                        this.dataTable = BLAcc.getMenuByLoai("4");
+                        this.dgvThongTinNV.DataSource = dataTable;
+                    }
+                }
             }
-            else if (cbBoxOptionSearch.Text.CompareTo("Họ Tên") == 0 && txtSearchBox.Text != null)
+            catch
             {
-                this.dataTable = this.BLAcc.getNVbyName(txtSearchBox.Text);
-                this.dgvThongTinNV.DataSource = dataTable;
+
             }
-            else if (cbBoxOptionSearch.Text.CompareTo("ThuNgan") == 0 && txtSearchBox.Text != null)
-            {
-                this.dataTable = this.BLAcc.getNVbyPositionandSearchName(txtSearchBox.Text, 2);
-                this.dgvThongTinNV.DataSource = dataTable;
-            }
-            else if (cbBoxOptionSearch.Text.CompareTo("QuanLi") == 0 && txtSearchBox.Text != null)
-            {
-                this.dataTable = this.BLAcc.getNVbyPositionandSearchName(txtSearchBox.Text, 1);
-                this.dgvThongTinNV.DataSource = dataTable;
-            }
-            else if (cbBoxOptionSearch.Text.CompareTo("Phucvu") == 0 && txtSearchBox.Text != null)
-            {
-                this.dataTable = this.BLAcc.getNVbyPositionandSearchName(txtSearchBox.Text, 3);
-                this.dgvThongTinNV.DataSource = dataTable;
-            }
-            else if (cbBoxOptionSearch.Text.CompareTo("Baove") == 0 && txtSearchBox.Text != null)
-            {
-                this.dataTable = this.BLAcc.getNVbyPositionandSearchName(txtSearchBox.Text, 4);
-                this.dgvThongTinNV.DataSource = dataTable;
-            }
+
         }
 
 

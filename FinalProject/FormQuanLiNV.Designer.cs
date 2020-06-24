@@ -51,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbBoxChucVu = new System.Windows.Forms.ComboBox();
             this.dtpNamsinh = new System.Windows.Forms.DateTimePicker();
+            this.cbBoxOptionIDName = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // 
             this.txtSearchBox.Enabled = false;
             this.txtSearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBox.Location = new System.Drawing.Point(637, 40);
+            this.txtSearchBox.Location = new System.Drawing.Point(739, 40);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Size = new System.Drawing.Size(151, 26);
             this.txtSearchBox.TabIndex = 4;
@@ -75,7 +76,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(794, 41);
+            this.btnSearch.Location = new System.Drawing.Point(896, 41);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(33, 26);
             this.btnSearch.TabIndex = 7;
@@ -138,9 +139,11 @@
             this.cbBoxOptionSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxOptionSearch.FormattingEnabled = true;
             this.cbBoxOptionSearch.Items.AddRange(new object[] {
-            "ID",
-            "Họ Tên",
-            "ThuNgan"});
+            "Thu Ngân",
+            "Quản Lí",
+            "Phục Vụ",
+            "Bảo Vệ",
+            "Tất cả"});
             this.cbBoxOptionSearch.Location = new System.Drawing.Point(525, 40);
             this.cbBoxOptionSearch.Name = "cbBoxOptionSearch";
             this.cbBoxOptionSearch.Size = new System.Drawing.Size(100, 21);
@@ -272,11 +275,27 @@
             this.dtpNamsinh.Size = new System.Drawing.Size(100, 20);
             this.dtpNamsinh.TabIndex = 35;
             // 
+            // cbBoxOptionIDName
+            // 
+            this.cbBoxOptionIDName.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.cbBoxOptionIDName.DisplayMember = "0";
+            this.cbBoxOptionIDName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxOptionIDName.FormattingEnabled = true;
+            this.cbBoxOptionIDName.Items.AddRange(new object[] {
+            "ID",
+            "Họ Tên",
+            "--Chọn--"});
+            this.cbBoxOptionIDName.Location = new System.Drawing.Point(640, 40);
+            this.cbBoxOptionIDName.Name = "cbBoxOptionIDName";
+            this.cbBoxOptionIDName.Size = new System.Drawing.Size(83, 21);
+            this.cbBoxOptionIDName.TabIndex = 36;
+            // 
             // FormQuanLiNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 450);
+            this.ClientSize = new System.Drawing.Size(1023, 450);
+            this.Controls.Add(this.cbBoxOptionIDName);
             this.Controls.Add(this.dtpNamsinh);
             this.Controls.Add(this.cbBoxChucVu);
             this.Controls.Add(this.label7);
@@ -334,5 +353,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbBoxChucVu;
         private System.Windows.Forms.DateTimePicker dtpNamsinh;
+        private System.Windows.Forms.ComboBox cbBoxOptionIDName;
     }
 }

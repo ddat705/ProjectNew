@@ -86,7 +86,7 @@ namespace FinalProject.BS_Layer
                                             "INNER JOIN CHUCVU " +
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID ", CommandType.Text);
         }
-        public DataTable getChucVu(int id)
+        public DataTable getChucVu(string id)
         {
             return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
                                             "FROM NHANVIEN " +
@@ -110,15 +110,26 @@ namespace FinalProject.BS_Layer
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
                                             "WHERE NHANVIEN.HOTEN LIKE N'%" + ten+ "%'" , CommandType.Text);
         }
-        public DataTable getNVbyPositionandSearchName(string search, int id)
+
+        public DataTable getStaffByIDAndPosition(string id, string chucvu)
         {
             return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
                                             "FROM NHANVIEN " +
                                             "INNER JOIN CHUCVU " +
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
-                                            "WHERE CHUCVU.ID = " + id + "AND NHANVIEN.HOTEN LIKE N'%" + search + "%' OR NHANVIEN.ID = "+search, CommandType.Text);
-
+                                            "WHERE NHANVIEN.ID = " + id +
+                                            " AND CHUCVU.ID = " + chucvu, CommandType.Text);
         }
+        public DataTable getStaffByNameAndPosition(string hoten, string chucvu)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.HOTEN LIKE N'%" + hoten + "%'" +
+                                            " AND CHUCVU.ID = " + chucvu, CommandType.Text);
+        }
+
         public bool AddNV(string Hoten, string cmnd, string namsinh, string Luong, string Chucvu, string error)
         {
             return db.MyExecuteNonQuery("Insert Into NHANVIEN(HOTEN,CMND,NAMSINH,LUONG,CHUCVU) Values(N'" + Hoten + "','" + cmnd + "','"+ namsinh +"',"+Luong+","+ Chucvu +")", CommandType.Text, ref error);
