@@ -47,16 +47,20 @@
             this.btnReload = new System.Windows.Forms.Button();
             this.cbBoxOptionSearch = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.CbBoxSelectLoai = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtin)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvThongtin
             // 
+            this.dgvThongtin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongtin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvThongtin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongtin.Location = new System.Drawing.Point(22, 77);
             this.dgvThongtin.Name = "dgvThongtin";
             this.dgvThongtin.Size = new System.Drawing.Size(330, 361);
             this.dgvThongtin.TabIndex = 1;
+            this.dgvThongtin.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongtin_CellClick);
             // 
             // btnThem
             // 
@@ -66,24 +70,27 @@
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(107, 35);
+            this.btnXoa.Location = new System.Drawing.Point(198, 35);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(68, 23);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(195, 36);
+            this.btnSua.Location = new System.Drawing.Point(107, 35);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(69, 23);
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnTim
             // 
@@ -93,6 +100,7 @@
             this.btnTim.TabIndex = 5;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // btnHuy
             // 
@@ -102,6 +110,7 @@
             this.btnHuy.TabIndex = 6;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -111,6 +120,7 @@
             this.btnLuu.TabIndex = 7;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // txtSearchBox
             // 
@@ -179,7 +189,11 @@
             // 
             // cbBoxLoai
             // 
+            this.cbBoxLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxLoai.FormattingEnabled = true;
+            this.cbBoxLoai.Items.AddRange(new object[] {
+            "Thức ăn",
+            "Nước uống"});
             this.cbBoxLoai.Location = new System.Drawing.Point(500, 276);
             this.cbBoxLoai.Name = "cbBoxLoai";
             this.cbBoxLoai.Size = new System.Drawing.Size(100, 21);
@@ -191,8 +205,9 @@
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(69, 23);
             this.btnReload.TabIndex = 17;
-            this.btnReload.Text = "Reload";
+            this.btnReload.Text = "Refesh";
             this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // cbBoxOptionSearch
             // 
@@ -202,8 +217,9 @@
             this.cbBoxOptionSearch.FormattingEnabled = true;
             this.cbBoxOptionSearch.Items.AddRange(new object[] {
             "ID",
-            "Tên"});
-            this.cbBoxOptionSearch.Location = new System.Drawing.Point(386, 80);
+            "Tên",
+            "--Select--"});
+            this.cbBoxOptionSearch.Location = new System.Drawing.Point(500, 77);
             this.cbBoxOptionSearch.Name = "cbBoxOptionSearch";
             this.cbBoxOptionSearch.Size = new System.Drawing.Size(100, 21);
             this.cbBoxOptionSearch.TabIndex = 18;
@@ -219,11 +235,27 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "Tìm kiếm theo:";
             // 
+            // CbBoxSelectLoai
+            // 
+            this.CbBoxSelectLoai.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.CbBoxSelectLoai.DisplayMember = "0";
+            this.CbBoxSelectLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbBoxSelectLoai.FormattingEnabled = true;
+            this.CbBoxSelectLoai.Items.AddRange(new object[] {
+            "Thức Ăn",
+            "Nước Uống",
+            "-- ALL --"});
+            this.CbBoxSelectLoai.Location = new System.Drawing.Point(386, 77);
+            this.CbBoxSelectLoai.Name = "CbBoxSelectLoai";
+            this.CbBoxSelectLoai.Size = new System.Drawing.Size(100, 21);
+            this.CbBoxSelectLoai.TabIndex = 20;
+            // 
             // FormMenuManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 450);
+            this.Controls.Add(this.CbBoxSelectLoai);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbBoxOptionSearch);
             this.Controls.Add(this.btnReload);
@@ -273,5 +305,6 @@
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.ComboBox cbBoxOptionSearch;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox CbBoxSelectLoai;
     }
 }
