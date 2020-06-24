@@ -37,6 +37,7 @@
             this.dtpBatDau = new System.Windows.Forms.DateTimePicker();
             this.cbBoxChucVu = new System.Windows.Forms.ComboBox();
             this.dtpKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXemThongKe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +99,7 @@
             this.dtpBatDau.Name = "dtpBatDau";
             this.dtpBatDau.Size = new System.Drawing.Size(200, 20);
             this.dtpBatDau.TabIndex = 6;
+            this.dtpBatDau.ValueChanged += new System.EventHandler(this.DtpBatDau_ValueChanged);
             // 
             // cbBoxChucVu
             // 
@@ -114,11 +116,21 @@
             this.dtpKetThuc.Size = new System.Drawing.Size(200, 20);
             this.dtpKetThuc.TabIndex = 8;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(426, 312);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "label5";
+            // 
             // FormThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpKetThuc);
             this.Controls.Add(this.cbBoxChucVu);
             this.Controls.Add(this.dtpBatDau);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.DateTimePicker dtpBatDau;
         private System.Windows.Forms.ComboBox cbBoxChucVu;
         private System.Windows.Forms.DateTimePicker dtpKetThuc;
+        private System.Windows.Forms.Label label5;
     }
 }

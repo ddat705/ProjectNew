@@ -16,5 +16,10 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void DtpBatDau_ValueChanged(object sender, EventArgs e)
+        {
+            label5.Text = dtpBatDau.Value.ToString();
+        }
     }
 }

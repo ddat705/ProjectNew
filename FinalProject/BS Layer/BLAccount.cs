@@ -41,5 +41,51 @@ namespace FinalProject.BS_Layer
                                             "ON THUCDON.LOAI = LOAI.ID " + 
                                             "WHERE LOAI.ID = " + id, CommandType.Text);
         }
+        public DataTable getStaffAll()
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID ", CommandType.Text);
+        }
+        public DataTable getChucVu(int id)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE CHUCVU.ID = " + id, CommandType.Text);
+        }
+        public DataTable getNVbyID(string id)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.ID = " + id, CommandType.Text);
+        }
+        public DataTable getNVbyName(string ten)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE NHANVIEN.HOTEN LIKE N'%" + ten+ "%'" , CommandType.Text);
+        }
+        public DataTable getNVbyPositionandSearchName(string search, int id)
+        {
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+                                            "FROM NHANVIEN " +
+                                            "INNER JOIN CHUCVU " +
+                                            "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
+                                            "WHERE CHUCVU.ID = " + id + "AND NHANVIEN.HOTEN LIKE N'%" + search + "%' OR NHANVIEN.ID = "+search, CommandType.Text);
+
+        }
+        public bool AddNV(string Hoten, string cmnd, DateTime namsinh, int Luong, int Chucvu, ref string error)
+        {
+            string sqlString = "Insert Into NHANVIEN(HOTEN,CMND,NAMSINH,LUONG,CHUCVU) Values(N'" + Hoten + "','" + cmnd + "','"+ namsinh +"',"+Luong+","+ Chucvu +")";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref error);
+
+        }
     }
 }

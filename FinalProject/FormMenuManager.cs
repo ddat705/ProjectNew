@@ -35,5 +35,10 @@ namespace FinalProject
                 txtSearchBox.Enabled = true;
             }
         }
+
+        private void BtnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
