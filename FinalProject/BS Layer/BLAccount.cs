@@ -38,7 +38,45 @@ namespace FinalProject.BS_Layer
             return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN " +
                                             "FROM THUCDON " +
                                             "INNER JOIN LOAI " +
-                                            "ON THUCDON.LOAI = LOAI.ID " + 
+                                            "ON THUCDON.LOAI = LOAI.ID " +
+                                            "WHERE THUCDON.ID = " + id, CommandType.Text);
+        }
+
+        public DataTable getMenuByIDAndLoai(string idMenu, string idLoai)
+        {
+            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN " +
+                                            "FROM THUCDON " +
+                                            "INNER JOIN LOAI " +
+                                            "ON THUCDON.LOAI = LOAI.ID " +
+                                            "WHERE THUCDON.ID = " + idMenu +
+                                            " AND LOAI.ID = " + idLoai, CommandType.Text);
+        }
+
+        public DataTable getMenuByName(string name)
+        {
+            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN " +
+                                            "FROM THUCDON " +
+                                            "INNER JOIN LOAI " +
+                                            "ON THUCDON.LOAI = LOAI.ID " +
+                                            "WHERE THUCDON.TEN LIKE N'%" + name + "%'", CommandType.Text);
+        }
+
+        public DataTable getMenuByNameAndLoai(string idMenu, string idLoai)
+        {
+            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN " +
+                                            "FROM THUCDON " +
+                                            "INNER JOIN LOAI " +
+                                            "ON THUCDON.LOAI = LOAI.ID " +
+                                            "WHERE THUCDON.TEN LIKE N'%" + idMenu + "%'" +
+                                            " AND LOAI.ID = " + idLoai, CommandType.Text);
+        }
+
+        public DataTable getMenuByLoai(string id)
+        {
+            return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN,THUCDON.GIA, LOAI.TEN " +
+                                            "FROM THUCDON " +
+                                            "INNER JOIN LOAI " +
+                                            "ON THUCDON.LOAI = LOAI.ID " +
                                             "WHERE LOAI.ID = " + id, CommandType.Text);
         }
         public DataTable getStaffAll()
@@ -86,6 +124,22 @@ namespace FinalProject.BS_Layer
             string sqlString = "Insert Into NHANVIEN(HOTEN,CMND,NAMSINH,LUONG,CHUCVU) Values(N'" + Hoten + "','" + cmnd + "','"+ namsinh +"',"+Luong+","+ Chucvu +")";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref error);
 
+        }
+
+        public void deleteMenuByID(string id)
+        {
+            db.ExecuteQueryDataTable("DELETE " +
+                                             "FROM THUCDON " +
+                                             "WHERE THUCDON.ID = " + id, CommandType.Text);
+        }
+
+        public bool addMenu(string ten, string gia, string loai, string err)
+        {
+
+            return db.MyExecuteNonQuery("INSERT INTO THUCDON(TEN,GIA,LOAI) VALUES ('" +
+                      ten + "'," +
+                      gia + "," +
+                      loai + ")", CommandType.Text, ref err);
         }
     }
 }
