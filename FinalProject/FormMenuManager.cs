@@ -188,6 +188,7 @@ namespace FinalProject
                 this.btnThem.Enabled = false;
                 this.btnXoa.Enabled = false;
                 this.enableTextBoxSelected();
+
             }
             else
             {
@@ -208,22 +209,37 @@ namespace FinalProject
             DialogResult a = MessageBox.Show("Bạn muốn lưu lại!!", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (a == DialogResult.OK)
             {
-                if(txtBoxMaMonAn.Text == "")
+                if (btnThem.Enabled)
                 {
-                    if(this.BLAcc.addMenu(txtBoxTenMonAn.Text, txtBoxGia.Text, Convert.ToString(cbBoxLoai.SelectedIndex+1),err))
+                    if (txtBoxMaMonAn.Text == "")
                     {
-                        MessageBox.Show("Lưu thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (this.BLAcc.addMenu(txtBoxTenMonAn.Text, txtBoxGia.Text, Convert.ToString(cbBoxLoai.SelectedIndex + 1), this.err))
+                        {
+                            MessageBox.Show("Lưu thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Có lỗi!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                    }
+                }
+                else if(btnSua.Enabled)
+                {
+
+                    if (this.BLAcc.updateMenuByID(txtBoxMaMonAn.Text, txtBoxTenMonAn.Text, txtBoxGia.Text, Convert.ToString(cbBoxLoai.SelectedIndex + 1), this.err))
+                    {
+                        MessageBox.Show("Đã sửa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Có lỗi!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        MessageBox.Show("Có lỗi xảy ra!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    this.reload();
-                }
-              
+                }          
             }
+            this.reload();
+
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -236,7 +252,6 @@ namespace FinalProject
             this.btnHuy.Enabled = true;
             this.btnLuu.Enabled = true;
             this.btnSua.Enabled = false;
-            this.btnThem.Enabled = false;
             this.btnXoa.Enabled = false;
             this.SetValueToTextBoxAllNull();
             this.enableTextBoxSelected();
@@ -259,9 +274,5 @@ namespace FinalProject
             this.reload();
         }
 
-        private void BtnThem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

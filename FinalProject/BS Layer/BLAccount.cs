@@ -139,5 +139,14 @@ namespace FinalProject.BS_Layer
                       gia + "," +
                       loai + ")", CommandType.Text, ref err);
         }
+        public bool updateMenuByID(string id, string ten, string gia, string loai, string err)
+        {
+
+            return db.MyExecuteNonQuery("UPDATE THUCDON SET TEN = '" +
+                      ten + "', GIA =" +
+                      gia + ", LOAI =" +
+                      loai + " WHERE ID = " + 
+                      id, CommandType.Text, ref err);
+        }
     }
 }
