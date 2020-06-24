@@ -75,6 +75,16 @@
             this.StaffManager = new System.Windows.Forms.ToolStripMenuItem();
             this.SaleManager = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuManager = new System.Windows.Forms.ToolStripMenuItem();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumberUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan5)).BeginInit();
@@ -150,6 +160,7 @@
             this.ptbBan10.Size = new System.Drawing.Size(46, 42);
             this.ptbBan10.TabIndex = 9;
             this.ptbBan10.TabStop = false;
+            this.ptbBan10.Click += new System.EventHandler(this.ptbBan10_Click);
             // 
             // label3
             // 
@@ -167,6 +178,7 @@
             this.ptbBan5.Size = new System.Drawing.Size(46, 42);
             this.ptbBan5.TabIndex = 8;
             this.ptbBan5.TabStop = false;
+            this.ptbBan5.Click += new System.EventHandler(this.ptbBan5_Click);
             // 
             // ptbBan9
             // 
@@ -175,6 +187,7 @@
             this.ptbBan9.Size = new System.Drawing.Size(46, 42);
             this.ptbBan9.TabIndex = 7;
             this.ptbBan9.TabStop = false;
+            this.ptbBan9.Click += new System.EventHandler(this.ptbBan9_Click);
             // 
             // ptbBan3
             // 
@@ -183,6 +196,7 @@
             this.ptbBan3.Size = new System.Drawing.Size(46, 42);
             this.ptbBan3.TabIndex = 4;
             this.ptbBan3.TabStop = false;
+            this.ptbBan3.Click += new System.EventHandler(this.ptbBan3_Click);
             // 
             // ptbBan7
             // 
@@ -191,6 +205,7 @@
             this.ptbBan7.Size = new System.Drawing.Size(46, 42);
             this.ptbBan7.TabIndex = 3;
             this.ptbBan7.TabStop = false;
+            this.ptbBan7.Click += new System.EventHandler(this.ptbBan7_Click);
             // 
             // ptbBan2
             // 
@@ -199,6 +214,7 @@
             this.ptbBan2.Size = new System.Drawing.Size(46, 42);
             this.ptbBan2.TabIndex = 2;
             this.ptbBan2.TabStop = false;
+            this.ptbBan2.Click += new System.EventHandler(this.ptbBan2_Click);
             // 
             // ptbBan6
             // 
@@ -207,6 +223,7 @@
             this.ptbBan6.Size = new System.Drawing.Size(46, 42);
             this.ptbBan6.TabIndex = 1;
             this.ptbBan6.TabStop = false;
+            this.ptbBan6.Click += new System.EventHandler(this.ptbBan6_Click);
             // 
             // ptbBan1
             // 
@@ -220,6 +237,16 @@
             // 
             // PanelBan
             // 
+            this.PanelBan.Controls.Add(this.label19);
+            this.PanelBan.Controls.Add(this.label18);
+            this.PanelBan.Controls.Add(this.label17);
+            this.PanelBan.Controls.Add(this.label16);
+            this.PanelBan.Controls.Add(this.label15);
+            this.PanelBan.Controls.Add(this.label14);
+            this.PanelBan.Controls.Add(this.label13);
+            this.PanelBan.Controls.Add(this.label12);
+            this.PanelBan.Controls.Add(this.label10);
+            this.PanelBan.Controls.Add(this.label9);
             this.PanelBan.Controls.Add(this.ptbBan10);
             this.PanelBan.Controls.Add(this.ptbBan5);
             this.PanelBan.Controls.Add(this.ptbBan9);
@@ -242,6 +269,7 @@
             this.ptbBan4.Size = new System.Drawing.Size(46, 42);
             this.ptbBan4.TabIndex = 6;
             this.ptbBan4.TabStop = false;
+            this.ptbBan4.Click += new System.EventHandler(this.ptbBan4_Click);
             // 
             // ptbBan8
             // 
@@ -250,6 +278,7 @@
             this.ptbBan8.Size = new System.Drawing.Size(46, 42);
             this.ptbBan8.TabIndex = 5;
             this.ptbBan8.TabStop = false;
+            this.ptbBan8.Click += new System.EventHandler(this.ptbBan8_Click);
             // 
             // btnGoiThem
             // 
@@ -504,6 +533,96 @@
             this.MenuManager.Text = "Quản lý Menu";
             this.MenuManager.Click += new System.EventHandler(this.MenuManager_Click);
             // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 61);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 23);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Bàn 1";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(91, 61);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 23);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Bàn 2";
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(181, 61);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 23);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Bàn 3";
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(268, 61);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 23);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Bàn 4";
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(357, 61);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 23);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Bàn 5";
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(14, 148);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 25);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Bàn 6";
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(91, 148);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 25);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "Bàn 7";
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(181, 148);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 25);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "Bàn 8";
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(268, 148);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(47, 25);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "Bàn 9";
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(352, 148);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(49, 25);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "Bàn 10";
+            // 
             // FormXuLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -605,5 +724,15 @@
         private System.Windows.Forms.ToolStripMenuItem InfoAccount;
         private System.Windows.Forms.ToolStripMenuItem CreateAccount;
         private System.Windows.Forms.ToolStripMenuItem Logout;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }

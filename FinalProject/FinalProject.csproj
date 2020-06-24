@@ -90,6 +90,7 @@
     <Compile Include="FormXuLi.Designer.cs">
       <DependentUpon>FormXuLi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelClass\Table.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddAccount.resx">
