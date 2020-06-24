@@ -11,7 +11,7 @@ namespace FinalProject.ModelClass
     public class Table
     {
         public PictureBox ptb = new PictureBox();
-        public bool isUsed = true;
+        public bool isUsed = true;                  //Bàn trống
 
         public Table() 
         {
