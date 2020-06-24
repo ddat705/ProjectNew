@@ -273,7 +273,7 @@ namespace FinalProject
                     }
                     else
                     {
-                        this.dataTable = BLAcc.getMenuByLoai("1");
+                        this.dataTable = BLAcc.getChucVu("1");
                         this.dgvThongTinNV.DataSource = dataTable;
                     }
                 }
@@ -291,7 +291,7 @@ namespace FinalProject
                     }
                     else
                     {
-                        this.dataTable = BLAcc.getMenuByLoai("3");
+                        this.dataTable = BLAcc.getChucVu("3");
                         this.dgvThongTinNV.DataSource = dataTable;
                     }
                 }
@@ -309,7 +309,7 @@ namespace FinalProject
                     }
                     else
                     {
-                        this.dataTable = BLAcc.getMenuByLoai("4");
+                        this.dataTable = BLAcc.getChucVu("4");
                         this.dgvThongTinNV.DataSource = dataTable;
                     }
                 }
