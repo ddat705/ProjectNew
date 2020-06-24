@@ -13,16 +13,49 @@ namespace FinalProject
     public partial class FormXuLi : Form
     {
         DataTable inforAcc = new DataTable();
+        List<PictureBox> lPtb = new List<PictureBox>();
+        string srcImageTableEmpty = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + "\\Assets\\ImagesApplication\\table_empty.png";
+        string srcImageTableUsed = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + "\\Assets\\ImagesApplication\\table_used.png";
         public FormXuLi()
         {
+
             InitializeComponent();
+
         }
 
         public FormXuLi(DataTable root)
         {
             InitializeComponent();
             inforAcc = root;
+
+            this.AddListPtb();
+            this.LoadNewListTable();
         }
+
+
+        public void AddListPtb()
+        {
+            lPtb.Add(ptbBan1);
+            lPtb.Add(ptbBan2);
+            lPtb.Add(ptbBan3);
+            lPtb.Add(ptbBan4);
+            lPtb.Add(ptbBan5);
+            lPtb.Add(ptbBan6);
+            lPtb.Add(ptbBan7);
+            lPtb.Add(ptbBan8);
+            lPtb.Add(ptbBan9);
+            lPtb.Add(ptbBan10);
+        }
+
+        public void LoadNewListTable()
+        {
+            foreach(PictureBox box in lPtb)
+            {
+                box.BorderStyle = BorderStyle.FixedSingle;
+                box.Image = Image.FromFile(@"" + this.srcImageTableEmpty);
+            }
+        }
+
 
         private void MenuManager_Click(object sender, EventArgs e)
         {
@@ -88,6 +121,11 @@ namespace FinalProject
             {
                 e.Cancel = false;
             }
+        }
+
+        private void ptbBan1_Click(object sender, EventArgs e)
+        {
+            ptbBan1.Image = Image.FromFile(@"" + this.srcImageTableUsed);
         }
     }
 }

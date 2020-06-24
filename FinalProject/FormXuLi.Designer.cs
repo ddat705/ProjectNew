@@ -145,7 +145,7 @@
             // 
             // ptbBan10
             // 
-            this.ptbBan10.Location = new System.Drawing.Point(355, 80);
+            this.ptbBan10.Location = new System.Drawing.Point(355, 97);
             this.ptbBan10.Name = "ptbBan10";
             this.ptbBan10.Size = new System.Drawing.Size(46, 42);
             this.ptbBan10.TabIndex = 9;
@@ -170,7 +170,7 @@
             // 
             // ptbBan9
             // 
-            this.ptbBan9.Location = new System.Drawing.Point(269, 80);
+            this.ptbBan9.Location = new System.Drawing.Point(269, 97);
             this.ptbBan9.Name = "ptbBan9";
             this.ptbBan9.Size = new System.Drawing.Size(46, 42);
             this.ptbBan9.TabIndex = 7;
@@ -186,7 +186,7 @@
             // 
             // ptbBan7
             // 
-            this.ptbBan7.Location = new System.Drawing.Point(94, 80);
+            this.ptbBan7.Location = new System.Drawing.Point(94, 97);
             this.ptbBan7.Name = "ptbBan7";
             this.ptbBan7.Size = new System.Drawing.Size(46, 42);
             this.ptbBan7.TabIndex = 3;
@@ -202,7 +202,7 @@
             // 
             // ptbBan6
             // 
-            this.ptbBan6.Location = new System.Drawing.Point(12, 80);
+            this.ptbBan6.Location = new System.Drawing.Point(12, 97);
             this.ptbBan6.Name = "ptbBan6";
             this.ptbBan6.Size = new System.Drawing.Size(46, 42);
             this.ptbBan6.TabIndex = 1;
@@ -210,11 +210,13 @@
             // 
             // ptbBan1
             // 
+            this.ptbBan1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ptbBan1.Location = new System.Drawing.Point(12, 15);
             this.ptbBan1.Name = "ptbBan1";
             this.ptbBan1.Size = new System.Drawing.Size(46, 42);
             this.ptbBan1.TabIndex = 0;
             this.ptbBan1.TabStop = false;
+            this.ptbBan1.Click += new System.EventHandler(this.ptbBan1_Click);
             // 
             // PanelBan
             // 
@@ -228,9 +230,9 @@
             this.PanelBan.Controls.Add(this.ptbBan2);
             this.PanelBan.Controls.Add(this.ptbBan6);
             this.PanelBan.Controls.Add(this.ptbBan1);
-            this.PanelBan.Location = new System.Drawing.Point(24, 66);
+            this.PanelBan.Location = new System.Drawing.Point(24, 27);
             this.PanelBan.Name = "PanelBan";
-            this.PanelBan.Size = new System.Drawing.Size(420, 142);
+            this.PanelBan.Size = new System.Drawing.Size(420, 181);
             this.PanelBan.TabIndex = 9;
             // 
             // ptbBan4
@@ -243,7 +245,7 @@
             // 
             // ptbBan8
             // 
-            this.ptbBan8.Location = new System.Drawing.Point(181, 80);
+            this.ptbBan8.Location = new System.Drawing.Point(181, 97);
             this.ptbBan8.Name = "ptbBan8";
             this.ptbBan8.Size = new System.Drawing.Size(46, 42);
             this.ptbBan8.TabIndex = 5;
@@ -261,9 +263,9 @@
             // dgvMuaHang
             // 
             this.dgvMuaHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMuaHang.Location = new System.Drawing.Point(473, 66);
+            this.dgvMuaHang.Location = new System.Drawing.Point(473, 27);
             this.dgvMuaHang.Name = "dgvMuaHang";
-            this.dgvMuaHang.Size = new System.Drawing.Size(258, 294);
+            this.dgvMuaHang.Size = new System.Drawing.Size(258, 333);
             this.dgvMuaHang.TabIndex = 18;
             // 
             // btnChuyenBan
@@ -453,21 +455,21 @@
             // InfoAccount
             // 
             this.InfoAccount.Name = "InfoAccount";
-            this.InfoAccount.Size = new System.Drawing.Size(180, 22);
+            this.InfoAccount.Size = new System.Drawing.Size(177, 22);
             this.InfoAccount.Text = "Thông tin tài khoản";
             this.InfoAccount.Click += new System.EventHandler(this.InfoAccount_Click);
             // 
             // CreateAccount
             // 
             this.CreateAccount.Name = "CreateAccount";
-            this.CreateAccount.Size = new System.Drawing.Size(180, 22);
+            this.CreateAccount.Size = new System.Drawing.Size(177, 22);
             this.CreateAccount.Text = "Thêm tài khoản";
             this.CreateAccount.Click += new System.EventHandler(this.CreateAccount_Click);
             // 
             // Logout
             // 
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(180, 22);
+            this.Logout.Size = new System.Drawing.Size(177, 22);
             this.Logout.Text = "Đăng xuất";
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
