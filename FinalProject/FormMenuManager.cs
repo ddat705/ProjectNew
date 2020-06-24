@@ -258,5 +258,10 @@ namespace FinalProject
             }
             this.reload();
         }
+
+        private void BtnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

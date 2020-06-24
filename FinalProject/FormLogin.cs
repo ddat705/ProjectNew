@@ -54,9 +54,9 @@ namespace FinalProject
                 {
                     Form f = new FormXuLi();
                     this.Hide();
-                    f.ShowDialog();             
-                    this.txtUsername.Text = "";
+                    f.ShowDialog();       
                     this.txtPassword.Text = "";
+                    this.txtUsername.Text = "";
                     this.Show();
                 }
                 catch
