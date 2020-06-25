@@ -12,6 +12,8 @@ namespace FinalProject.ModelClass
     {
         public PictureBox ptb = new PictureBox();
         public bool isUsed = true;                  //Bàn trống
+        public List<SelectedMenuClass> lSelectedMenu = new List<SelectedMenuClass>();
+
 
         public Table() 
         {
@@ -21,6 +23,7 @@ namespace FinalProject.ModelClass
         {
             this.ptb.Image = Image.FromFile(@"" + src);
             this.isUsed = true;
+            lSelectedMenu.Clear();
         }
         public void setTableIsUsed(string src)
         {

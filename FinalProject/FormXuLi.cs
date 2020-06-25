@@ -1,4 +1,5 @@
-﻿using FinalProject.ModelClass;
+﻿using FinalProject.BS_Layer;
+using FinalProject.ModelClass;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,26 +14,54 @@ namespace FinalProject
 {
     public partial class FormXuLi : Form
     {
-        DataTable inforAcc = new DataTable();
-        List<Table> lTable = new List<Table>();
+        private DataTable inforAcc = new DataTable();
+        private List<Table> lTable = new List<Table>();
+
+        private int BanDangChon;
+        private int monDangChon;
+
         string srcImageTableEmpty = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + "\\Assets\\ImagesApplication\\table_empty.png";
         string srcImageTableUsed = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + "\\Assets\\ImagesApplication\\table_used.png";
+
+        private DataTable dtMenu = new DataTable();
+        private BLAccount BLAcc = new BLAccount();
+        
         public FormXuLi()
         {
 
             InitializeComponent();
-
         }
 
         public FormXuLi(DataTable root)
         {
             InitializeComponent();
+
             inforAcc = root;
 
             this.AddListPtb();
             this.LoadNewListTable();
+
+            this.cbBoxLoai.SelectedIndex = 0;
+
+            this.reload(0);
         }
 
+        public void reload(int check)
+        {
+            if(check == 0)
+            {
+                dtMenu = BLAcc.getMenuAll();
+            }
+            else
+            {
+                dtMenu = BLAcc.getMenuByLoai(check.ToString());             
+            }
+            cbBoxTenMon.Items.Clear();
+            foreach(DataRow x in dtMenu.Rows)
+            {
+                cbBoxTenMon.Items.Add(x[1].ToString());
+            }
+        }
 
         public void AddListPtb()
         {
@@ -51,16 +80,6 @@ namespace FinalProject
             lTable[7].ptb = ptbBan8;
             lTable[8].ptb = ptbBan9;
             lTable[9].ptb = ptbBan10;
-            //lPtb.Add(ptbBan1);
-            //lPtb.Add(ptbBan2);
-            //lPtb.Add(ptbBan3);
-            //lPtb.Add(ptbBan4);
-            //lPtb.Add(ptbBan5);
-            //lPtb.Add(ptbBan6);
-            //lPtb.Add(ptbBan7);
-            //lPtb.Add(ptbBan8);
-            //lPtb.Add(ptbBan9);
-            //lPtb.Add(ptbBan10);
         }
 
         public void LoadNewListTable()
@@ -144,18 +163,23 @@ namespace FinalProject
             {
                 if (i == index)
                 {
-                    lTable[i].setBorderStyle();
+                    if(lTable[i].isUsed == false)
+                    {
+                        lTable[i].setBorderStyle();
+                        this.BanDangChon = index;
+                    }
+
                 }
                 else
                 {
                     lTable[i].setBorderStyleNull();
                 }
             }
+            this.lbTextSelectedTable.Text = "Bàn " + Convert.ToString(this.BanDangChon + 1);
         }
 
         private void ptbBan1_Click(object sender, EventArgs e)
-        {
-            this.setBorderListTable(0);
+        {            
             if(lTable[0].isUsed == true)
             {
                 DialogResult rep;
@@ -163,8 +187,12 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[0].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(0);
+
                 }
             }
+            else
+                this.setBorderListTable(0);
             //else
             //{
             //    lTable[0].setTableEmpty(srcImageTableEmpty);
@@ -174,7 +202,6 @@ namespace FinalProject
 
         private void ptbBan2_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(1);
             if (lTable[1].isUsed == true)
             {
                 DialogResult rep;
@@ -182,8 +209,12 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[1].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(1);
                 }
             }
+            else
+                this.setBorderListTable(1);
+
             //else
             //{
             //    lTable[1].setTableEmpty(srcImageTableEmpty);
@@ -192,7 +223,6 @@ namespace FinalProject
 
         private void ptbBan3_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(2);
             if (lTable[2].isUsed == true)
             {
                 DialogResult rep;
@@ -200,8 +230,12 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[2].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(2);
                 }
             }
+            else
+                this.setBorderListTable(2);
+
             //else
             //{
             //    lTable[2].setTableEmpty(srcImageTableEmpty);
@@ -210,7 +244,6 @@ namespace FinalProject
 
         private void ptbBan4_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(3);
             if (lTable[3].isUsed == true)
             {
                 DialogResult rep;
@@ -218,8 +251,13 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[3].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(3);
+
                 }
             }
+            else
+                 this.setBorderListTable(3);
+
             //else
             //{
             //    lTable[3].setTableEmpty(srcImageTableEmpty);
@@ -228,7 +266,6 @@ namespace FinalProject
 
         private void ptbBan5_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(4);
             if (lTable[4].isUsed == true)
             {
                 DialogResult rep;
@@ -236,8 +273,13 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[4].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(4);
+
                 }
             }
+            else
+                this.setBorderListTable(4);
+
             //else
             //{
             //    lTable[4].setTableEmpty(srcImageTableEmpty);
@@ -246,7 +288,6 @@ namespace FinalProject
 
         private void ptbBan6_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(5);
             if (lTable[5].isUsed == true)
             {
                 DialogResult rep;
@@ -254,8 +295,13 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[5].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(5);
+
                 }
             }
+            else
+                this.setBorderListTable(5);
+
             //else
             //{
             //    lTable[5].setTableEmpty(srcImageTableEmpty);
@@ -264,7 +310,6 @@ namespace FinalProject
 
         private void ptbBan7_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(6);
             if (lTable[6].isUsed == true)
             {
                 DialogResult rep;
@@ -272,8 +317,12 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[6].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(6);
                 }
             }
+            else
+                this.setBorderListTable(6);
+
             //else
             //{
             //    lTable[6].setTableEmpty(srcImageTableEmpty);
@@ -282,7 +331,6 @@ namespace FinalProject
 
         private void ptbBan8_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(7);
             if (lTable[7].isUsed == true)
             {
                 DialogResult rep;
@@ -290,8 +338,13 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[7].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(7);
+
                 }
             }
+            else
+                this.setBorderListTable(7);
+
             //else
             //{
             //    lTable[7].setTableEmpty(srcImageTableEmpty);
@@ -300,7 +353,6 @@ namespace FinalProject
 
         private void ptbBan9_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(8);
             if (lTable[8].isUsed == true)
             {
                 DialogResult rep;
@@ -308,8 +360,13 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[8].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(8);
+
                 }
             }
+            else
+                this.setBorderListTable(8);
+
             //else
             //{
             //    lTable[8].setTableEmpty(srcImageTableEmpty);
@@ -318,7 +375,6 @@ namespace FinalProject
 
         private void ptbBan10_Click(object sender, EventArgs e)
         {
-            this.setBorderListTable(9);
             if (lTable[9].isUsed == true)
             {
                 DialogResult rep;
@@ -326,12 +382,101 @@ namespace FinalProject
                 if (rep == DialogResult.Yes)
                 {
                     lTable[9].setTableIsUsed(srcImageTableUsed);
+                    this.setBorderListTable(9);
+
                 }
             }
+            else
+                this.setBorderListTable(9);
+
             //else
             //{
             //    lTable[9].setTableEmpty(srcImageTableEmpty);
             //}
+        }
+
+        private void cbBoxLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.reload(cbBoxLoai.SelectedIndex);
+        }
+
+        private void cbBoxTenMon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.monDangChon = cbBoxTenMon.SelectedIndex;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbBoxTenMon.Text != "")
+                {
+                    SelectedMenuClass x = new SelectedMenuClass();
+                    x.maMon = dtMenu.Rows[monDangChon][0].ToString();
+                    x.TenMon = dtMenu.Rows[monDangChon][1].ToString();
+                    x.soLuong = Convert.ToInt32(NumberUpDown.Value);
+                    x.gia = Convert.ToDouble(dtMenu.Rows[monDangChon][2]);
+                    lTable[BanDangChon].lSelectedMenu.Add(x);
+                    this.RutGonlSelectedMenu(lTable[BanDangChon]);
+                    this.test();
+                }
+                else
+                {
+                    MessageBox.Show("chua chon mon");
+                }
+            }
+            catch
+            {
+
+            }
+
+
+            //lTable[BanDangChon].lSelectedMenu
+        }
+        public void RutGonlSelectedMenu(Table TB)
+        {
+            for(int i = 0; i< TB.lSelectedMenu.Count-1; i++)
+            {
+                List<int> x = new List<int>();
+                for(int j = i+1; j < TB.lSelectedMenu.Count; j++)
+                {
+                    if(TB.lSelectedMenu[i].maMon == TB.lSelectedMenu[j].maMon)
+                    {
+                        x.Add(j);
+                        TB.lSelectedMenu[i].soLuong += TB.lSelectedMenu[j].soLuong;
+                    }
+                }
+                this.removelSelectedMenu(TB, x);
+                TB.lSelectedMenu[i].thanhTien = TB.lSelectedMenu[i].gia * TB.lSelectedMenu[i].soLuong;
+            }
+        }
+
+        public void removelSelectedMenu(Table tb,List<int> x)
+        {
+
+            for(int i = 0; i< x.Count; i++)
+            {
+                tb.lSelectedMenu.RemoveAt(x[i]);
+            }
+        }
+        public void test()
+        {
+            //dgvMuaHang.Rows.Clear();
+            for(int i = 0; i < lTable[BanDangChon].lSelectedMenu.Count; i++)
+            {
+                dgvMuaHang.Rows[i].Cells[0].Value = lTable[BanDangChon].lSelectedMenu[BanDangChon].TenMon.ToString();
+                dgvMuaHang.Rows[i].Cells[1].Value = lTable[BanDangChon].lSelectedMenu[BanDangChon].soLuong.ToString();
+                dgvMuaHang.Rows[i].Cells[2].Value = lTable[BanDangChon].lSelectedMenu[BanDangChon].thanhTien.ToString();
+            }
+            //int i = 0;
+            this.label20.Text = lTable[BanDangChon].lSelectedMenu.Count.ToString();
+            //lTable[BanDangChon].lSelectedMenu.ForEach(rs =>
+            //{
+            //    dgvMuaHang.Rows[i].Cells[0].Value = rs.TenMon.ToString();
+            //    dgvMuaHang.Rows[i].Cells[1].Value = rs.soLuong.ToString();
+            //    dgvMuaHang.Rows[i].Cells[2].Value = rs.thanhTien.ToString();
+            //    i++;
+            //});
         }
     }
 }
