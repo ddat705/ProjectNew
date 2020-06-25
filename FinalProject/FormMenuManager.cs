@@ -273,5 +273,28 @@ namespace FinalProject
             }
             this.reload();
         }
+
+        private void CbBoxSelectLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CbBoxSelectLoai != null)
+            {
+                txtSearchBox.Enabled = true;
+            }
+            if (CbBoxSelectLoai.SelectedIndex == 1)
+            {
+                this.dataTable = this.BLAcc.getMenuByLoai("2");
+                this.dgvThongtin.DataSource = dataTable;
+            }
+            else if (CbBoxSelectLoai.SelectedIndex == 0)
+            {
+                this.dataTable = this.BLAcc.getMenuByLoai("1");
+                this.dgvThongtin.DataSource = dataTable;
+            }
+            else
+            {
+                this.dataTable = this.BLAcc.getMenuAll();
+                this.dgvThongtin.DataSource = dataTable;
+            }
+        }
     }
 }

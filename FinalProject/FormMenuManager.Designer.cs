@@ -249,6 +249,7 @@
             this.CbBoxSelectLoai.Name = "CbBoxSelectLoai";
             this.CbBoxSelectLoai.Size = new System.Drawing.Size(100, 21);
             this.CbBoxSelectLoai.TabIndex = 20;
+            this.CbBoxSelectLoai.SelectedIndexChanged += new System.EventHandler(this.CbBoxSelectLoai_SelectedIndexChanged);
             // 
             // FormMenuManager
             // 

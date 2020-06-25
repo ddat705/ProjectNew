@@ -214,7 +214,7 @@ namespace FinalProject
             }
             else
             {
-                MessageBox.Show("Chưa nhan vien xoá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chưa chọn nhân viên xoá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             this.LoadData();
         }

@@ -258,10 +258,10 @@
             this.cbBoxChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxChucVu.FormattingEnabled = true;
             this.cbBoxChucVu.Items.AddRange(new object[] {
-            "Quan Li",
-            "Phuc Vu",
-            "Bao Ve",
-            "Thu Ngan"});
+            "Quản Lí",
+            "Phục Vụ",
+            "Bảo Vệ",
+            "Thu Ngân"});
             this.cbBoxChucVu.Location = new System.Drawing.Point(670, 259);
             this.cbBoxChucVu.Name = "cbBoxChucVu";
             this.cbBoxChucVu.Size = new System.Drawing.Size(100, 21);
