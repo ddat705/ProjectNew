@@ -57,6 +57,9 @@
             this.ptbBan4 = new System.Windows.Forms.PictureBox();
             this.ptbBan8 = new System.Windows.Forms.PictureBox();
             this.dgvMuaHang = new System.Windows.Forms.DataGridView();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnChuyenBan = new System.Windows.Forms.Button();
             this.cbBoxBanChuyen = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -86,9 +89,6 @@
             this.MenuManager = new System.Windows.Forms.ToolStripMenuItem();
             this.lbSelectedTable = new System.Windows.Forms.Label();
             this.lbTextSelectedTable = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumberUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan10)).BeginInit();
@@ -409,6 +409,21 @@
             this.dgvMuaHang.Size = new System.Drawing.Size(314, 312);
             this.dgvMuaHang.TabIndex = 18;
             // 
+            // name
+            // 
+            this.name.HeaderText = "Tên";
+            this.name.Name = "name";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.Name = "SoLuong";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            // 
             // btnChuyenBan
             // 
             this.btnChuyenBan.Location = new System.Drawing.Point(229, 324);
@@ -661,21 +676,6 @@
             this.lbTextSelectedTable.Name = "lbTextSelectedTable";
             this.lbTextSelectedTable.Size = new System.Drawing.Size(0, 13);
             this.lbTextSelectedTable.TabIndex = 28;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Tên";
-            this.name.Name = "name";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.HeaderText = "Số Lượng";
-            this.SoLuong.Name = "SoLuong";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành Tiền";
-            this.ThanhTien.Name = "ThanhTien";
             // 
             // label20
             // 

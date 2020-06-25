@@ -40,9 +40,7 @@ namespace FinalProject
 
             this.AddListPtb();
             this.LoadNewListTable();
-
             this.cbBoxLoai.SelectedIndex = 0;
-
             this.reload(0);
         }
 
@@ -167,6 +165,7 @@ namespace FinalProject
                     {
                         lTable[i].setBorderStyle();
                         this.BanDangChon = index;
+                        this.test();
                     }
 
                 }
@@ -416,6 +415,7 @@ namespace FinalProject
                     x.TenMon = dtMenu.Rows[monDangChon][1].ToString();
                     x.soLuong = Convert.ToInt32(NumberUpDown.Value);
                     x.gia = Convert.ToDouble(dtMenu.Rows[monDangChon][2]);
+                    x.thanhTien = x.gia * x.soLuong;
                     lTable[BanDangChon].lSelectedMenu.Add(x);
                     this.RutGonlSelectedMenu(lTable[BanDangChon]);
                     this.test();
@@ -461,12 +461,12 @@ namespace FinalProject
         }
         public void test()
         {
+            dgvMuaHang.Rows.Clear();
             //dgvMuaHang.Rows.Clear();
-            for(int i = 0; i < lTable[BanDangChon].lSelectedMenu.Count; i++)
+            for (int i = 0; i < lTable[BanDangChon].lSelectedMenu.Count; i++)
             {
-                dgvMuaHang.Rows[i].Cells[0].Value = lTable[BanDangChon].lSelectedMenu[BanDangChon].TenMon.ToString();
-                dgvMuaHang.Rows[i].Cells[1].Value = lTable[BanDangChon].lSelectedMenu[BanDangChon].soLuong.ToString();
-                dgvMuaHang.Rows[i].Cells[2].Value = lTable[BanDangChon].lSelectedMenu[BanDangChon].thanhTien.ToString();
+                string[] row1 = new string[] { lTable[BanDangChon].lSelectedMenu[i].TenMon, lTable[BanDangChon].lSelectedMenu[i].soLuong.ToString(), lTable[BanDangChon].lSelectedMenu[i].thanhTien.ToString() };
+                dgvMuaHang.Rows.Add(row1);
             }
             //int i = 0;
             this.label20.Text = lTable[BanDangChon].lSelectedMenu.Count.ToString();
