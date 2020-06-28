@@ -551,6 +551,7 @@
             this.btnXuatHoaDon.TabIndex = 23;
             this.btnXuatHoaDon.Text = "Xuất Hóa Đơn";
             this.btnXuatHoaDon.UseVisualStyleBackColor = true;
+            this.btnXuatHoaDon.Click += new System.EventHandler(this.BtnXuatHoaDon_Click);
             // 
             // label11
             // 

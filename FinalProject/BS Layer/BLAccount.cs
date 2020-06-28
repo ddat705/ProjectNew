@@ -246,5 +246,6 @@ namespace FinalProject.BS_Layer
         {
             return db.MyExecuteNonQuery("Insert Into TAIKHOAN(USERNAME,PASSWORD,TYPEACCOUNT,IDNhanVien) Values('" + tentk + "','" + pass + "'," + chucvutk + "," +id + ")", CommandType.Text, ref error);
         }
+
     }
 }

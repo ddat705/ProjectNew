@@ -479,6 +479,10 @@ namespace FinalProject
             //});
         }
 
-
+        private void BtnXuatHoaDon_Click(object sender, EventArgs e)
+        {
+            Form a = new FormReport();
+            a.ShowDialog();
+        }
     }
 }
