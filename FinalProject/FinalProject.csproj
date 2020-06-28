@@ -102,6 +102,12 @@
     <Compile Include="FormReport.Designer.cs">
       <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearchBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchBill.Designer.cs">
+      <DependentUpon>FormSearchBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,7 +132,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportXuatHD.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SearchBill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchBill.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThongKeLuong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeLuong.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAddAccount.resx">
       <DependentUpon>FormAddAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +161,9 @@
     <EmbeddedResource Include="FormReport.resx">
       <DependentUpon>FormReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchBill.resx">
+      <DependentUpon>FormSearchBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +179,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportSearchBill.rdlc" />
     <EmbeddedResource Include="ReportXuatHD.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -181,6 +201,28 @@
     </None>
     <None Include="ReportXuatHD.xss">
       <DependentUpon>ReportXuatHD.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBill.xsc">
+      <DependentUpon>SearchBill.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SearchBill.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SearchBill.xss">
+      <DependentUpon>SearchBill.xsd</DependentUpon>
+    </None>
+    <None Include="ThongKeLuong.xsc">
+      <DependentUpon>ThongKeLuong.xsd</DependentUpon>
+    </None>
+    <None Include="ThongKeLuong.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThongKeLuong.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ThongKeLuong.xss">
+      <DependentUpon>ThongKeLuong.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

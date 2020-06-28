@@ -110,13 +110,6 @@ namespace FinalProject
             this.Show();
         }
 
-        private void SaleManager_Click(object sender, EventArgs e)
-        {
-            Form fThongKe = new FormThongKe();
-            this.Hide();
-            fThongKe.ShowDialog();
-            this.Show();
-        }
 
         private void InfoAccount_Click(object sender, EventArgs e)
         {
@@ -482,7 +475,23 @@ namespace FinalProject
         private void BtnXuatHoaDon_Click(object sender, EventArgs e)
         {
             Form a = new FormReport();
+            this.Hide();
             a.ShowDialog();
+            this.Show();
+
+        }
+
+        private void TìmKiếmThôngTinHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form a = new FormSearchBill();
+            this.Hide();
+            a.ShowDialog();
+            this.Show();
+        }
+
+        private void ThôngKêLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
