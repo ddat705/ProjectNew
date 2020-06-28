@@ -489,9 +489,12 @@ namespace FinalProject
             this.Show();
         }
 
-        private void ThôngKêLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TheoBộPhậnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form a = new FormTKL();
+            this.Hide();
+            a.ShowDialog();
+            this.Show();
         }
     }
 }

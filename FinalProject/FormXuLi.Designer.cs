@@ -93,6 +93,8 @@
             this.lbSelectedTable = new System.Windows.Forms.Label();
             this.lbTextSelectedTable = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.theoBộPhậnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toànThểNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.NumberUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan5)).BeginInit();
@@ -676,10 +678,12 @@
             // 
             // thôngKêLươngToolStripMenuItem
             // 
+            this.thôngKêLươngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.theoBộPhậnToolStripMenuItem,
+            this.toànThểNhânViênToolStripMenuItem});
             this.thôngKêLươngToolStripMenuItem.Name = "thôngKêLươngToolStripMenuItem";
             this.thôngKêLươngToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.thôngKêLươngToolStripMenuItem.Text = "Thống kê lương";
-            this.thôngKêLươngToolStripMenuItem.Click += new System.EventHandler(this.ThôngKêLươngToolStripMenuItem_Click);
             // 
             // thốngKêTổngDoanhThuToolStripMenuItem
             // 
@@ -712,6 +716,19 @@
             this.label20.Size = new System.Drawing.Size(41, 13);
             this.label20.TabIndex = 29;
             this.label20.Text = "label20";
+            // 
+            // theoBộPhậnToolStripMenuItem
+            // 
+            this.theoBộPhậnToolStripMenuItem.Name = "theoBộPhậnToolStripMenuItem";
+            this.theoBộPhậnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.theoBộPhậnToolStripMenuItem.Text = "Theo bộ phận";
+            this.theoBộPhậnToolStripMenuItem.Click += new System.EventHandler(this.TheoBộPhậnToolStripMenuItem_Click);
+            // 
+            // toànThểNhânViênToolStripMenuItem
+            // 
+            this.toànThểNhânViênToolStripMenuItem.Name = "toànThểNhânViênToolStripMenuItem";
+            this.toànThểNhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toànThểNhânViênToolStripMenuItem.Text = "Toàn thể nhân viên";
             // 
             // FormXuLi
             // 
@@ -834,5 +851,7 @@
         private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngKêLươngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thốngKêTổngDoanhThuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoBộPhậnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toànThểNhânViênToolStripMenuItem;
     }
 }

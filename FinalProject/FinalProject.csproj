@@ -114,6 +114,12 @@
     <Compile Include="FormThongKe.Designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTKL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTKL.Designer.cs">
+      <DependentUpon>FormTKL.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXuLi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTKL.resx">
+      <DependentUpon>FormTKL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormXuLi.resx">
       <DependentUpon>FormXuLi.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +190,7 @@
     </Compile>
     <EmbeddedResource Include="ReportSearchBill.rdlc" />
     <EmbeddedResource Include="ReportXuatHD.rdlc" />
+    <EmbeddedResource Include="TKL.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
