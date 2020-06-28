@@ -13,7 +13,7 @@ namespace FinalProject.ModelClass
         public PictureBox ptb = new PictureBox();
         public bool isUsed = true;                  //Bàn trống
         public List<SelectedMenuClass> lSelectedMenu = new List<SelectedMenuClass>();
-
+        public double TongTien = 0;
 
         public Table() 
         {

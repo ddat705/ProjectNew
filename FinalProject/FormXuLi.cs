@@ -25,7 +25,8 @@ namespace FinalProject
 
         private DataTable dtMenu = new DataTable();
         private BLAccount BLAcc = new BLAccount();
-        
+        private string err;
+
         public FormXuLi()
         {
 
@@ -41,6 +42,7 @@ namespace FinalProject
             this.AddListPtb();
             this.LoadNewListTable();
             this.cbBoxLoai.SelectedIndex = 0;
+            btnThanhToan.Enabled = false;
             this.reload(0);
         }
 
@@ -410,15 +412,20 @@ namespace FinalProject
             {
                 if (cbBoxTenMon.Text != "")
                 {
-                    SelectedMenuClass x = new SelectedMenuClass();
-                    x.maMon = dtMenu.Rows[monDangChon][0].ToString();
-                    x.TenMon = dtMenu.Rows[monDangChon][1].ToString();
-                    x.soLuong = Convert.ToInt32(NumberUpDown.Value);
-                    x.gia = Convert.ToDouble(dtMenu.Rows[monDangChon][2]);
-                    x.thanhTien = x.gia * x.soLuong;
-                    lTable[BanDangChon].lSelectedMenu.Add(x);
-                    this.RutGonlSelectedMenu(lTable[BanDangChon]);
-                    this.test();
+                    if(NumberUpDown.Value != 0)
+                    {
+                        SelectedMenuClass x = new SelectedMenuClass();
+                        x.maMon = dtMenu.Rows[monDangChon][0].ToString();
+                        x.TenMon = dtMenu.Rows[monDangChon][1].ToString();
+                        x.soLuong = Convert.ToInt32(NumberUpDown.Value);
+                        x.gia = Convert.ToDouble(dtMenu.Rows[monDangChon][2]);
+                        x.thanhTien = x.gia * x.soLuong;
+                        lTable[BanDangChon].lSelectedMenu.Add(x);
+                        this.RutGonlSelectedMenu(lTable[BanDangChon]);
+                        this.test();
+                        this.TongTien();
+                    }
+
                 }
                 else
                 {
@@ -429,18 +436,15 @@ namespace FinalProject
             {
 
             }
-
-
-            //lTable[BanDangChon].lSelectedMenu
         }
         public void RutGonlSelectedMenu(Table TB)
         {
-            for(int i = 0; i< TB.lSelectedMenu.Count-1; i++)
+            for (int i = 0; i < TB.lSelectedMenu.Count - 1; i++)
             {
                 List<int> x = new List<int>();
-                for(int j = i+1; j < TB.lSelectedMenu.Count; j++)
+                for (int j = i + 1; j < TB.lSelectedMenu.Count; j++)
                 {
-                    if(TB.lSelectedMenu[i].maMon == TB.lSelectedMenu[j].maMon)
+                    if (TB.lSelectedMenu[i].maMon == TB.lSelectedMenu[j].maMon)
                     {
                         x.Add(j);
                         TB.lSelectedMenu[i].soLuong += TB.lSelectedMenu[j].soLuong;
@@ -448,6 +452,12 @@ namespace FinalProject
                 }
                 this.removelSelectedMenu(TB, x);
                 TB.lSelectedMenu[i].thanhTien = TB.lSelectedMenu[i].gia * TB.lSelectedMenu[i].soLuong;
+                if (TB.lSelectedMenu[i].soLuong == 0)
+                {
+                    TB.lSelectedMenu.RemoveAt(i);
+                    this.test();
+                    i--;
+                }
             }
         }
 
@@ -462,21 +472,42 @@ namespace FinalProject
         public void test()
         {
             dgvMuaHang.Rows.Clear();
-            //dgvMuaHang.Rows.Clear();
             for (int i = 0; i < lTable[BanDangChon].lSelectedMenu.Count; i++)
             {
                 string[] row1 = new string[] { lTable[BanDangChon].lSelectedMenu[i].TenMon, lTable[BanDangChon].lSelectedMenu[i].soLuong.ToString(), lTable[BanDangChon].lSelectedMenu[i].thanhTien.ToString() };
                 dgvMuaHang.Rows.Add(row1);
             }
-            //int i = 0;
-            this.label20.Text = lTable[BanDangChon].lSelectedMenu.Count.ToString();
-            //lTable[BanDangChon].lSelectedMenu.ForEach(rs =>
-            //{
-            //    dgvMuaHang.Rows[i].Cells[0].Value = rs.TenMon.ToString();
-            //    dgvMuaHang.Rows[i].Cells[1].Value = rs.soLuong.ToString();
-            //    dgvMuaHang.Rows[i].Cells[2].Value = rs.thanhTien.ToString();
-            //    i++;
-            //});
+        }
+
+        public void TongTien()
+        {
+            lTable[BanDangChon].TongTien = 0;
+            for (int i =0; i < lTable[BanDangChon].lSelectedMenu.Count; i++)
+            {
+                lTable[BanDangChon].TongTien += lTable[BanDangChon].lSelectedMenu[i].thanhTien;
+            }
+            this.lblTongTien.Text = lTable[BanDangChon].TongTien.ToString();
+        }
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            lblTienThoi.Text = (Convert.ToInt32(txtBoxTienNhan.Text) - Convert.ToInt32(lblTongTien.Text)).ToString();
+            this.BLAcc.addHoaDon(inforAcc.Rows[0][1].ToString(), DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"), this.lblTongTien.Text, lTable[BanDangChon], err);
+
+        }
+
+        private void txtBoxTienNhan_TextChanged(object sender, EventArgs e)
+        {
+            if(txtBoxTienNhan.Text != "")
+            {
+                if (Convert.ToInt32(txtBoxTienNhan.Text) >= Convert.ToInt32(lblTongTien.Text))
+                {
+                    btnThanhToan.Enabled = true;
+                }
+                else
+                {
+                    btnThanhToan.Enabled = false;
+                }
+            }
         }
     }
 }

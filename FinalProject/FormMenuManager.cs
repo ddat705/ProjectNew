@@ -15,7 +15,7 @@ namespace FinalProject
     {
         BLAccount BLAcc = new BLAccount();
         DataTable dataTable = new DataTable();
-        string err;
+        private string err;
         public FormMenuManager()
         {
             InitializeComponent();
