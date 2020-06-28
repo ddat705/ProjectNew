@@ -496,5 +496,13 @@ namespace FinalProject
             a.ShowDialog();
             this.Show();
         }
+
+        private void ToànThểNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form a = new FormLuongToanNV();
+            this.Hide();
+            a.ShowDialog();
+            this.Show();
+        }
     }
 }

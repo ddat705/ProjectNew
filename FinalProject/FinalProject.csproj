@@ -78,6 +78,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLuongToanNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLuongToanNV.Designer.cs">
+      <DependentUpon>FormLuongToanNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPermissionAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,11 +155,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThongKeLuong.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TKLToanNV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKLToanNV.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAddAccount.resx">
       <DependentUpon>FormAddAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLuongToanNV.resx">
+      <DependentUpon>FormLuongToanNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPermissionAdmin.resx">
       <DependentUpon>FormPermissionAdmin.cs</DependentUpon>
@@ -189,6 +203,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ReportSearchBill.rdlc" />
+    <EmbeddedResource Include="ReportTKLToanNV.rdlc" />
     <EmbeddedResource Include="ReportXuatHD.rdlc" />
     <EmbeddedResource Include="TKL.rdlc" />
     <None Include="packages.config" />
@@ -233,6 +248,17 @@
     </None>
     <None Include="ThongKeLuong.xss">
       <DependentUpon>ThongKeLuong.xsd</DependentUpon>
+    </None>
+    <None Include="TKLToanNV.xsc">
+      <DependentUpon>TKLToanNV.xsd</DependentUpon>
+    </None>
+    <None Include="TKLToanNV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKLToanNV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TKLToanNV.xss">
+      <DependentUpon>TKLToanNV.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

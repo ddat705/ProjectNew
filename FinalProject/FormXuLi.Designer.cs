@@ -729,6 +729,7 @@
             this.toànThểNhânViênToolStripMenuItem.Name = "toànThểNhânViênToolStripMenuItem";
             this.toànThểNhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.toànThểNhânViênToolStripMenuItem.Text = "Toàn thể nhân viên";
+            this.toànThểNhânViênToolStripMenuItem.Click += new System.EventHandler(this.ToànThểNhânViênToolStripMenuItem_Click);
             // 
             // FormXuLi
             // 
