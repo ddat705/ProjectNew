@@ -96,6 +96,12 @@
     <Compile Include="FormQuanLiNV.Designer.cs">
       <DependentUpon>FormQuanLiNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,11 @@
     <Compile Include="ModelClass\Table.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportXuatHD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportXuatHD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="FormAddAccount.resx">
       <DependentUpon>FormAddAccount.cs</DependentUpon>
@@ -128,6 +139,9 @@
     <EmbeddedResource Include="FormQuanLiNV.resx">
       <DependentUpon>FormQuanLiNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +157,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportXuatHD.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,6 +168,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReportXuatHD.xsc">
+      <DependentUpon>ReportXuatHD.xsd</DependentUpon>
+    </None>
+    <None Include="ReportXuatHD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportXuatHD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportXuatHD.xss">
+      <DependentUpon>ReportXuatHD.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
