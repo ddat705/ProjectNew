@@ -8627,7 +8627,7 @@ SELECT ID, TEN, GIA, LOAI FROM THUCDON WHERE (ID = @ID)";
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "Select a.MAHD, a.NGAYLAPHD, a.NGAYTHANHTOAN, a.TONGTIEN, b.SOLUONG, b.THANHTIEN, " +
                 "c.ID, c.TEN, c.GIA\r\nFrom HOADON a, CHITIETHOADON b, THUCDON c\r\nWHERE a.MAHD=b.MA" +
-                "HD AND b.MAMONAN=c.ID";
+                "HD AND b.MAMONAN=c.ID AND a.MAHD = ( Select Max(MAHD) From HOADON)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

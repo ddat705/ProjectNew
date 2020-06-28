@@ -527,12 +527,12 @@ SELECT ID, name FROM TYPEACCOUNT WHERE (ID = @ID)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BILLTableAdapter" GeneratorDataComponentClassName="BILLTableAdapter" Name="BILL" UserDataComponentName="BILLTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="FinalProjectConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="FinalProjectConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>Select a.MAHD, a.NGAYLAPHD, a.NGAYTHANHTOAN, a.TONGTIEN, b.SOLUONG, b.THANHTIEN, c.ID, c.TEN, c.GIA
 From HOADON a, CHITIETHOADON b, THUCDON c
-WHERE a.MAHD=b.MAHD AND b.MAMONAN=c.ID</CommandText>
+WHERE a.MAHD=b.MAHD AND b.MAMONAN=c.ID AND a.MAHD = ( Select Max(MAHD) From HOADON)</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
