@@ -504,5 +504,13 @@ namespace FinalProject
             a.ShowDialog();
             this.Show();
         }
+
+        private void ThốngKêTổngDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form a = new FormTKDoanhThu();
+            this.Hide();
+            a.ShowDialog();
+            this.Show();
+        }
     }
 }

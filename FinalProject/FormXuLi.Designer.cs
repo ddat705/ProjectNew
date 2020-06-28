@@ -690,6 +690,7 @@
             this.thốngKêTổngDoanhThuToolStripMenuItem.Name = "thốngKêTổngDoanhThuToolStripMenuItem";
             this.thốngKêTổngDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.thốngKêTổngDoanhThuToolStripMenuItem.Text = "Thống kê tổng doanh thu";
+            this.thốngKêTổngDoanhThuToolStripMenuItem.Click += new System.EventHandler(this.ThốngKêTổngDoanhThuToolStripMenuItem_Click);
             // 
             // lbSelectedTable
             // 
