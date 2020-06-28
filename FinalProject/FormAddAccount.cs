@@ -16,30 +16,27 @@ namespace FinalProject
     {
         BLAccount BLAcc = new BLAccount();
         DataTable dataTable = new DataTable();
+        string err;
         public FormAddAccount()
         {
             InitializeComponent();
-            this.LoadData();
-        }
-
-        private void BtnThem_Click(object sender, EventArgs e)
-        {
-            
+            //this.LoadData();
         }
         void LoadData()
         {
-            this.dgvTaiKhoan.Enabled = true;
             this.dataTable = BLAcc.getStaffDHaveAcc();
             this.dgvTaiKhoan.DataSource = dataTable;
             this.cbBoxSelect.SelectedIndex = 2;
+            this.cbBoxIDTen.SelectedIndex = 2;
             this.txtUsername.ResetText();
             this.txtUsername.Enabled = false;            
             this.txtPassword.ResetText();
             this.txtPassword.Enabled = false;
             this.btnThem.Enabled = false;
             this.btnHuy.Enabled = false;
-
-                //DgvTaiKhoan_CellClick(null, null);
+            this.btnLuu.Enabled = false;
+            this.cbChucvu.Enabled = false;
+            DgvTaiKhoan_CellClick(null, null);
         }
            
         
@@ -53,64 +50,49 @@ namespace FinalProject
         {
             int r = dgvTaiKhoan.CurrentCell.RowIndex;
             this.lblID.Text = dgvTaiKhoan.Rows[r].Cells[0].Value.ToString();
-            this.txtUsername.Enabled = true;
-            this.txtPassword.Enabled = true;
+            this.btnThem.Enabled = true;
+            int index = cbChucvu.FindString(this.dgvTaiKhoan.Rows[r].Cells[5].Value.ToString());
+            cbChucvu.SelectedIndex = index;
 
         }
 
         private void CbBoxSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbBoxSelect != null)
+            if(cbBoxSelect!=null)
             {
-                txtSearchBox.Enabled = true;
+                txtsearch.Enabled = true;
             }
-            if (cbBoxSelect.Text.CompareTo("Thu Ngân") == 0)
+            if(cbBoxSelect.SelectedIndex==1)
             {
                 this.dataTable = this.BLAcc.getStaffDHaveAccByPosition("2");
                 this.dgvTaiKhoan.DataSource = dataTable;
-
             }
-            else if (cbBoxSelect.Text.CompareTo("Quản Lí") == 0)
+            else if(cbBoxSelect.SelectedIndex==0)
             {
                 this.dataTable = this.BLAcc.getStaffDHaveAccByPosition("1");
                 this.dgvTaiKhoan.DataSource = dataTable;
             }
-            
             else
             {
                 this.dataTable = this.BLAcc.getStaffDHaveAcc();
                 this.dgvTaiKhoan.DataSource = dataTable;
             }
-
         }
 
-        private void CbBoxOptionIDName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbBoxOptionIDName.SelectedIndex != 2)
-            {
-                txtSearchBox.Enabled = true;
-            }
-            else
-            {
-                txtSearchBox.Text = "";
-                txtSearchBox.Enabled = false;
-            }
-        }
-
-        private void BtnSearch_Click(object sender, EventArgs e)
+        private void Btnsearch_Click(object sender, EventArgs e)
         {
             try
             {
                 if (cbBoxSelect.SelectedIndex == 2)
                 {
-                    if (cbBoxOptionIDName.SelectedIndex == 0)
+                    if (cbBoxIDTen.SelectedIndex == 0)
                     {
-                        this.dataTable = BLAcc.getStaffDHaveAccbyID(txtSearchBox.Text);
+                        this.dataTable = BLAcc.getStaffDHaveAccbyID(txtsearch.Text);
                         this.dgvTaiKhoan.DataSource = dataTable;
                     }
-                    else if (cbBoxOptionIDName.SelectedIndex == 1)
+                    else if(cbBoxIDTen.SelectedIndex==1)
                     {
-                        this.dataTable = BLAcc.getStaffDHaveAccbyName(txtSearchBox.Text);
+                        this.dataTable = BLAcc.getStaffDHaveAccbyName(txtsearch.Text);
                         this.dgvTaiKhoan.DataSource = dataTable;
                     }
                     else
@@ -119,16 +101,16 @@ namespace FinalProject
                         this.dgvTaiKhoan.DataSource = dataTable;
                     }
                 }
-                else if (cbBoxSelect.SelectedIndex == 0)
+                else if(cbBoxSelect.SelectedIndex==0)
                 {
-                    if (cbBoxOptionIDName.SelectedIndex == 0)
+                    if(cbBoxIDTen.SelectedIndex==0)
                     {
-                        this.dataTable = BLAcc.getStaffDHaveAccByIDAndPosition(txtSearchBox.Text, "1");
+                        this.dataTable = BLAcc.getStaffDHaveAccByIDAndPosition(txtsearch.Text, "1");
                         this.dgvTaiKhoan.DataSource = dataTable;
                     }
-                    else if (cbBoxOptionIDName.SelectedIndex == 1)
+                    else if (cbBoxIDTen.SelectedIndex == 1)
                     {
-                        this.dataTable = BLAcc.getStaffDHaveAccByNameAndPosition(txtSearchBox.Text, "1");
+                        this.dataTable = BLAcc.getStaffDHaveAccByNameAndPosition(txtsearch.Text, "1");
                         this.dgvTaiKhoan.DataSource = dataTable;
                     }
                     else
@@ -139,14 +121,14 @@ namespace FinalProject
                 }
                 else if (cbBoxSelect.SelectedIndex == 1)
                 {
-                    if (cbBoxOptionIDName.SelectedIndex == 0)
+                    if (cbBoxIDTen.SelectedIndex == 0)
                     {
-                        this.dataTable = BLAcc.getStaffDHaveAccByIDAndPosition(txtSearchBox.Text, "2");
+                        this.dataTable = BLAcc.getStaffDHaveAccByIDAndPosition(txtsearch.Text, "2");
                         this.dgvTaiKhoan.DataSource = dataTable;
                     }
-                    else if (cbBoxOptionIDName.SelectedIndex == 1)
+                    else if (cbBoxSelect.SelectedIndex == 1)
                     {
-                        this.dataTable = BLAcc.getStaffDHaveAccByIDAndPosition(txtSearchBox.Text, "2");
+                        this.dataTable = BLAcc.getStaffDHaveAccByNameAndPosition(txtsearch.Text, "2");
                         this.dgvTaiKhoan.DataSource = dataTable;
                     }
                     else
@@ -160,6 +142,56 @@ namespace FinalProject
             {
 
             }
+        }
+
+        private void BtnThem_Click(object sender, EventArgs e)
+        {
+            this.txtPassword.Enabled = true;
+            this.txtUsername.Enabled = true;
+            this.btnHuy.Enabled = true;
+        }
+
+        private void TxtUsername_TextChanged(object sender, EventArgs e)
+        {
+            if(txtUsername.Text!="" && txtPassword.Text!="")
+            {
+                btnLuu.Enabled = true;
+            }
+        }
+
+        private void TxtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsername.Text != "" && txtPassword.Text != "")
+            {
+                btnLuu.Enabled = true;
+            }
+        }
+
+        private void BtnHuy_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void BtnLuu_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                BLAccount blacc = new BLAccount();
+                blacc.CreateAcc(this.txtUsername.Text, this.txtPassword.Text, Convert.ToString(cbChucvu.SelectedIndex + 1), this.lblID.Text, err);
+                LoadData();
+                this.dgvTaiKhoan.Enabled = true;
+                MessageBox.Show("Đã thêm xong!");
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Không thêm được. Lỗi rồi!");
+            }
+        }
+
+        private void BtnReload_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

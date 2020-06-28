@@ -201,7 +201,7 @@ namespace FinalProject.BS_Layer
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
                                             "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
                                                           "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
-                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.CHUCVU =" +id, CommandType.Text);
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND NHANVIEN.CHUCVU =" +id, CommandType.Text);
         }
         public DataTable getStaffDHaveAccbyID(string id)
         {
@@ -211,7 +211,7 @@ namespace FinalProject.BS_Layer
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
                                             "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
                                                           "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
-                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.ID =" + id, CommandType.Text);
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.CHUCVU = 1 OR NHANVIEN.CHUCVU = 2) AND NHANVIEN.ID =" + id, CommandType.Text);
         }
         public DataTable getStaffDHaveAccbyName(string ten)
         {
@@ -221,7 +221,7 @@ namespace FinalProject.BS_Layer
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
                                             "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
                                                           "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
-                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.HOTEN LIKE N'%" + ten + "%'", CommandType.Text);
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.CHUCVU = 1 OR NHANVIEN.CHUCVU = 2) AND NHANVIEN.HOTEN LIKE N'%" + ten + "%'", CommandType.Text);
         }
         public DataTable getStaffDHaveAccByIDAndPosition(string id, string chucvu)
         {
@@ -231,7 +231,7 @@ namespace FinalProject.BS_Layer
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
                                             "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
                                                           "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
-                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.ID =" + id + " AND CHUCVU.ID = " + chucvu, CommandType.Text);
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND NHANVIEN.ID =" + id + " AND CHUCVU.ID = " + chucvu, CommandType.Text);
         }
         public DataTable getStaffDHaveAccByNameAndPosition(string hoten, string chucvu)
         {
@@ -241,7 +241,11 @@ namespace FinalProject.BS_Layer
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
                                             "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
                                                           "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
-                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND (NHANVIEN.HOTEN LIKE N'%" + hoten + "%'" + " AND CHUCVU.ID = " + chucvu, CommandType.Text);
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND NHANVIEN.HOTEN LIKE N'%" + hoten + "%' AND CHUCVU.ID = " + chucvu, CommandType.Text);
+        }
+        public bool CreateAcc(string tentk, string pass, string chucvutk, string id, string error)
+        {
+            return db.MyExecuteNonQuery("Insert Into TAIKHOAN(USERNAME,PASSWORD,TYPEACCOUNT,IDNhanVien) Values('" + tentk + "','" + pass + "'," + chucvutk + "," +id + ")", CommandType.Text, ref error);
         }
 
         public bool addHoaDon(string Username, string NgayLap, string NgayThanhToan, string TongTien, Table T, string err)
