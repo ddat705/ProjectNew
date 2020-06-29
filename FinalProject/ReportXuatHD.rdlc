@@ -11,7 +11,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>2.03125in</Height>
+              <Height>2.10416in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -25,10 +25,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Mã hóa đơn: </Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -57,14 +62,16 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Top>0.26042in</Top>
-                          <Left>1.66319in</Left>
+                          <Left>1.59375in</Left>
                           <Height>0.25in</Height>
-                          <Width>1in</Width>
+                          <Width>0.42708in</Width>
                           <ZIndex>1</ZIndex>
                           <Style>
                             <Border>
@@ -84,17 +91,22 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Ngày lập hóa đơn: </Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Top>0.26042in</Top>
-                          <Left>2.92013in</Left>
+                          <Left>2.21672in</Left>
                           <Height>0.25in</Height>
-                          <Width>1.29167in</Width>
+                          <Width>1.48959in</Width>
                           <ZIndex>2</ZIndex>
                           <Style>
                             <Border>
@@ -117,14 +129,16 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Top>0.26042in</Top>
-                          <Left>4.28124in</Left>
+                          <Left>3.70631in</Left>
                           <Height>0.25in</Height>
-                          <Width>1in</Width>
+                          <Width>1.4783in</Width>
                           <ZIndex>3</ZIndex>
                           <Style>
                             <Border>
@@ -144,15 +158,20 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Ngày thanh toán: </Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Top>0.26042in</Top>
-                          <Left>5.53819in</Left>
+                          <Left>5.31597in</Left>
                           <Height>0.25in</Height>
                           <Width>1.29167in</Width>
                           <ZIndex>4</ZIndex>
@@ -177,14 +196,16 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Top>0.26042in</Top>
-                          <Left>6.8993in</Left>
+                          <Left>6.60764in</Left>
                           <Height>0.25in</Height>
-                          <Width>1in</Width>
+                          <Width>1.48958in</Width>
                           <ZIndex>5</ZIndex>
                           <Style>
                             <Border>
@@ -229,7 +250,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Mã món ăn</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -261,7 +285,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Tên món ăn</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -293,7 +320,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Giá</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -325,7 +355,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Số lượng</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -357,7 +390,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Thành tiền</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -542,7 +578,6 @@
                                           <PaddingBottom>2pt</PaddingBottom>
                                         </Style>
                                       </Textbox>
-                                      <rd:Selected>true</rd:Selected>
                                     </CellContents>
                                   </TablixCell>
                                 </TablixCells>
@@ -588,10 +623,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Tổng tiền: </Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -621,7 +661,9 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -640,6 +682,40 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Xin cảm ơn quý khách!!!Hẹn gặp lại ^^</Value>
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Top>1.80903in</Top>
+                          <Left>3.39582in</Left>
+                          <Height>0.19792in</Height>
+                          <Width>2.09636in</Width>
+                          <ZIndex>9</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
                       </ReportItems>
                       <KeepTogether>true</KeepTogether>
                       <Style>
@@ -648,6 +724,7 @@
                         </Border>
                       </Style>
                     </Rectangle>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -671,9 +748,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.13417in</Top>
-        <Left>0.11333in</Left>
-        <Height>2.03125in</Height>
+        <Top>0.04167in</Top>
+        <Left>0.10291in</Left>
+        <Height>2.10416in</Height>
         <Width>8.8993in</Width>
         <Style>
           <Border>
@@ -700,17 +777,22 @@
               <TextRuns>
                 <TextRun>
                   <Value>HÓA ĐƠN THANH TOÁN</Value>
-                  <Style />
+                  <Style>
+                    <FontFamily>Segoe UI Semibold</FontFamily>
+                    <FontSize>19pt</FontSize>
+                    <FontWeight>ExtraBold</FontWeight>
+                    <Color>Blue</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.36333in</Top>
-          <Left>3.655in</Left>
-          <Height>0.25in</Height>
-          <Width>1.60417in</Width>
+          <Top>0.41319in</Top>
+          <Left>3.03346in</Left>
+          <Height>0.53125in</Height>
+          <Width>3.1354in</Width>
           <Style>
             <Border>
               <Style>None</Style>

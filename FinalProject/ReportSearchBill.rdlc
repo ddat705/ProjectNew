@@ -25,15 +25,20 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Mã hóa đơn:</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox1</rd:DefaultName>
                           <Top>0.1875in</Top>
-                          <Left>0.38542in</Left>
+                          <Left>0.80208in</Left>
                           <Height>0.25in</Height>
                           <Width>1in</Width>
                           <Style>
@@ -57,14 +62,16 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>MAHD</rd:DefaultName>
                           <Top>0.1875in</Top>
-                          <Left>1.45486in</Left>
+                          <Left>1.80208in</Left>
                           <Height>0.25in</Height>
-                          <Width>1in</Width>
+                          <Width>0.42708in</Width>
                           <ZIndex>1</ZIndex>
                           <Style>
                             <Border>
@@ -84,17 +91,22 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Ngày lập hóa đơn:</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
                           <Top>0.1875in</Top>
-                          <Left>2.77083in</Left>
+                          <Left>2.00695in</Left>
                           <Height>0.25in</Height>
-                          <Width>1.22917in</Width>
+                          <Width>1.47917in</Width>
                           <ZIndex>2</ZIndex>
                           <Style>
                             <Border>
@@ -117,14 +129,16 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NGAYLAPHD</rd:DefaultName>
                           <Top>0.1875in</Top>
-                          <Left>4.06944in</Left>
+                          <Left>3.55556in</Left>
                           <Height>0.25in</Height>
-                          <Width>1in</Width>
+                          <Width>1.71875in</Width>
                           <ZIndex>3</ZIndex>
                           <Style>
                             <Border>
@@ -144,17 +158,22 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Ngày thanh toán:</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox5</rd:DefaultName>
                           <Top>0.1875in</Top>
-                          <Left>5.40625in</Left>
+                          <Left>5.12151in</Left>
                           <Height>0.25in</Height>
-                          <Width>1.14583in</Width>
+                          <Width>1.36111in</Width>
                           <ZIndex>4</ZIndex>
                           <Style>
                             <Border>
@@ -177,14 +196,16 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NGAYTHANHTOAN</rd:DefaultName>
                           <Top>0.1875in</Top>
-                          <Left>6.62153in</Left>
+                          <Left>6.55207in</Left>
                           <Height>0.25in</Height>
-                          <Width>1in</Width>
+                          <Width>1.59375in</Width>
                           <ZIndex>5</ZIndex>
                           <Style>
                             <Border>
@@ -229,7 +250,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Mã món ăn</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -261,7 +285,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Tên món</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -293,7 +320,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Giá</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -325,7 +355,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Số lượng</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -357,7 +390,10 @@
                                             <TextRuns>
                                               <TextRun>
                                                 <Value>Thành tiền</Value>
-                                                <Style />
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
                                             <Style>
@@ -570,8 +606,8 @@
                           <DataSetName>DataSet1</DataSetName>
                           <Top>0.69792in</Top>
                           <Left>0.80208in</Left>
-                          <Height>0.64583in</Height>
-                          <Width>6.75in</Width>
+                          <Height>0.64584in</Height>
+                          <Width>6.74999in</Width>
                           <ZIndex>6</ZIndex>
                           <Style>
                             <Border>
@@ -587,10 +623,15 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Tổng tiền:</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox23</rd:DefaultName>
@@ -620,7 +661,9 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>TONGTIEN</rd:DefaultName>
@@ -647,6 +690,7 @@
                         </Border>
                       </Style>
                     </Rectangle>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -699,7 +743,13 @@
               <TextRuns>
                 <TextRun>
                   <Value>THÔNG TIN CHI TIẾT HÓA ĐƠN</Value>
-                  <Style />
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontFamily>Segoe UI Semibold</FontFamily>
+                    <FontSize>16pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>Blue</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -710,7 +760,13 @@
               <TextRuns>
                 <TextRun>
                   <Value>(ĐÃ THANH TOÁN)</Value>
-                  <Style />
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontFamily>Segoe UI Semibold</FontFamily>
+                    <FontSize>16pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>Blue</Color>
+                  </Style>
                 </TextRun>
               </TextRuns>
               <Style>
@@ -720,9 +776,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox25</rd:DefaultName>
           <Top>0.26958in</Top>
-          <Left>3.66542in</Left>
-          <Height>0.41667in</Height>
-          <Width>2.17708in</Width>
+          <Left>1.45708in</Left>
+          <Height>0.72in</Height>
+          <Width>6.625in</Width>
           <Style>
             <Border>
               <Style>None</Style>

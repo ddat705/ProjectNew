@@ -24,13 +24,13 @@
                                 <Width>1in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1in</Width>
+                                <Width>1.48958in</Width>
                               </TablixColumn>
                               <TablixColumn>
                                 <Width>1in</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1in</Width>
+                                <Width>1.47917in</Width>
                               </TablixColumn>
                             </TablixColumns>
                             <TablixRows>
@@ -46,11 +46,16 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>ID</Value>
-                                                <Style />
+                                                <Value>ID Nhân viên</Value>
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -76,11 +81,16 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>HOTEN</Value>
-                                                <Style />
+                                                <Value>Họ tên nhân viên</Value>
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -106,11 +116,16 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>CHUCVU</Value>
-                                                <Style />
+                                                <Value>Chức vụ</Value>
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -136,11 +151,16 @@
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>LUONG</Value>
-                                                <Style />
+                                                <Value>Lương</Value>
+                                                <Style>
+                                                  <FontStyle>Italic</FontStyle>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -175,7 +195,9 @@
                                                 <Style />
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>ID</rd:DefaultName>
@@ -205,7 +227,9 @@
                                                 <Style />
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>HOTEN</rd:DefaultName>
@@ -235,7 +259,9 @@
                                                 <Style />
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>CHUCVU</rd:DefaultName>
@@ -265,7 +291,9 @@
                                                 <Style />
                                               </TextRun>
                                             </TextRuns>
-                                            <Style />
+                                            <Style>
+                                              <TextAlign>Center</TextAlign>
+                                            </Style>
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>LUONG</rd:DefaultName>
@@ -305,10 +333,10 @@
                             </TablixMembers>
                           </TablixRowHierarchy>
                           <DataSetName>DataSet1</DataSetName>
-                          <Top>0.32292in</Top>
+                          <Top>0.11459in</Top>
                           <Left>1.5625in</Left>
                           <Height>0.5in</Height>
-                          <Width>4in</Width>
+                          <Width>4.96875in</Width>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -323,15 +351,20 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Tổng tiền:</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontStyle>Italic</FontStyle>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox19</rd:DefaultName>
-                          <Top>1.07292in</Top>
-                          <Left>3.78125in</Left>
+                          <Top>0.68403in</Top>
+                          <Left>4.05208in</Left>
                           <Height>0.25in</Height>
                           <Width>1in</Width>
                           <ZIndex>1</ZIndex>
@@ -356,14 +389,16 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>LUONG1</rd:DefaultName>
-                          <Top>1.07292in</Top>
-                          <Left>4.85069in</Left>
+                          <Top>0.68403in</Top>
+                          <Left>5.12152in</Left>
                           <Height>0.25in</Height>
-                          <Width>1in</Width>
+                          <Width>1.32639in</Width>
                           <ZIndex>2</ZIndex>
                           <Style>
                             <Border>
@@ -383,7 +418,6 @@
                         </Border>
                       </Style>
                     </Rectangle>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -427,6 +461,43 @@
       <Height>1in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>BẢNG LƯƠNG </Value>
+                  <Style>
+                    <FontStyle>Italic</FontStyle>
+                    <FontFamily>sEGOE UI</FontFamily>
+                    <FontSize>17pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                    <Color>Red</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox1</rd:DefaultName>
+          <Top>0.55903in</Top>
+          <Left>3.56125in</Left>
+          <Height>0.38542in</Height>
+          <Width>1.76042in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>
