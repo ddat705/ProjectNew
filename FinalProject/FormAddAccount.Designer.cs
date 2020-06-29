@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbChucvu = new System.Windows.Forms.ComboBox();
             this.btnReload = new System.Windows.Forms.Button();
+            this.btnAddPicture = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,11 +226,22 @@
             this.btnReload.UseVisualStyleBackColor = true;
             this.btnReload.Click += new System.EventHandler(this.BtnReload_Click);
             // 
+            // btnAddPicture
+            // 
+            this.btnAddPicture.Location = new System.Drawing.Point(704, 51);
+            this.btnAddPicture.Name = "btnAddPicture";
+            this.btnAddPicture.Size = new System.Drawing.Size(31, 23);
+            this.btnAddPicture.TabIndex = 19;
+            this.btnAddPicture.Text = "...";
+            this.btnAddPicture.UseVisualStyleBackColor = true;
+            this.btnAddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
+            // 
             // FormAddAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 552);
+            this.ClientSize = new System.Drawing.Size(798, 415);
+            this.Controls.Add(this.btnAddPicture);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.cbChucvu);
             this.Controls.Add(this.label5);
@@ -277,5 +289,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbChucvu;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnAddPicture;
     }
 }

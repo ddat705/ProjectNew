@@ -193,5 +193,32 @@ namespace FinalProject
         {
             LoadData();
         }
+
+        private void btnAddPicture_Click(object sender, EventArgs e)
+        {
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "Image Files(*.PNG;*.JPG;*.GIF)|*.PNG;*.JPG;*.GIF|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 1;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (openFileDialog.CheckFileExists)
+                    {
+                        string paths = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                        string CorrectFilename = System.IO.Path.GetFileName(openFileDialog.FileName);
+                        System.IO.File.Copy(openFileDialog.FileName, paths + "\\Assets\\ImagesUsers\\" + CorrectFilename, true);
+                        filePath = paths + "\\Assets\\ImagesUsers\\" + CorrectFilename;
+                        MessageBox.Show("đã thêm ảnh");
+                    }
+                }
+                //this.lbTextName.Text = filePath;
+            }
+
+        }
     }
 }

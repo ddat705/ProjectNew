@@ -64,11 +64,9 @@
             this.cbBoxBanChuyen = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTienThoi = new System.Windows.Forms.Label();
-            this.txtBoxGiamGia = new System.Windows.Forms.TextBox();
             this.txtBoxTienNhan = new System.Windows.Forms.TextBox();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -449,34 +447,25 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.lblTienThoi);
-            this.panel2.Controls.Add(this.txtBoxGiamGia);
             this.panel2.Controls.Add(this.txtBoxTienNhan);
             this.panel2.Controls.Add(this.lblTongTien);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(793, 76);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(197, 163);
+            this.panel2.Size = new System.Drawing.Size(197, 146);
             this.panel2.TabIndex = 21;
             // 
             // lblTienThoi
             // 
             this.lblTienThoi.AutoSize = true;
-            this.lblTienThoi.Location = new System.Drawing.Point(131, 138);
+            this.lblTienThoi.Location = new System.Drawing.Point(131, 111);
             this.lblTienThoi.Name = "lblTienThoi";
-            this.lblTienThoi.Size = new System.Drawing.Size(38, 13);
+            this.lblTienThoi.Size = new System.Drawing.Size(13, 13);
             this.lblTienThoi.TabIndex = 10;
-            this.lblTienThoi.Text = "label9 ";
-            // 
-            // txtBoxGiamGia
-            // 
-            this.txtBoxGiamGia.Location = new System.Drawing.Point(107, 99);
-            this.txtBoxGiamGia.Name = "txtBoxGiamGia";
-            this.txtBoxGiamGia.Size = new System.Drawing.Size(77, 20);
-            this.txtBoxGiamGia.TabIndex = 9;
+            this.lblTienThoi.Text = "0";
             // 
             // txtBoxTienNhan
             // 
@@ -484,33 +473,25 @@
             this.txtBoxTienNhan.Name = "txtBoxTienNhan";
             this.txtBoxTienNhan.Size = new System.Drawing.Size(77, 20);
             this.txtBoxTienNhan.TabIndex = 8;
+            this.txtBoxTienNhan.TextChanged += new System.EventHandler(this.txtBoxTienNhan_TextChanged);
             // 
             // lblTongTien
             // 
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Location = new System.Drawing.Point(131, 44);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(38, 13);
+            this.lblTongTien.Size = new System.Drawing.Size(13, 13);
             this.lblTongTien.TabIndex = 6;
-            this.lblTongTien.Text = "label9 ";
+            this.lblTongTien.Text = "0";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 138);
+            this.label7.Location = new System.Drawing.Point(12, 111);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Tiền thối";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 106);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Giảm giá";
             // 
             // label6
             // 
@@ -543,10 +524,11 @@
             // 
             this.btnThanhToan.Location = new System.Drawing.Point(793, 263);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(75, 23);
+            this.btnThanhToan.Size = new System.Drawing.Size(98, 23);
             this.btnThanhToan.TabIndex = 22;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnXuatHoaDon
             // 
@@ -811,12 +793,10 @@
         private System.Windows.Forms.ComboBox cbBoxBanChuyen;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTienThoi;
-        private System.Windows.Forms.TextBox txtBoxGiamGia;
         private System.Windows.Forms.TextBox txtBoxTienNhan;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Button btnThanhToan;

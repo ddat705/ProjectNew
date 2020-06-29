@@ -1,4 +1,5 @@
 ﻿using FinalProject.DB_Layer;
+using FinalProject.ModelClass;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -166,7 +167,7 @@ namespace FinalProject.BS_Layer
         public bool updateMenuByID(string id, string ten, string gia, string loai, string err)
         {
 
-            return db.MyExecuteNonQuery("UPDATE THUCDON SET TEN = '" +
+            return db.MyExecuteNonQuery("UPDATE THUCDON SET TEN = N'" +
                       ten + "', GIA =" +
                       gia + ", LOAI =" +
                       loai + " WHERE ID = " + 
@@ -247,5 +248,30 @@ namespace FinalProject.BS_Layer
             return db.MyExecuteNonQuery("Insert Into TAIKHOAN(USERNAME,PASSWORD,TYPEACCOUNT,IDNhanVien) Values('" + tentk + "','" + pass + "'," + chucvutk + "," +id + ")", CommandType.Text, ref error);
         }
 
+        public bool addHoaDon(string Username, string NgayLap, string NgayThanhToan, string TongTien, Table T, string err)
+        {
+            if( db.MyExecuteNonQuery("insert into HOADON(USERNAME, NGAYLAPHD,NGAYTHANHTOAN,TONGTIEN) values('" +
+                     Username + "','" +
+                     NgayLap + "','" +
+                     NgayThanhToan + "','" +
+                     TongTien + "')", CommandType.Text,ref err))
+            {
+                DataTable x = db.ExecuteQueryDataTable("SELECT MAX(HOADON.MAHD) " +
+                                                      " FROM HOADON ", CommandType.Text);
+                string ID = x.Rows[0][0].ToString();
+
+                for (int i = 0; i < T.lSelectedMenu.Count; i++)
+                {
+                    db.MyExecuteNonQuery("insert into CHITIETHOADON(MAHD,MAMONAN,SOLUONG,THANHTIEN) values(" +
+                     ID + "," +
+                      T.lSelectedMenu[i].maMon + "," +
+                     T.lSelectedMenu[i].soLuong + "," +
+                     T.lSelectedMenu[i].thanhTien + ")", CommandType.Text, ref err);
+                }
+                return true;
+            }   
+            return false;
+        }
+             
     }
 }
