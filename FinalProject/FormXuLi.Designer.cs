@@ -74,7 +74,6 @@
             this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
-            this.lblSlogan = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,12 +86,13 @@
             this.tìmKiếmThôngTinHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngKêLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoBộPhậnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toànThểNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêTổngDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbSelectedTable = new System.Windows.Forms.Label();
             this.lbTextSelectedTable = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.theoBộPhậnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toànThểNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumberUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan5)).BeginInit();
@@ -552,24 +552,15 @@
             // lblDiaChi
             // 
             this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.Location = new System.Drawing.Point(565, 405);
+            this.lblDiaChi.Location = new System.Drawing.Point(758, 405);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(40, 13);
+            this.lblDiaChi.Size = new System.Drawing.Size(43, 13);
             this.lblDiaChi.TabIndex = 11;
-            this.lblDiaChi.Text = "Đia chi";
-            // 
-            // lblSlogan
-            // 
-            this.lblSlogan.AutoSize = true;
-            this.lblSlogan.Location = new System.Drawing.Point(692, 405);
-            this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(40, 13);
-            this.lblSlogan.TabIndex = 25;
-            this.lblSlogan.Text = "Slogan";
+            this.lblDiaChi.Text = "Đia chỉ:";
             // 
             // Logo
             // 
-            this.Logo.Location = new System.Drawing.Point(640, 405);
+            this.Logo.Location = new System.Drawing.Point(696, 392);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(46, 42);
             this.Logo.TabIndex = 10;
@@ -667,6 +658,20 @@
             this.thôngKêLươngToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.thôngKêLươngToolStripMenuItem.Text = "Thống kê lương";
             // 
+            // theoBộPhậnToolStripMenuItem
+            // 
+            this.theoBộPhậnToolStripMenuItem.Name = "theoBộPhậnToolStripMenuItem";
+            this.theoBộPhậnToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.theoBộPhậnToolStripMenuItem.Text = "Theo bộ phận";
+            this.theoBộPhậnToolStripMenuItem.Click += new System.EventHandler(this.TheoBộPhậnToolStripMenuItem_Click);
+            // 
+            // toànThểNhânViênToolStripMenuItem
+            // 
+            this.toànThểNhânViênToolStripMenuItem.Name = "toànThểNhânViênToolStripMenuItem";
+            this.toànThểNhânViênToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.toànThểNhânViênToolStripMenuItem.Text = "Toàn thể nhân viên";
+            this.toànThểNhânViênToolStripMenuItem.Click += new System.EventHandler(this.ToànThểNhânViênToolStripMenuItem_Click);
+            // 
             // thốngKêTổngDoanhThuToolStripMenuItem
             // 
             this.thốngKêTổngDoanhThuToolStripMenuItem.Name = "thốngKêTổngDoanhThuToolStripMenuItem";
@@ -700,16 +705,26 @@
             this.label20.TabIndex = 29;
             this.label20.Text = "label20";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(805, 405);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(93, 13);
+            this.label21.TabIndex = 30;
+            this.label21.Text = "Thủ Đức, TPHCM";
+            // 
             // FormXuLi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 486);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.lbTextSelectedTable);
             this.Controls.Add(this.lbSelectedTable);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Logo);
-            this.Controls.Add(this.lblSlogan);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnXuatHoaDon);
@@ -788,7 +803,6 @@
         private System.Windows.Forms.Button btnXuatHoaDon;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblDiaChi;
-        private System.Windows.Forms.Label lblSlogan;
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNhàHàngToolStripMenuItem;
@@ -814,5 +828,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ToolStripMenuItem tìmKiếmThôngTinHóaĐơnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thôngKêLươngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêTổngDoanhThuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoBộPhậnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toànThểNhânViênToolStripMenuItem;
+        private System.Windows.Forms.Label label21;
     }
 }

@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.TKLToanNV = new FinalProject.TKLToanNV();
             this.TKLFullBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TKLToanNV = new FinalProject.TKLToanNV();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.TKLFullTableAdapter = new FinalProject.TKLToanNVTableAdapters.TKLFullTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.TKLToanNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TKLFullBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TKLToanNV)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TKLFullBindingSource
+            // 
+            this.TKLFullBindingSource.DataMember = "TKLFull";
+            this.TKLFullBindingSource.DataSource = this.TKLToanNV;
+            // 
+            // TKLToanNV
+            // 
+            this.TKLToanNV.DataSetName = "TKLToanNV";
+            this.TKLToanNV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -44,21 +54,11 @@
             reportDataSource1.Value = this.TKLFullBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FinalProject.ReportTKLToanNV.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(173, 94);
+            this.reportViewer1.Location = new System.Drawing.Point(1, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(799, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // TKLToanNV
-            // 
-            this.TKLToanNV.DataSetName = "TKLToanNV";
-            this.TKLToanNV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TKLFullBindingSource
-            // 
-            this.TKLFullBindingSource.DataMember = "TKLFull";
-            this.TKLFullBindingSource.DataSource = this.TKLToanNV;
             // 
             // TKLFullTableAdapter
             // 
@@ -73,8 +73,8 @@
             this.Name = "FormLuongToanNV";
             this.Text = "FormLuongToanNV";
             this.Load += new System.EventHandler(this.FormLuongToanNV_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.TKLToanNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TKLFullBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TKLToanNV)).EndInit();
             this.ResumeLayout(false);
 
         }

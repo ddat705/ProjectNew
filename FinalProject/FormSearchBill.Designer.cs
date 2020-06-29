@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.TimkiemHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SearchBill = new FinalProject.SearchBill();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnsearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.TimkiemHDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SearchBill = new FinalProject.SearchBill();
             this.TimkiemHDTableAdapter = new FinalProject.SearchBillTableAdapters.TimkiemHDTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,16 +42,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.SearchBill)).BeginInit();
             this.SuspendLayout();
             // 
+            // TimkiemHDBindingSource
+            // 
+            this.TimkiemHDBindingSource.DataMember = "TimkiemHD";
+            this.TimkiemHDBindingSource.DataSource = this.SearchBill;
+            // 
+            // SearchBill
+            // 
+            this.SearchBill.DataSetName = "SearchBill";
+            this.SearchBill.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.TimkiemHDBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FinalProject.ReportSearchBill.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(43, 112);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 112);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(724, 326);
+            this.reportViewer1.Size = new System.Drawing.Size(784, 349);
             this.reportViewer1.TabIndex = 0;
             // 
             // btnsearch
@@ -71,16 +81,6 @@
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 2;
             // 
-            // TimkiemHDBindingSource
-            // 
-            this.TimkiemHDBindingSource.DataMember = "TimkiemHD";
-            this.TimkiemHDBindingSource.DataSource = this.SearchBill;
-            // 
-            // SearchBill
-            // 
-            this.SearchBill.DataSetName = "SearchBill";
-            this.SearchBill.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // TimkiemHDTableAdapter
             // 
             this.TimkiemHDTableAdapter.ClearBeforeFill = true;
@@ -88,18 +88,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(252, 73);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(224, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(119, 15);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Mã HĐ cần tìm";
+            this.label1.Text = "Mã hóa đơn cần tìm:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(313, 32);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(211, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 13);
+            this.label2.Size = new System.Drawing.Size(365, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "TÌM KIẾM THÔNG TIN HÓA ĐƠN";
             // 
@@ -107,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 466);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);

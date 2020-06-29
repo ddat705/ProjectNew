@@ -259,9 +259,9 @@
             this.cbBoxChucVu.FormattingEnabled = true;
             this.cbBoxChucVu.Items.AddRange(new object[] {
             "Quản Lí",
+            "Thu Ngân",
             "Phục Vụ",
-            "Bảo Vệ",
-            "Thu Ngân"});
+            "Bảo Vệ"});
             this.cbBoxChucVu.Location = new System.Drawing.Point(670, 259);
             this.cbBoxChucVu.Name = "cbBoxChucVu";
             this.cbBoxChucVu.Size = new System.Drawing.Size(100, 21);

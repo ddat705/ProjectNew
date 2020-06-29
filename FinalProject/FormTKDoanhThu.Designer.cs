@@ -30,16 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ThongKeDoanhThu = new FinalProject.ThongKeDoanhThu();
             this.TKDTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ThongKeDoanhThu = new FinalProject.ThongKeDoanhThu();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.TKDTTableAdapter = new FinalProject.ThongKeDoanhThuTableAdapters.TKDTTableAdapter();
             this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.dtpTo = new System.Windows.Forms.DateTimePicker();
             this.btnTK = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ThongKeDoanhThu)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TKDTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThongKeDoanhThu)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TKDTBindingSource
+            // 
+            this.TKDTBindingSource.DataMember = "TKDT";
+            this.TKDTBindingSource.DataSource = this.ThongKeDoanhThu;
+            // 
+            // ThongKeDoanhThu
+            // 
+            this.ThongKeDoanhThu.DataSetName = "ThongKeDoanhThu";
+            this.ThongKeDoanhThu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -47,21 +60,11 @@
             reportDataSource1.Value = this.TKDTBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FinalProject.ReportThongKeDT.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(215, 105);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 105);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(776, 348);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // ThongKeDoanhThu
-            // 
-            this.ThongKeDoanhThu.DataSetName = "ThongKeDoanhThu";
-            this.ThongKeDoanhThu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // TKDTBindingSource
-            // 
-            this.TKDTBindingSource.DataMember = "TKDT";
-            this.TKDTBindingSource.DataSource = this.ThongKeDoanhThu;
             // 
             // TKDTTableAdapter
             // 
@@ -69,33 +72,67 @@
             // 
             // dtpFrom
             // 
-            this.dtpFrom.Location = new System.Drawing.Point(192, 61);
+            this.dtpFrom.Location = new System.Drawing.Point(134, 64);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(200, 20);
             this.dtpFrom.TabIndex = 1;
             // 
             // dtpTo
             // 
-            this.dtpTo.Location = new System.Drawing.Point(411, 61);
+            this.dtpTo.Location = new System.Drawing.Point(405, 63);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(200, 20);
             this.dtpTo.TabIndex = 2;
             // 
             // btnTK
             // 
-            this.btnTK.Location = new System.Drawing.Point(627, 61);
+            this.btnTK.Location = new System.Drawing.Point(622, 60);
             this.btnTK.Name = "btnTK";
             this.btnTK.Size = new System.Drawing.Size(75, 23);
             this.btnTK.TabIndex = 3;
-            this.btnTK.Text = "button1";
+            this.btnTK.Text = "Xem";
             this.btnTK.UseVisualStyleBackColor = true;
             this.btnTK.Click += new System.EventHandler(this.BtnTK_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(75, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Từ ngày:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(340, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Đến ngày:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(207, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(398, 42);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "DOANH THU NHÀ HÀNG";
             // 
             // FormTKDoanhThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 465);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTK);
             this.Controls.Add(this.dtpTo);
             this.Controls.Add(this.dtpFrom);
@@ -103,9 +140,10 @@
             this.Name = "FormTKDoanhThu";
             this.Text = "FormTKDoanhThu";
             this.Load += new System.EventHandler(this.FormTKDoanhThu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ThongKeDoanhThu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TKDTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThongKeDoanhThu)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,5 +156,8 @@
         private System.Windows.Forms.DateTimePicker dtpFrom;
         private System.Windows.Forms.DateTimePicker dtpTo;
         private System.Windows.Forms.Button btnTK;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
