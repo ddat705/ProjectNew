@@ -84,6 +84,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLuongToanNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLuongToanNV.Designer.cs">
+      <DependentUpon>FormLuongToanNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPermissionAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +114,29 @@
     <Compile Include="FormReport.Designer.cs">
       <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearchBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchBill.Designer.cs">
+      <DependentUpon>FormSearchBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormThongKe.Designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTKDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTKDoanhThu.Designer.cs">
+      <DependentUpon>FormTKDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTKL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTKL.Designer.cs">
+      <DependentUpon>FormTKL.cs</DependentUpon>
     </Compile>
     <Compile Include="FormXuLi.cs">
       <SubType>Form</SubType>
@@ -132,12 +156,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportXuatHD.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SearchBill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchBill.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThongKeDoanhThu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeDoanhThu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeLuong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThongKeLuong.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TKLToanNV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TKLToanNV.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormAddAccount.resx">
       <DependentUpon>FormAddAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLuongToanNV.resx">
+      <DependentUpon>FormLuongToanNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPermissionAdmin.resx">
       <DependentUpon>FormPermissionAdmin.cs</DependentUpon>
@@ -151,8 +198,17 @@
     <EmbeddedResource Include="FormReport.resx">
       <DependentUpon>FormReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchBill.resx">
+      <DependentUpon>FormSearchBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTKDoanhThu.resx">
+      <DependentUpon>FormTKDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTKL.resx">
+      <DependentUpon>FormTKL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXuLi.resx">
       <DependentUpon>FormXuLi.cs</DependentUpon>
@@ -166,7 +222,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportSearchBill.rdlc" />
+    <EmbeddedResource Include="ReportThongKeDT.rdlc" />
+    <EmbeddedResource Include="ReportTKLToanNV.rdlc" />
     <EmbeddedResource Include="ReportXuatHD.rdlc" />
+    <EmbeddedResource Include="TKL.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -187,6 +247,50 @@
     </None>
     <None Include="ReportXuatHD.xss">
       <DependentUpon>ReportXuatHD.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBill.xsc">
+      <DependentUpon>SearchBill.xsd</DependentUpon>
+    </None>
+    <None Include="SearchBill.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SearchBill.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SearchBill.xss">
+      <DependentUpon>SearchBill.xsd</DependentUpon>
+    </None>
+    <None Include="ThongKeDoanhThu.xsc">
+      <DependentUpon>ThongKeDoanhThu.xsd</DependentUpon>
+    </None>
+    <None Include="ThongKeDoanhThu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThongKeDoanhThu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ThongKeDoanhThu.xss">
+      <DependentUpon>ThongKeDoanhThu.xsd</DependentUpon>
+    </None>
+    <None Include="ThongKeLuong.xsc">
+      <DependentUpon>ThongKeLuong.xsd</DependentUpon>
+    </None>
+    <None Include="ThongKeLuong.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThongKeLuong.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ThongKeLuong.xss">
+      <DependentUpon>ThongKeLuong.xsd</DependentUpon>
+    </None>
+    <None Include="TKLToanNV.xsc">
+      <DependentUpon>TKLToanNV.xsd</DependentUpon>
+    </None>
+    <None Include="TKLToanNV.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TKLToanNV.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TKLToanNV.xss">
+      <DependentUpon>TKLToanNV.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -32,8 +32,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Top>0.26042in</Top>
-                          <Left>0.59375in</Left>
+                          <Top>0.30209in</Top>
+                          <Left>0.71267in</Left>
                           <Height>0.25in</Height>
                           <Width>1in</Width>
                           <Style>
@@ -61,8 +61,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Top>0.26042in</Top>
-                          <Left>1.66319in</Left>
+                          <Top>0.30209in</Top>
+                          <Left>1.78211in</Left>
                           <Height>0.25in</Height>
                           <Width>1in</Width>
                           <ZIndex>1</ZIndex>
@@ -91,8 +91,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Top>0.26042in</Top>
-                          <Left>2.92013in</Left>
+                          <Top>0.30209in</Top>
+                          <Left>3.03905in</Left>
                           <Height>0.25in</Height>
                           <Width>1.29167in</Width>
                           <ZIndex>2</ZIndex>
@@ -121,8 +121,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Top>0.26042in</Top>
-                          <Left>4.28124in</Left>
+                          <Top>0.30209in</Top>
+                          <Left>4.40016in</Left>
                           <Height>0.25in</Height>
                           <Width>1in</Width>
                           <ZIndex>3</ZIndex>
@@ -151,8 +151,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Top>0.26042in</Top>
-                          <Left>5.53819in</Left>
+                          <Top>0.30209in</Top>
+                          <Left>5.65711in</Left>
                           <Height>0.25in</Height>
                           <Width>1.29167in</Width>
                           <ZIndex>4</ZIndex>
@@ -181,8 +181,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Top>0.26042in</Top>
-                          <Left>6.8993in</Left>
+                          <Top>0.30209in</Top>
+                          <Left>7.01822in</Left>
                           <Height>0.25in</Height>
                           <Width>1in</Width>
                           <ZIndex>5</ZIndex>
@@ -542,7 +542,6 @@
                                           <PaddingBottom>2pt</PaddingBottom>
                                         </Style>
                                       </Textbox>
-                                      <rd:Selected>true</rd:Selected>
                                     </CellContents>
                                   </TablixCell>
                                 </TablixCells>
@@ -569,8 +568,8 @@
                             </TablixMembers>
                           </TablixRowHierarchy>
                           <DataSetName>DataSet1</DataSetName>
-                          <Top>0.67708in</Top>
-                          <Left>0.59375in</Left>
+                          <Top>0.71875in</Top>
+                          <Left>0.71267in</Left>
                           <Height>0.71876in</Height>
                           <Width>7.30555in</Width>
                           <ZIndex>6</ZIndex>
@@ -595,8 +594,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Top>1.46528in</Top>
-                          <Left>5.53819in</Left>
+                          <Top>1.50695in</Top>
+                          <Left>5.65711in</Left>
                           <Height>0.25in</Height>
                           <Width>1in</Width>
                           <ZIndex>7</ZIndex>
@@ -625,8 +624,8 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox3</rd:DefaultName>
-                          <Top>1.46528in</Top>
-                          <Left>6.60764in</Left>
+                          <Top>1.50695in</Top>
+                          <Left>6.72656in</Left>
                           <Height>0.25in</Height>
                           <Width>1.22917in</Width>
                           <ZIndex>8</ZIndex>
@@ -671,8 +670,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.13417in</Top>
-        <Left>0.11333in</Left>
         <Height>2.03125in</Height>
         <Width>8.8993in</Width>
         <Style>
@@ -682,10 +679,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.28125in</Height>
+    <Height>2.03125in</Height>
     <Style />
   </Body>
-  <Width>9.01264in</Width>
+  <Width>8.8993in</Width>
   <Page>
     <PageHeader>
       <Height>1in</Height>
@@ -703,14 +700,27 @@
                   <Style />
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>(ĐÃ THANH TOÁN)</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.36333in</Top>
-          <Left>3.655in</Left>
-          <Height>0.25in</Height>
-          <Width>1.60417in</Width>
+          <Top>0.23833in</Top>
+          <Left>3.70631in</Left>
+          <Height>0.38542in</Height>
+          <Width>1.69385in</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -741,7 +751,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>7b429bad-10c1-4a26-808b-33079f6abbec</rd:DataSourceID>
+      <rd:DataSourceID>b07dcae3-9bf0-4930-ba09-f76e68b48c4f</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -755,17 +765,9 @@
           <DataField>MAHD</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="NGAYLAPHD">
-          <DataField>NGAYLAPHD</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="NGAYTHANHTOAN">
-          <DataField>NGAYTHANHTOAN</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
-        </Field>
-        <Field Name="TONGTIEN">
-          <DataField>TONGTIEN</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="MAMONAN">
+          <DataField>MAMONAN</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="SOLUONG">
           <DataField>SOLUONG</DataField>
@@ -775,29 +777,17 @@
           <DataField>THANHTIEN</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="ID">
-          <DataField>ID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="TEN">
-          <DataField>TEN</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="GIA">
-          <DataField>GIA</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>ReportXuatHD</rd:DataSetName>
         <rd:SchemaPath>C:\Users\KIEU VINH\Desktop\ddat705\ProjectNew\FinalProject\ReportXuatHD.xsd</rd:SchemaPath>
-        <rd:TableName>BILL</rd:TableName>
+        <rd:TableName>CHITIETHOADON</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>BILLTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>CHITIETHOADONTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
-  <rd:ReportID>79526f5d-e43b-4f64-a449-ac167e74bf1c</rd:ReportID>
+  <rd:ReportID>57fad5a0-51ae-4af4-a445-03327877e3b2</rd:ReportID>
 </Report>
