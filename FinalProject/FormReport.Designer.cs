@@ -47,7 +47,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "FinalProject.ReportXuatHD.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(77, 32);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
+            //this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(658, 284);
             this.reportViewer1.TabIndex = 0;
             // 
