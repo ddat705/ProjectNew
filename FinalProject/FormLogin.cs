@@ -52,11 +52,15 @@ namespace FinalProject
             {
                 try
                 {
+                    string pathPicture = BLacc.getPathPictureByUsername(this.txtPassword.Text);
+                    DTacc.Columns.Add();
+                    DTacc.Rows[0][6] = pathPicture;
                     Form f = new FormXuLi(DTacc);
                     this.Hide();
-                    f.ShowDialog();       
+                    f.ShowDialog();
                     this.txtPassword.Text = "";
                     this.txtUsername.Text = "";
+                    this.txtUsername.Focus();
                     this.Show();
                 }
                 catch

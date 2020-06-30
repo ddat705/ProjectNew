@@ -17,6 +17,8 @@ namespace FinalProject
         BLAccount BLAcc = new BLAccount();
         DataTable dataTable = new DataTable();
         string err;
+        string pathPicture = "";
+
         public FormAddAccount()
         {
             InitializeComponent();
@@ -51,7 +53,7 @@ namespace FinalProject
             int r = dgvTaiKhoan.CurrentCell.RowIndex;
             this.lblID.Text = dgvTaiKhoan.Rows[r].Cells[0].Value.ToString();
             this.btnThem.Enabled = true;
-            int index = cbChucvu.FindString(this.dgvTaiKhoan.Rows[r].Cells[5].Value.ToString());
+            int index = cbChucvu.FindString(this.dgvTaiKhoan.Rows[r].Cells[4].Value.ToString());
             cbChucvu.SelectedIndex = index;
 
         }
@@ -148,6 +150,8 @@ namespace FinalProject
         {
             this.txtPassword.Enabled = true;
             this.txtUsername.Enabled = true;
+            this.cbChucvu.Enabled = true;
+            this.cbChucvu.SelectedIndex = 1;
             this.btnHuy.Enabled = true;
         }
 
@@ -176,9 +180,8 @@ namespace FinalProject
         {
             try
             {
-
                 BLAccount blacc = new BLAccount();
-                blacc.CreateAcc(this.txtUsername.Text, this.txtPassword.Text, Convert.ToString(cbChucvu.SelectedIndex + 1), this.lblID.Text, err);
+                blacc.CreateAcc(this.txtUsername.Text, this.txtPassword.Text, Convert.ToString(cbChucvu.SelectedIndex + 1), this.lblID.Text, pathPicture ,err);
                 LoadData();
                 this.dgvTaiKhoan.Enabled = true;
                 MessageBox.Show("Đã thêm xong!");
@@ -213,7 +216,9 @@ namespace FinalProject
                         string CorrectFilename = System.IO.Path.GetFileName(openFileDialog.FileName);
                         System.IO.File.Copy(openFileDialog.FileName, paths + "\\Assets\\ImagesUsers\\" + CorrectFilename, true);
                         filePath = paths + "\\Assets\\ImagesUsers\\" + CorrectFilename;
-                        MessageBox.Show("đã thêm ảnh");
+                        MessageBox.Show("đã thêm ảnh " + filePath);
+                        ptbImageNV.Image = Image.FromFile(filePath);
+                        this.pathPicture = filePath;
                     }
                 }
                 //this.lbTextName.Text = filePath;

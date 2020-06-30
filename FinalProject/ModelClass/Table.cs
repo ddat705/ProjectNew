@@ -14,6 +14,7 @@ namespace FinalProject.ModelClass
         public bool isUsed = true;                  //Bàn trống
         public List<SelectedMenuClass> lSelectedMenu = new List<SelectedMenuClass>();
         public double TongTien = 0;
+        public bool status = false;
 
         public Table() 
         {
@@ -22,6 +23,9 @@ namespace FinalProject.ModelClass
         public void setTableEmpty(string src)
         {
             this.ptb.Image = Image.FromFile(@"" + src);
+            this.lSelectedMenu.Clear();
+            this.TongTien = 0;
+            this.status = false;
             this.isUsed = true;
             lSelectedMenu.Clear();
         }

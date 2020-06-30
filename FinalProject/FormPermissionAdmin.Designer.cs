@@ -30,6 +30,9 @@
         {
             this.tabInforUser = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbTextCMND = new System.Windows.Forms.Label();
+            this.lbRoleAcc = new System.Windows.Forms.Label();
             this.lbTextChucVu = new System.Windows.Forms.Label();
             this.lbTextID = new System.Windows.Forms.Label();
             this.lbTextRoleAcc = new System.Windows.Forms.Label();
@@ -37,14 +40,12 @@
             this.lbTextUsername = new System.Windows.Forms.Label();
             this.lbIDUser = new System.Windows.Forms.Label();
             this.lbChucVuNV = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptbPictureUser = new System.Windows.Forms.PictureBox();
             this.lbUsername = new System.Windows.Forms.Label();
             this.tabQuanLyNV = new System.Windows.Forms.TabControl();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbRoleAcc = new System.Windows.Forms.Label();
-            this.lbTextCMND = new System.Windows.Forms.Label();
             this.tabInforUser.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,6 +67,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbTextCMND);
             this.panel1.Controls.Add(this.lbRoleAcc);
             this.panel1.Controls.Add(this.lbTextChucVu);
@@ -83,6 +85,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(694, 330);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(85, 268);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 24);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Ảnh";
+            // 
+            // lbTextCMND
+            // 
+            this.lbTextCMND.Location = new System.Drawing.Point(375, 280);
+            this.lbTextCMND.Name = "lbTextCMND";
+            this.lbTextCMND.Size = new System.Drawing.Size(295, 42);
+            this.lbTextCMND.TabIndex = 13;
+            this.lbTextCMND.Text = "6";
+            this.lbTextCMND.UseCompatibleTextRendering = true;
+            // 
+            // lbRoleAcc
+            // 
+            this.lbRoleAcc.AutoSize = true;
+            this.lbRoleAcc.Location = new System.Drawing.Point(236, 64);
+            this.lbRoleAcc.Name = "lbRoleAcc";
+            this.lbRoleAcc.Size = new System.Drawing.Size(130, 24);
+            this.lbRoleAcc.TabIndex = 12;
+            this.lbRoleAcc.Text = "Loại tài khoản:";
             // 
             // lbTextChucVu
             // 
@@ -147,6 +176,15 @@
             this.lbChucVuNV.TabIndex = 5;
             this.lbChucVuNV.Text = "Chức Vụ:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(236, 280);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "CMND:";
+            // 
             // lbName
             // 
             this.lbName.AutoSize = true;
@@ -160,16 +198,18 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.ptbPictureUser);
-            this.panel2.Location = new System.Drawing.Point(28, 33);
+            this.panel2.Location = new System.Drawing.Point(15, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(146, 183);
+            this.panel2.Size = new System.Drawing.Size(190, 233);
             this.panel2.TabIndex = 2;
             // 
             // ptbPictureUser
             // 
+            this.ptbPictureUser.BackColor = System.Drawing.Color.LemonChiffon;
             this.ptbPictureUser.Location = new System.Drawing.Point(3, 3);
             this.ptbPictureUser.Name = "ptbPictureUser";
-            this.ptbPictureUser.Size = new System.Drawing.Size(138, 175);
+            this.ptbPictureUser.Size = new System.Drawing.Size(182, 225);
+            this.ptbPictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPictureUser.TabIndex = 0;
             this.ptbPictureUser.TabStop = false;
             // 
@@ -192,33 +232,6 @@
             this.tabQuanLyNV.SelectedIndex = 0;
             this.tabQuanLyNV.Size = new System.Drawing.Size(719, 389);
             this.tabQuanLyNV.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(236, 280);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CMND:";
-            // 
-            // lbRoleAcc
-            // 
-            this.lbRoleAcc.AutoSize = true;
-            this.lbRoleAcc.Location = new System.Drawing.Point(236, 64);
-            this.lbRoleAcc.Name = "lbRoleAcc";
-            this.lbRoleAcc.Size = new System.Drawing.Size(130, 24);
-            this.lbRoleAcc.TabIndex = 12;
-            this.lbRoleAcc.Text = "Loại tài khoản:";
-            // 
-            // lbTextCMND
-            // 
-            this.lbTextCMND.Location = new System.Drawing.Point(375, 280);
-            this.lbTextCMND.Name = "lbTextCMND";
-            this.lbTextCMND.Size = new System.Drawing.Size(295, 42);
-            this.lbTextCMND.TabIndex = 13;
-            this.lbTextCMND.Text = "6";
-            this.lbTextCMND.UseCompatibleTextRendering = true;
             // 
             // FormPermissionAdmin
             // 
@@ -258,5 +271,6 @@
         private System.Windows.Forms.Label lbRoleAcc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbTextCMND;
+        private System.Windows.Forms.Label label1;
     }
 }

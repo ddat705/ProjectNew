@@ -26,6 +26,8 @@ namespace FinalProject
             lbTextName.Text = root.Rows[0][3].ToString();
             lbTextCMND.Text = root.Rows[0][4].ToString();
             lbTextRoleAcc.Text = root.Rows[0][1].ToString();
+            if(root.Rows[0][6].ToString() != "null")
+                ptbPictureUser.Image = Image.FromFile(root.Rows[0][6].ToString());
         }
 
         private void FormPermissionAdmin_Load(object sender, EventArgs e)
