@@ -55,18 +55,20 @@
             // 
             // tabInforUser
             // 
+            this.tabInforUser.BackColor = System.Drawing.Color.Transparent;
+            this.tabInforUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabInforUser.Controls.Add(this.panel1);
             this.tabInforUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabInforUser.Location = new System.Drawing.Point(4, 25);
             this.tabInforUser.Name = "tabInforUser";
             this.tabInforUser.Padding = new System.Windows.Forms.Padding(5);
-            this.tabInforUser.Size = new System.Drawing.Size(711, 360);
+            this.tabInforUser.Size = new System.Drawing.Size(672, 339);
             this.tabInforUser.TabIndex = 0;
             this.tabInforUser.Text = "Thông tin tài khoản";
-            this.tabInforUser.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = global::FinalProject.Properties.Resources.Untitled1;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbTextCMND);
             this.panel1.Controls.Add(this.lbRoleAcc);
@@ -81,9 +83,9 @@
             this.panel1.Controls.Add(this.lbName);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lbUsername);
-            this.panel1.Location = new System.Drawing.Point(9, 9);
+            this.panel1.Location = new System.Drawing.Point(-4, -9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(694, 330);
+            this.panel1.Size = new System.Drawing.Size(707, 365);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -206,9 +208,9 @@
             // ptbPictureUser
             // 
             this.ptbPictureUser.BackColor = System.Drawing.Color.LemonChiffon;
-            this.ptbPictureUser.Location = new System.Drawing.Point(3, 3);
+            this.ptbPictureUser.Location = new System.Drawing.Point(2, -1);
             this.ptbPictureUser.Name = "ptbPictureUser";
-            this.ptbPictureUser.Size = new System.Drawing.Size(182, 225);
+            this.ptbPictureUser.Size = new System.Drawing.Size(187, 232);
             this.ptbPictureUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbPictureUser.TabIndex = 0;
             this.ptbPictureUser.TabStop = false;
@@ -227,16 +229,17 @@
             this.tabQuanLyNV.Controls.Add(this.tabInforUser);
             this.tabQuanLyNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabQuanLyNV.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabQuanLyNV.Location = new System.Drawing.Point(12, 12);
+            this.tabQuanLyNV.Location = new System.Drawing.Point(33, 12);
             this.tabQuanLyNV.Name = "tabQuanLyNV";
             this.tabQuanLyNV.SelectedIndex = 0;
-            this.tabQuanLyNV.Size = new System.Drawing.Size(719, 389);
+            this.tabQuanLyNV.Size = new System.Drawing.Size(680, 368);
             this.tabQuanLyNV.TabIndex = 0;
             // 
             // FormPermissionAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FinalProject.Properties.Resources._623_6236350_profile_icon_png_white_clipart_png_download_windows;
             this.ClientSize = new System.Drawing.Size(739, 405);
             this.Controls.Add(this.tabQuanLyNV);
             this.Name = "FormPermissionAdmin";

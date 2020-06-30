@@ -298,6 +298,8 @@
   <ItemGroup>
     <None Include="Resources\pngtree-restaurant-set-menu-background-material-image_158473.jpg" />
     <None Include="Resources\pngtree-delicious-sushi-background-poster-image_194461.jpg" />
+    <None Include="Resources\623-6236350_profile-icon-png-white-clipart-png-download-windows.png" />
+    <None Include="Resources\Untitled1.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -63,6 +63,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _623_6236350_profile_icon_png_white_clipart_png_download_windows {
+            get {
+                object obj = ResourceManager.GetObject("623-6236350_profile-icon-png-white-clipart-png-download-windows", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_delicious_sushi_background_poster_image_194461 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-delicious-sushi-background-poster-image_194461", resourceCulture);
@@ -76,6 +86,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap pngtree_restaurant_set_menu_background_material_image_158473 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-restaurant-set-menu-background-material-image_158473", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
