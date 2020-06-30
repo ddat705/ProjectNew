@@ -38,12 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureTableAdapter1 = new FinalProject.SearchBillTableAdapters.PICTURETableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKeLuongBoPhanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKeLuong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // ThongKeLuongBoPhanBindingSource
@@ -111,32 +107,12 @@
             // 
             this.pictureTableAdapter1.ClearBeforeFill = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FinalProject.Properties.Resources.pngtree_reports_icon_for_your_project_png_image_1533764;
-            this.pictureBox1.Location = new System.Drawing.Point(663, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 85);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::FinalProject.Properties.Resources._8;
-            this.pictureBox2.Location = new System.Drawing.Point(38, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(99, 93);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // FormTKL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 478);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -146,8 +122,6 @@
             this.Load += new System.EventHandler(this.FormTKL_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ThongKeLuongBoPhanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThongKeLuong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,8 +136,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private SearchBillTableAdapters.PICTURETableAdapter pictureTableAdapter1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

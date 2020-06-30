@@ -38,12 +38,8 @@
             this.TimkiemHDTableAdapter = new FinalProject.SearchBillTableAdapters.TimkiemHDTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.TimkiemHDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchBill)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TimkiemHDBindingSource
@@ -110,32 +106,12 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "TÌM KIẾM THÔNG TIN HÓA ĐƠN";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::FinalProject.Properties.Resources._8;
-            this.pictureBox2.Location = new System.Drawing.Point(46, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(99, 93);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FinalProject.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(646, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 93);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormSearchBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(808, 466);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
@@ -145,8 +121,6 @@
             this.Text = "FormSearchBill";
             ((System.ComponentModel.ISupportInitialize)(this.TimkiemHDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchBill)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +136,5 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

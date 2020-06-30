@@ -68,7 +68,6 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::FinalProject.Properties.Resources.Untitled1;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lbTextCMND);
             this.panel1.Controls.Add(this.lbRoleAcc);
@@ -239,7 +238,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FinalProject.Properties.Resources._623_6236350_profile_icon_png_white_clipart_png_download_windows;
             this.ClientSize = new System.Drawing.Size(739, 405);
             this.Controls.Add(this.tabQuanLyNV);
             this.Name = "FormPermissionAdmin";

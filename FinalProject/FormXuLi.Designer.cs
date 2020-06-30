@@ -76,7 +76,6 @@
             this.btnXuatHoaDon = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.InfoAccount = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,7 +109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMuaHang)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -608,15 +606,6 @@
             this.lblDiaChi.TabIndex = 11;
             this.lblDiaChi.Text = "Đia chỉ:";
             // 
-            // Logo
-            // 
-            this.Logo.Image = global::FinalProject.Properties.Resources._7;
-            this.Logo.Location = new System.Drawing.Point(814, 292);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(194, 146);
-            this.Logo.TabIndex = 10;
-            this.Logo.TabStop = false;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -784,7 +773,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::FinalProject.Properties.Resources.pngtree_restaurant_set_menu_background_material_image_158473;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1020, 486);
             this.Controls.Add(this.label20);
@@ -794,7 +782,6 @@
             this.Controls.Add(this.lbSelectedTable);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.Logo);
             this.Controls.Add(this.btnXuatHoaDon);
             this.Controls.Add(this.lblDiaChi);
             this.Controls.Add(this.btnThanhToan);
@@ -829,7 +816,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMuaHang)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -872,7 +858,6 @@
         private System.Windows.Forms.Button btnXuatHoaDon;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblDiaChi;
-        private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thôngTinNhàHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem StaffManager;
