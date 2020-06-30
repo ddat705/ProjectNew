@@ -67,6 +67,7 @@
             // dgvThongTinNV
             // 
             this.dgvThongTinNV.AllowUserToOrderColumns = true;
+            this.dgvThongTinNV.BackgroundColor = System.Drawing.Color.White;
             this.dgvThongTinNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinNV.Location = new System.Drawing.Point(43, 89);
             this.dgvThongTinNV.Name = "dgvThongTinNV";

@@ -173,6 +173,46 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7 {
+            get {
+                object obj = ResourceManager.GetObject("7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8 {
+            get {
+                object obj = ResourceManager.GetObject("8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9 {
+            get {
+                object obj = ResourceManager.GetObject("9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download {
+            get {
+                object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hinh_nen_powerpoint_chuyen_nghiep_luanvan2s {
             get {
                 object obj = ResourceManager.GetObject("hinh_nen_powerpoint_chuyen_nghiep_luanvan2s", resourceCulture);
@@ -193,6 +233,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_reports_icon_for_your_project_png_image_1533764 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-reports-icon-for-your-project-png-image_1533764", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_restaurant_set_menu_background_material_image_158473 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-restaurant-set-menu-background-material-image_158473", resourceCulture);
@@ -206,6 +256,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap qqqqs {
             get {
                 object obj = ResourceManager.GetObject("qqqqs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thiet_ke_logo_nha_hang_nhat_7 {
+            get {
+                object obj = ResourceManager.GetObject("thiet-ke-logo-nha-hang-nhat-7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

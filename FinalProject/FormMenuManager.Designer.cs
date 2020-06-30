@@ -55,6 +55,7 @@
             // 
             this.dgvThongtin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongtin.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvThongtin.BackgroundColor = System.Drawing.Color.White;
             this.dgvThongtin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongtin.Location = new System.Drawing.Point(22, 31);
             this.dgvThongtin.Name = "dgvThongtin";

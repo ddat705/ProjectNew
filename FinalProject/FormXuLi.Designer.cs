@@ -94,6 +94,8 @@
             this.lbSelectedTable = new System.Windows.Forms.Label();
             this.lbTextSelectedTable = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumberUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBan5)).BeginInit();
@@ -115,7 +117,7 @@
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(344, 323);
+            this.btnThem.Location = new System.Drawing.Point(354, 323);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 16;
@@ -155,6 +157,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(36, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
@@ -410,6 +413,7 @@
             // 
             this.dgvMuaHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMuaHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMuaHang.BackgroundColor = System.Drawing.Color.White;
             this.dgvMuaHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMuaHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
@@ -478,7 +482,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(793, 76);
+            this.panel2.Location = new System.Drawing.Point(811, 76);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(197, 175);
             this.panel2.TabIndex = 21;
@@ -494,7 +498,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 146);
+            this.label8.Location = new System.Drawing.Point(12, 146);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 11;
@@ -565,7 +569,7 @@
             // btnThanhToan
             // 
             this.btnThanhToan.BackColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(793, 263);
+            this.btnThanhToan.Location = new System.Drawing.Point(811, 263);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(98, 23);
             this.btnThanhToan.TabIndex = 22;
@@ -576,7 +580,7 @@
             // btnXuatHoaDon
             // 
             this.btnXuatHoaDon.BackColor = System.Drawing.Color.White;
-            this.btnXuatHoaDon.Location = new System.Drawing.Point(897, 263);
+            this.btnXuatHoaDon.Location = new System.Drawing.Point(915, 263);
             this.btnXuatHoaDon.Name = "btnXuatHoaDon";
             this.btnXuatHoaDon.Size = new System.Drawing.Size(93, 23);
             this.btnXuatHoaDon.TabIndex = 23;
@@ -598,7 +602,7 @@
             // 
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.BackColor = System.Drawing.Color.Transparent;
-            this.lblDiaChi.Location = new System.Drawing.Point(775, 35);
+            this.lblDiaChi.Location = new System.Drawing.Point(801, 25);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(43, 13);
             this.lblDiaChi.TabIndex = 11;
@@ -606,7 +610,8 @@
             // 
             // Logo
             // 
-            this.Logo.Location = new System.Drawing.Point(796, 292);
+            this.Logo.Image = global::FinalProject.Properties.Resources._7;
+            this.Logo.Location = new System.Drawing.Point(814, 292);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(194, 146);
             this.Logo.TabIndex = 10;
@@ -621,7 +626,7 @@
             this.ThongKe});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1002, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1020, 24);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -730,7 +735,7 @@
             // 
             this.lbSelectedTable.AutoSize = true;
             this.lbSelectedTable.BackColor = System.Drawing.Color.Transparent;
-            this.lbSelectedTable.Location = new System.Drawing.Point(473, 60);
+            this.lbSelectedTable.Location = new System.Drawing.Point(462, 60);
             this.lbSelectedTable.Name = "lbSelectedTable";
             this.lbSelectedTable.Size = new System.Drawing.Size(84, 13);
             this.lbSelectedTable.TabIndex = 27;
@@ -740,7 +745,7 @@
             // 
             this.lbTextSelectedTable.AutoSize = true;
             this.lbTextSelectedTable.BackColor = System.Drawing.Color.Transparent;
-            this.lbTextSelectedTable.Location = new System.Drawing.Point(563, 60);
+            this.lbTextSelectedTable.Location = new System.Drawing.Point(552, 60);
             this.lbTextSelectedTable.Name = "lbTextSelectedTable";
             this.lbTextSelectedTable.Size = new System.Drawing.Size(0, 13);
             this.lbTextSelectedTable.TabIndex = 28;
@@ -749,11 +754,31 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Location = new System.Drawing.Point(822, 35);
+            this.label21.Location = new System.Drawing.Point(848, 25);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(93, 13);
             this.label21.TabIndex = 30;
             this.label21.Text = "Thủ Đức, TPHCM";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Location = new System.Drawing.Point(848, 49);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(61, 13);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "999999999";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Location = new System.Drawing.Point(801, 49);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(32, 13);
+            this.label22.TabIndex = 31;
+            this.label22.Text = "SĐT:";
             // 
             // FormXuLi
             // 
@@ -761,7 +786,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FinalProject.Properties.Resources.pngtree_restaurant_set_menu_background_material_image_158473;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1002, 486);
+            this.ClientSize = new System.Drawing.Size(1020, 486);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.lbTextSelectedTable);
             this.Controls.Add(this.lbSelectedTable);
@@ -878,5 +905,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label lbStatus;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
     }
 }

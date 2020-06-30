@@ -114,12 +114,6 @@
     <Compile Include="FormSearchBill.Designer.cs">
       <DependentUpon>FormSearchBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThongKe.Designer.cs">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTKDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,9 +193,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchBill.resx">
       <DependentUpon>FormSearchBill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormThongKe.resx">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTKDoanhThu.resx">
       <DependentUpon>FormTKDoanhThu.cs</DependentUpon>
@@ -312,6 +303,12 @@
     <None Include="Resources\unnamed4.jpg" />
     <None Include="Resources\unnamed5.jpg" />
     <None Include="Resources\3.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\pngtree-reports-icon-for-your-project-png-image_1533764.jpg" />
+    <None Include="Resources\thiet-ke-logo-nha-hang-nhat-7.jpg" />
+    <None Include="Resources\7.jpg" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\9.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
