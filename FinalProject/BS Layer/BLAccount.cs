@@ -39,6 +39,15 @@ namespace FinalProject.BS_Layer
             //return db.ExecuteQueryDataTable("select * from TAIKHOAN Where Username = '" + Username + "' and Password = '" + Password + "'", CommandType.Text);
         }
 
+        public string getPathPictureByUsername(string Username)
+        {
+            DataTable picture = new DataTable();
+            picture = db.ExecuteQueryDataTable("Select Picture.PHOTO FROM PICTURE WHERE username = '" + Username + "'", CommandType.Text);
+            if(picture.Rows.Count!=0)
+                return picture.Rows[0][0].ToString();
+            return "null";
+        }
+
         public DataTable getMenuAll()
         {
             return db.ExecuteQueryDataTable("SELECT THUCDON.ID,THUCDON.TEN as Tên,THUCDON.GIA as Giá, LOAI.TEN as Loại " +
@@ -122,7 +131,7 @@ namespace FinalProject.BS_Layer
                                             "FROM NHANVIEN " +
                                             "INNER JOIN CHUCVU " +
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
-                                            "WHERE NHANVIEN.HOTEN LIKE N'%" + ten+ "%'" , CommandType.Text);
+                                            "WHERE NHANVIEN.HOTEN LIKE N'%" + ten + "%'", CommandType.Text);
         }
 
         public DataTable getStaffByIDAndPosition(string id, string chucvu)
@@ -146,7 +155,7 @@ namespace FinalProject.BS_Layer
 
         public bool AddNV(string Hoten, string cmnd, string namsinh, string Luong, string Chucvu, string error)
         {
-            return db.MyExecuteNonQuery("Insert Into NHANVIEN(HOTEN,CMND,NAMSINH,LUONG,CHUCVU) Values(N'" + Hoten + "','" + cmnd + "','"+ namsinh +"',"+Luong+","+ Chucvu +")", CommandType.Text, ref error);
+            return db.MyExecuteNonQuery("Insert Into NHANVIEN(HOTEN,CMND,NAMSINH,LUONG,CHUCVU) Values(N'" + Hoten + "','" + cmnd + "','" + namsinh + "'," + Luong + "," + Chucvu + ")", CommandType.Text, ref error);
         }
 
         public void deleteMenuByID(string id)
@@ -170,12 +179,12 @@ namespace FinalProject.BS_Layer
             return db.MyExecuteNonQuery("UPDATE THUCDON SET TEN = N'" +
                       ten + "', GIA =" +
                       gia + ", LOAI =" +
-                      loai + " WHERE ID = " + 
+                      loai + " WHERE ID = " +
                       id, CommandType.Text, ref err);
         }
         public bool UpdateNV(string id, string Hoten, string cmnd, string namsinh, string Luong, string Chucvu, string error)
         {
-            return db.MyExecuteNonQuery("Update NHANVIEN Set HOTEN = '" + Hoten + "', CMND = '" + cmnd + "', NAMSINH = '" + namsinh + "', LUONG = " + Luong + ", CHUCVU = " + Chucvu + " WHERE ID = "+id, CommandType.Text, ref error);
+            return db.MyExecuteNonQuery("Update NHANVIEN Set HOTEN = '" + Hoten + "', CMND = '" + cmnd + "', NAMSINH = '" + namsinh + "', LUONG = " + Luong + ", CHUCVU = " + Chucvu + " WHERE ID = " + id, CommandType.Text, ref error);
         }
         public void DeleteStaff(string id)
         {
@@ -185,7 +194,7 @@ namespace FinalProject.BS_Layer
 
         public DataTable getStaffDHaveAcc()
         {
-            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', NHANVIEN.LUONG AS 'LƯƠNG', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
+            return db.ExecuteQueryDataTable("SELECT NHANVIEN.ID, NHANVIEN.HOTEN AS 'HỌ TÊN', NHANVIEN.CMND, NHANVIEN.NAMSINH AS 'NĂM SINH', CHUCVU.CHUCVU AS 'CHỨC VỤ' " +
                                             "FROM NHANVIEN " +
                                             "INNER JOIN CHUCVU " +
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
@@ -201,7 +210,7 @@ namespace FinalProject.BS_Layer
                                             "ON NHANVIEN.CHUCVU = CHUCVU.ID " +
                                             "WHERE NHANVIEN.ID NOT IN (SELECT NHANVIEN.ID " +
                                                           "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
-                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND NHANVIEN.CHUCVU =" +id, CommandType.Text);
+                                                          "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND NHANVIEN.CHUCVU =" + id, CommandType.Text);
         }
         public DataTable getStaffDHaveAccbyID(string id)
         {
@@ -243,18 +252,22 @@ namespace FinalProject.BS_Layer
                                                           "FROM NHANVIEN, CHUCVU, TAIKHOAN " +
                                                           "WHERE NHANVIEN.CHUCVU = CHUCVU.ID and NHANVIEN.ID = TAIKHOAN.IDNhanVien) AND NHANVIEN.HOTEN LIKE N'%" + hoten + "%' AND CHUCVU.ID = " + chucvu, CommandType.Text);
         }
-        public bool CreateAcc(string tentk, string pass, string chucvutk, string id, string error)
+        public bool CreateAcc(string tentk, string pass, string chucvutk, string id, string pathPicture, string error)
         {
-            return db.MyExecuteNonQuery("Insert Into TAIKHOAN(USERNAME,PASSWORD,TYPEACCOUNT,IDNhanVien) Values('" + tentk + "','" + pass + "'," + chucvutk + "," +id + ")", CommandType.Text, ref error);
+            if (db.MyExecuteNonQuery("Insert Into TAIKHOAN(USERNAME,PASSWORD,TYPEACCOUNT,IDNhanVien) Values('" + tentk + "','" + pass + "'," + chucvutk + "," + id + ")", CommandType.Text, ref error))
+            {
+                return db.MyExecuteNonQuery("insert into PICTURE(USERNAME, PHOTO) values('" + tentk + "','" + pathPicture + "')", CommandType.Text, ref error);
+            }
+            return false;
         }
 
         public bool addHoaDon(string Username, string NgayLap, string NgayThanhToan, string TongTien, Table T, string err)
         {
-            if( db.MyExecuteNonQuery("insert into HOADON(USERNAME, NGAYLAPHD,NGAYTHANHTOAN,TONGTIEN) values('" +
+            if (db.MyExecuteNonQuery("insert into HOADON(USERNAME, NGAYLAPHD,NGAYTHANHTOAN,TONGTIEN) values('" +
                      Username + "','" +
                      NgayLap + "','" +
                      NgayThanhToan + "','" +
-                     TongTien + "')", CommandType.Text,ref err))
+                     TongTien + "')", CommandType.Text, ref err))
             {
                 DataTable x = db.ExecuteQueryDataTable("SELECT MAX(HOADON.MAHD) " +
                                                       " FROM HOADON ", CommandType.Text);
@@ -269,9 +282,9 @@ namespace FinalProject.BS_Layer
                      T.lSelectedMenu[i].thanhTien + ")", CommandType.Text, ref err);
                 }
                 return true;
-            }   
+            }
             return false;
         }
-             
+
     }
 }

@@ -17,7 +17,7 @@ namespace FinalProject
         private DataTable inforAcc = new DataTable();
         private List<Table> lTable = new List<Table>();
 
-        private int BanDangChon;
+        private int BanDangChon = -1;
         private int monDangChon;
 
         string srcImageTableEmpty = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + "\\Assets\\ImagesApplication\\table_empty.png";
@@ -37,12 +37,20 @@ namespace FinalProject
         {
             InitializeComponent();
 
-            inforAcc = root;
+            if (root.Rows[0][1].ToString() == "Staff")
+            {
+                this.CreateAccount.Enabled = false;
+                this.MenuManager.Enabled = false;
+                this.StaffManager.Enabled = false;
+                this.ThongKe.Enabled = false;
 
+            }
+            inforAcc = root;
             this.AddListPtb();
             this.LoadNewListTable();
             this.cbBoxLoai.SelectedIndex = 0;
             btnThanhToan.Enabled = false;
+            btnXuatHoaDon.Enabled = false;
             this.reload(0);
         }
 
@@ -417,6 +425,7 @@ namespace FinalProject
                         this.RutGonlSelectedMenu(lTable[BanDangChon]);
                         this.test();
                         this.TongTien();
+                        this.checkBtnThanhToan();
                     }
 
                 }
@@ -483,14 +492,25 @@ namespace FinalProject
         }
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            btnXuatHoaDon.Enabled = true;
             lblTienThoi.Text = (Convert.ToInt32(txtBoxTienNhan.Text) - Convert.ToInt32(lblTongTien.Text)).ToString();
             this.BLAcc.addHoaDon(inforAcc.Rows[0][1].ToString(), DateTime.Today.ToString("yyyy-MM-dd"), DateTime.Today.ToString("yyyy-MM-dd"), this.lblTongTien.Text, lTable[BanDangChon], err);
-
+            this.lTable[BanDangChon].status = true;
+            if (this.lTable[BanDangChon].status)
+            {
+                lbStatus.Text = "Đã thanh toán!";
+            }
+            btnThanhToan.Enabled = false;
         }
 
         private void txtBoxTienNhan_TextChanged(object sender, EventArgs e)
         {
-            if(txtBoxTienNhan.Text != "")
+            this.checkBtnThanhToan();
+        }
+
+        public void checkBtnThanhToan()
+        {
+            if (txtBoxTienNhan.Text != "")
             {
                 if (Convert.ToInt32(txtBoxTienNhan.Text) >= Convert.ToInt32(lblTongTien.Text))
                 {
@@ -501,15 +521,29 @@ namespace FinalProject
                     btnThanhToan.Enabled = false;
                 }
             }
+            else
+            {
+                btnThanhToan.Enabled = false;
+            }
         }
-
         private void BtnXuatHoaDon_Click(object sender, EventArgs e)
         {
             Form a = new FormReport();
             this.Hide();
             a.ShowDialog();
+            lTable[BanDangChon].setTableEmpty(srcImageTableEmpty);
+            lTable[BanDangChon].setBorderStyleNull();
+            this.lblTongTien.Text = "0";
+            this.lblTienThoi.Text = "0";
+            this.txtBoxTienNhan.Text = "0";
+            this.lbTextSelectedTable.Text = "";
+            this.dgvMuaHang.Rows.Clear();
+            if (!lTable[BanDangChon].status)
+                lbStatus.Text = "Chưa thanh toán";
+            btnXuatHoaDon.Enabled = false;
+            btnThanhToan.Enabled = false;
+            this.BanDangChon = -1;
             this.Show();
-
         }
 
         private void TìmKiếmThôngTinHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -542,6 +576,46 @@ namespace FinalProject
             this.Hide();
             a.ShowDialog();
             this.Show();
+        }
+
+        private void btnChuyenBan_Click(object sender, EventArgs e)
+        {
+            if (lbTextSelectedTable.Text != "")
+            {
+                if (lTable[cbBoxBanChuyen.SelectedIndex + 1].isUsed)
+                {
+
+                    DialogResult rep;
+                    rep = MessageBox.Show("Bạn muốn Chuyển bàn này?", "Trả lời", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (rep == DialogResult.Yes)
+                    {
+                        int value = BanDangChon;
+                        this.lTable[cbBoxBanChuyen.SelectedIndex].isUsed = false;
+                        //this.lTable[cbBoxBanChuyen.SelectedIndex].lSelectedMenu = this.lTable[BanDangChon].lSelectedMenu;
+                        for(int i = 0; i<this.lTable[BanDangChon].lSelectedMenu.Count; i++)
+                        {
+                            this.lTable[cbBoxBanChuyen.SelectedIndex].lSelectedMenu.Add(this.lTable[BanDangChon].lSelectedMenu[i]);
+                        }
+                        this.lTable[cbBoxBanChuyen.SelectedIndex].TongTien = this.lTable[BanDangChon].TongTien;
+                        this.setBorderListTable(cbBoxBanChuyen.SelectedIndex);
+                        this.lTable[cbBoxBanChuyen.SelectedIndex].setTableIsUsed(srcImageTableUsed);
+                        this.lTable[cbBoxBanChuyen.SelectedIndex].setBorderStyle();
+                        this.lTable[value].setBorderStyleNull();
+                        this.lTable[value].setTableEmpty(srcImageTableEmpty);
+                        this.lTable[value].lSelectedMenu.Clear();
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Đã có người");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn bàn");
+
+            }
         }
     }
 }

@@ -47,15 +47,19 @@
             this.cbChucvu = new System.Windows.Forms.ComboBox();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnAddPicture = new System.Windows.Forms.Button();
+            this.ptbImageNV = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImageNV)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTaiKhoan
             // 
+            this.dgvTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTaiKhoan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTaiKhoan.Location = new System.Drawing.Point(37, 99);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(248, 300);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(456, 300);
             this.dgvTaiKhoan.TabIndex = 0;
             this.dgvTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTaiKhoan_CellClick);
             // 
@@ -84,7 +88,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(427, 164);
+            this.txtUsername.Location = new System.Drawing.Point(628, 186);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 3;
@@ -92,8 +96,9 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(427, 208);
+            this.txtPassword.Location = new System.Drawing.Point(628, 230);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
@@ -101,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(346, 164);
+            this.label2.Location = new System.Drawing.Point(547, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 5;
@@ -110,7 +115,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(346, 211);
+            this.label3.Location = new System.Drawing.Point(547, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 6;
@@ -119,7 +124,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(346, 126);
+            this.label4.Location = new System.Drawing.Point(547, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 7;
@@ -129,7 +134,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(449, 126);
+            this.lblID.Location = new System.Drawing.Point(650, 148);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(25, 16);
             this.lblID.TabIndex = 8;
@@ -147,7 +152,7 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(452, 322);
+            this.btnHuy.Location = new System.Drawing.Point(653, 344);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 10;
@@ -187,7 +192,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(349, 322);
+            this.btnLuu.Location = new System.Drawing.Point(550, 344);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 15;
@@ -198,27 +203,27 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(346, 258);
+            this.label5.Location = new System.Drawing.Point(547, 280);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Chức vụ";
+            this.label5.Text = "Loại tài khoản:";
             // 
             // cbChucvu
             // 
             this.cbChucvu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChucvu.FormattingEnabled = true;
             this.cbChucvu.Items.AddRange(new object[] {
-            "Quản Lí",
-            "Thu Ngân"});
-            this.cbChucvu.Location = new System.Drawing.Point(427, 255);
+            "Admin",
+            "Staff"});
+            this.cbChucvu.Location = new System.Drawing.Point(628, 277);
             this.cbChucvu.Name = "cbChucvu";
             this.cbChucvu.Size = new System.Drawing.Size(100, 21);
             this.cbChucvu.TabIndex = 17;
             // 
             // btnReload
             // 
-            this.btnReload.Location = new System.Drawing.Point(560, 322);
+            this.btnReload.Location = new System.Drawing.Point(761, 344);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(73, 23);
             this.btnReload.TabIndex = 18;
@@ -228,7 +233,7 @@
             // 
             // btnAddPicture
             // 
-            this.btnAddPicture.Location = new System.Drawing.Point(704, 51);
+            this.btnAddPicture.Location = new System.Drawing.Point(874, 344);
             this.btnAddPicture.Name = "btnAddPicture";
             this.btnAddPicture.Size = new System.Drawing.Size(31, 23);
             this.btnAddPicture.TabIndex = 19;
@@ -236,11 +241,22 @@
             this.btnAddPicture.UseVisualStyleBackColor = true;
             this.btnAddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
             // 
+            // ptbImageNV
+            // 
+            this.ptbImageNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbImageNV.Location = new System.Drawing.Point(761, 114);
+            this.ptbImageNV.Name = "ptbImageNV";
+            this.ptbImageNV.Size = new System.Drawing.Size(149, 184);
+            this.ptbImageNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbImageNV.TabIndex = 20;
+            this.ptbImageNV.TabStop = false;
+            // 
             // FormAddAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 415);
+            this.ClientSize = new System.Drawing.Size(922, 426);
+            this.Controls.Add(this.ptbImageNV);
             this.Controls.Add(this.btnAddPicture);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.cbChucvu);
@@ -264,6 +280,7 @@
             this.Text = "FormAddAccount";
             this.Load += new System.EventHandler(this.FormAddAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImageNV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +307,6 @@
         private System.Windows.Forms.ComboBox cbChucvu;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnAddPicture;
+        private System.Windows.Forms.PictureBox ptbImageNV;
     }
 }
