@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="unnamed2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unnamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,23 +136,35 @@
   <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hinh_nen_powerpoint_chuyen_nghiep_luanvan2s" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hinh_nen_powerpoint_chuyen_nghiep_luanvan2s.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="623-6236350_profile-icon-png-white-clipart-png-download-windows" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\623-6236350_profile-icon-png-white-clipart-png-download-windows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="361-3618102_myndshft-sgnl-human-resources-module-human-resources-round" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\361-3618102_myndshft-sgnl-human-resources-module-human-resources-round.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ttt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ttt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unnamed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ttt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ttt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="qqqqs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\qqqqs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngtree-restaurant-set-menu-background-material-image_158473" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-restaurant-set-menu-background-material-image_158473.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +175,10 @@
   <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hinh_nen_powerpoint_chuyen_nghiep_luanvan2s" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hinh_nen_powerpoint_chuyen_nghiep_luanvan2s.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unnamed3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\unnamed5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

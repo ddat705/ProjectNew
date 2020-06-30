@@ -304,6 +304,13 @@
     <None Include="Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png" />
     <None Include="Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png" />
     <None Include="Resources\hinh_nen_powerpoint_chuyen_nghiep_luanvan2s.jpg" />
+    <None Include="Resources\unnamed2.jpg" />
+    <None Include="Resources\361-3618102_myndshft-sgnl-human-resources-module-human-resources-round.png" />
+    <None Include="Resources\ttt.png" />
+    <None Include="Resources\ttt1.png" />
+    <None Include="Resources\unnamed3.jpg" />
+    <None Include="Resources\unnamed4.jpg" />
+    <None Include="Resources\unnamed5.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -42,6 +42,7 @@ namespace FinalProject
             this.btnXoa.Enabled = true;
             this.btnSua.Enabled = true;
             this.btnReload.Enabled = true;
+            this.dgvThongTinNV.Enabled = true;
             DgvThongTinNV_CellClick(null, null);
 
         }
