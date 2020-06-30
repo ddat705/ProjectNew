@@ -580,42 +580,43 @@ namespace FinalProject
 
         private void btnChuyenBan_Click(object sender, EventArgs e)
         {
-            if (lbTextSelectedTable.Text != "")
+            if(cbBoxBanChuyen.Text != "")
             {
-                if (lTable[cbBoxBanChuyen.SelectedIndex + 1].isUsed)
+                if (lbTextSelectedTable.Text != "")
                 {
-
-                    DialogResult rep;
-                    rep = MessageBox.Show("Bạn muốn Chuyển bàn này?", "Trả lời", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (rep == DialogResult.Yes)
+                    if (lTable[cbBoxBanChuyen.SelectedIndex].isUsed && ((cbBoxBanChuyen.SelectedIndex) != BanDangChon))
                     {
-                        int value = BanDangChon;
-                        this.lTable[cbBoxBanChuyen.SelectedIndex].isUsed = false;
-                        //this.lTable[cbBoxBanChuyen.SelectedIndex].lSelectedMenu = this.lTable[BanDangChon].lSelectedMenu;
-                        for(int i = 0; i<this.lTable[BanDangChon].lSelectedMenu.Count; i++)
+
+                        DialogResult rep;
+                        rep = MessageBox.Show("Bạn muốn Chuyển bàn này?", "Trả lời", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (rep == DialogResult.Yes)
                         {
-                            this.lTable[cbBoxBanChuyen.SelectedIndex].lSelectedMenu.Add(this.lTable[BanDangChon].lSelectedMenu[i]);
+                            int value = BanDangChon;
+                            this.lTable[cbBoxBanChuyen.SelectedIndex].isUsed = false;
+                            for (int i = 0; i < this.lTable[BanDangChon].lSelectedMenu.Count; i++)
+                            {
+                                this.lTable[cbBoxBanChuyen.SelectedIndex].lSelectedMenu.Add(this.lTable[BanDangChon].lSelectedMenu[i]);
+                            }
+                            this.lTable[cbBoxBanChuyen.SelectedIndex].TongTien = this.lTable[BanDangChon].TongTien;
+                            this.setBorderListTable(cbBoxBanChuyen.SelectedIndex);
+                            this.lTable[cbBoxBanChuyen.SelectedIndex].setTableIsUsed(srcImageTableUsed);
+                            this.lTable[cbBoxBanChuyen.SelectedIndex].setBorderStyle();
+                            this.lTable[value].setBorderStyleNull();
+                            this.lTable[value].setTableEmpty(srcImageTableEmpty);
+                            this.lTable[value].lSelectedMenu.Clear();
                         }
-                        this.lTable[cbBoxBanChuyen.SelectedIndex].TongTien = this.lTable[BanDangChon].TongTien;
-                        this.setBorderListTable(cbBoxBanChuyen.SelectedIndex);
-                        this.lTable[cbBoxBanChuyen.SelectedIndex].setTableIsUsed(srcImageTableUsed);
-                        this.lTable[cbBoxBanChuyen.SelectedIndex].setBorderStyle();
-                        this.lTable[value].setBorderStyleNull();
-                        this.lTable[value].setTableEmpty(srcImageTableEmpty);
-                        this.lTable[value].lSelectedMenu.Clear();
                     }
-                    
+                    else
+                    {
+                        MessageBox.Show("Đã có người");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Đã có người");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Chưa chọn bàn");
+                    MessageBox.Show("Chưa chọn bàn");
 
-            }
+                }
+            }     
         }
     }
 }

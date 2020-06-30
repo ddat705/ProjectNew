@@ -67,11 +67,13 @@
             // dgvThongTinNV
             // 
             this.dgvThongTinNV.AllowUserToOrderColumns = true;
+            this.dgvThongTinNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThongTinNV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvThongTinNV.BackgroundColor = System.Drawing.Color.White;
             this.dgvThongTinNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinNV.Location = new System.Drawing.Point(43, 89);
             this.dgvThongTinNV.Name = "dgvThongTinNV";
-            this.dgvThongTinNV.Size = new System.Drawing.Size(495, 301);
+            this.dgvThongTinNV.Size = new System.Drawing.Size(659, 301);
             this.dgvThongTinNV.TabIndex = 5;
             this.dgvThongTinNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvThongTinNV_CellClick);
             // 
@@ -93,7 +95,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(563, 89);
+            this.label4.Location = new System.Drawing.Point(777, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 25);
             this.label4.TabIndex = 9;
@@ -164,7 +166,7 @@
             "Phục Vụ",
             "Bảo Vệ",
             "Tất cả"});
-            this.cbBoxOptionSearch.Location = new System.Drawing.Point(567, 117);
+            this.cbBoxOptionSearch.Location = new System.Drawing.Point(781, 89);
             this.cbBoxOptionSearch.Name = "cbBoxOptionSearch";
             this.cbBoxOptionSearch.Size = new System.Drawing.Size(100, 21);
             this.cbBoxOptionSearch.TabIndex = 19;
@@ -172,14 +174,14 @@
             // 
             // txtBoxHoTen
             // 
-            this.txtBoxHoTen.Location = new System.Drawing.Point(659, 175);
+            this.txtBoxHoTen.Location = new System.Drawing.Point(879, 192);
             this.txtBoxHoTen.Name = "txtBoxHoTen";
             this.txtBoxHoTen.Size = new System.Drawing.Size(100, 20);
             this.txtBoxHoTen.TabIndex = 27;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(659, 146);
+            this.txtID.Location = new System.Drawing.Point(879, 163);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 26;
@@ -190,7 +192,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(567, 249);
+            this.label1.Location = new System.Drawing.Point(787, 266);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 25;
@@ -202,7 +204,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(567, 212);
+            this.label3.Location = new System.Drawing.Point(787, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 24;
@@ -214,7 +216,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(567, 178);
+            this.label2.Location = new System.Drawing.Point(787, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 23;
@@ -226,7 +228,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(567, 149);
+            this.label5.Location = new System.Drawing.Point(787, 166);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 13);
             this.label5.TabIndex = 22;
@@ -237,7 +239,7 @@
             this.btnLuu.BackColor = System.Drawing.Color.LightGray;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(670, 367);
+            this.btnLuu.Location = new System.Drawing.Point(890, 384);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 21;
@@ -250,7 +252,7 @@
             this.btnHuy.BackColor = System.Drawing.Color.LightGray;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(567, 367);
+            this.btnHuy.Location = new System.Drawing.Point(787, 384);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 20;
@@ -260,14 +262,14 @@
             // 
             // txtBoxCMND
             // 
-            this.txtBoxCMND.Location = new System.Drawing.Point(659, 205);
+            this.txtBoxCMND.Location = new System.Drawing.Point(879, 222);
             this.txtBoxCMND.Name = "txtBoxCMND";
             this.txtBoxCMND.Size = new System.Drawing.Size(100, 20);
             this.txtBoxCMND.TabIndex = 29;
             // 
             // txtBoxLuong
             // 
-            this.txtBoxLuong.Location = new System.Drawing.Point(659, 276);
+            this.txtBoxLuong.Location = new System.Drawing.Point(879, 293);
             this.txtBoxLuong.Name = "txtBoxLuong";
             this.txtBoxLuong.Size = new System.Drawing.Size(100, 20);
             this.txtBoxLuong.TabIndex = 30;
@@ -278,7 +280,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(567, 279);
+            this.label6.Location = new System.Drawing.Point(787, 296);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 32;
@@ -290,7 +292,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(567, 319);
+            this.label7.Location = new System.Drawing.Point(787, 336);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 33;
@@ -306,7 +308,7 @@
             "Thu Ngân",
             "Phục Vụ",
             "Bảo Vệ"});
-            this.cbBoxChucVu.Location = new System.Drawing.Point(659, 316);
+            this.cbBoxChucVu.Location = new System.Drawing.Point(879, 333);
             this.cbBoxChucVu.Name = "cbBoxChucVu";
             this.cbBoxChucVu.Size = new System.Drawing.Size(100, 21);
             this.cbBoxChucVu.TabIndex = 34;
@@ -315,7 +317,7 @@
             // 
             this.dtpNamsinh.CustomFormat = "yyyy-MM-dd";
             this.dtpNamsinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNamsinh.Location = new System.Drawing.Point(659, 243);
+            this.dtpNamsinh.Location = new System.Drawing.Point(879, 260);
             this.dtpNamsinh.Name = "dtpNamsinh";
             this.dtpNamsinh.Size = new System.Drawing.Size(100, 20);
             this.dtpNamsinh.TabIndex = 35;
@@ -331,7 +333,7 @@
             "ID",
             "Họ Tên",
             "--Chọn--"});
-            this.cbBoxOptionIDName.Location = new System.Drawing.Point(682, 117);
+            this.cbBoxOptionIDName.Location = new System.Drawing.Point(896, 89);
             this.cbBoxOptionIDName.Name = "cbBoxOptionIDName";
             this.cbBoxOptionIDName.Size = new System.Drawing.Size(83, 21);
             this.cbBoxOptionIDName.TabIndex = 36;

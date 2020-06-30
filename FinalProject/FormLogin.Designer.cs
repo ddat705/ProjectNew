@@ -41,7 +41,7 @@
             this.lbl_Username.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Username.ForeColor = System.Drawing.Color.White;
-            this.lbl_Username.Location = new System.Drawing.Point(102, 122);
+            this.lbl_Username.Location = new System.Drawing.Point(101, 83);
             this.lbl_Username.Name = "lbl_Username";
             this.lbl_Username.Size = new System.Drawing.Size(96, 20);
             this.lbl_Username.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.lbl_Password.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Password.ForeColor = System.Drawing.Color.White;
-            this.lbl_Password.Location = new System.Drawing.Point(102, 163);
+            this.lbl_Password.Location = new System.Drawing.Point(101, 124);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(91, 20);
             this.lbl_Password.TabIndex = 1;
@@ -62,7 +62,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(220, 116);
+            this.txtUsername.Location = new System.Drawing.Point(219, 77);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(213, 29);
             this.txtUsername.TabIndex = 2;
@@ -71,7 +71,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(220, 154);
+            this.txtPassword.Location = new System.Drawing.Point(219, 115);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(213, 29);
@@ -83,7 +83,7 @@
             this.btnLogin.BackColor = System.Drawing.SystemColors.MenuText;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(220, 199);
+            this.btnLogin.Location = new System.Drawing.Point(219, 179);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(95, 33);
             this.btnLogin.TabIndex = 4;
@@ -97,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FinalProject.Properties.Resources.pngtree_delicious_sushi_background_poster_image_194461;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(481, 344);
+            this.ClientSize = new System.Drawing.Size(481, 264);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
