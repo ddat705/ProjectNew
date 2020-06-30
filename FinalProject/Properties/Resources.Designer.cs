@@ -153,6 +153,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hinh_nen_powerpoint_chuyen_nghiep_luanvan2s {
+            get {
+                object obj = ResourceManager.GetObject("hinh_nen_powerpoint_chuyen_nghiep_luanvan2s", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_delicious_sushi_background_poster_image_194461 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-delicious-sushi-background-poster-image_194461", resourceCulture);

@@ -303,6 +303,7 @@
     <None Include="Resources\qqqqs.jpg" />
     <None Include="Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png" />
     <None Include="Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png" />
+    <None Include="Resources\hinh_nen_powerpoint_chuyen_nghiep_luanvan2s.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

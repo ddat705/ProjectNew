@@ -76,17 +76,20 @@
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(896, 41);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(33, 26);
             this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Tìm";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // label4
             // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(521, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 25);
@@ -95,47 +98,52 @@
             // 
             // btnReload
             // 
+            this.btnReload.BackColor = System.Drawing.Color.White;
             this.btnReload.Location = new System.Drawing.Point(390, 336);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(91, 37);
             this.btnReload.TabIndex = 12;
             this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.UseVisualStyleBackColor = false;
             this.btnReload.Click += new System.EventHandler(this.BtnReload_Click);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(264, 336);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(95, 37);
             this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xoá";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.White;
             this.btnSua.Location = new System.Drawing.Point(132, 336);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(102, 37);
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.BtnSua_Click);
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(12, 336);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(91, 37);
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.BtnThem_Click);
             // 
             // cbBoxOptionSearch
             // 
             this.cbBoxOptionSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.cbBoxOptionSearch.BackColor = System.Drawing.Color.White;
             this.cbBoxOptionSearch.DisplayMember = "0";
             this.cbBoxOptionSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxOptionSearch.FormattingEnabled = true;
@@ -168,7 +176,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(564, 186);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(578, 192);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 25;
@@ -177,7 +187,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(568, 151);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(578, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 24;
@@ -186,7 +198,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(564, 121);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(578, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 23;
@@ -195,7 +209,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(573, 92);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(578, 92);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 22;
@@ -203,22 +219,24 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(670, 311);
+            this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(681, 310);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 21;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.BtnLuu_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(567, 311);
+            this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(578, 310);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 20;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.BtnHuy_Click);
             // 
             // txtBoxCMND
@@ -238,7 +256,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(564, 222);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(578, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 13);
             this.label6.TabIndex = 32;
@@ -247,7 +267,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(564, 259);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(578, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 33;
@@ -256,6 +278,7 @@
             // cbBoxChucVu
             // 
             this.cbBoxChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxChucVu.ForeColor = System.Drawing.Color.White;
             this.cbBoxChucVu.FormattingEnabled = true;
             this.cbBoxChucVu.Items.AddRange(new object[] {
             "Quản Lí",
@@ -279,6 +302,7 @@
             // cbBoxOptionIDName
             // 
             this.cbBoxOptionIDName.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.cbBoxOptionIDName.BackColor = System.Drawing.Color.White;
             this.cbBoxOptionIDName.DisplayMember = "0";
             this.cbBoxOptionIDName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxOptionIDName.FormattingEnabled = true;
@@ -295,6 +319,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FinalProject.Properties.Resources.hinh_nen_powerpoint_chuyen_nghiep_luanvan2s;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1023, 450);
             this.Controls.Add(this.cbBoxOptionIDName);
             this.Controls.Add(this.dtpNamsinh);
