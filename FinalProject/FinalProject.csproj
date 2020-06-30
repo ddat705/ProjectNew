@@ -311,6 +311,7 @@
     <None Include="Resources\unnamed3.jpg" />
     <None Include="Resources\unnamed4.jpg" />
     <None Include="Resources\unnamed5.jpg" />
+    <None Include="Resources\3.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

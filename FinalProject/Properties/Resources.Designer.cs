@@ -143,6 +143,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3 {
+            get {
+                object obj = ResourceManager.GetObject("3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _361_3618102_myndshft_sgnl_human_resources_module_human_resources_round {
             get {
                 object obj = ResourceManager.GetObject("361-3618102_myndshft-sgnl-human-resources-module-human-resources-round", resourceCulture);
