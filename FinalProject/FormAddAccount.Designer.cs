@@ -267,6 +267,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::FinalProject.Properties.Resources._133_1331440_free_vector_graphic_create_an_account_icon_clipart7;
             this.pictureBox1.Location = new System.Drawing.Point(822, 26);
