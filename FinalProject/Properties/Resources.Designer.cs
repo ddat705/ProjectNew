@@ -63,6 +63,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_delicious_sushi_background_poster_image_194461 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-delicious-sushi-background-poster-image_194461", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_restaurant_set_menu_background_material_image_158473 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-restaurant-set-menu-background-material-image_158473", resourceCulture);

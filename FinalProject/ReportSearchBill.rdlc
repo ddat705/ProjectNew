@@ -686,7 +686,7 @@
                       <KeepTogether>true</KeepTogether>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                       </Style>
                     </Rectangle>

@@ -297,6 +297,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pngtree-restaurant-set-menu-background-material-image_158473.jpg" />
+    <None Include="Resources\pngtree-delicious-sushi-background-poster-image_194461.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

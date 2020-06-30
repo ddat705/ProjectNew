@@ -121,4 +121,7 @@
   <data name="pngtree-restaurant-set-menu-background-material-image_158473" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-restaurant-set-menu-background-material-image_158473.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pngtree-delicious-sushi-background-poster-image_194461" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-delicious-sushi-background-poster-image_194461.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
