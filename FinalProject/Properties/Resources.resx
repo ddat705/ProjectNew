@@ -118,16 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="qqqqs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\qqqqs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pngtree-delicious-sushi-background-poster-image_194461" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-delicious-sushi-background-poster-image_194461.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="623-6236350_profile-icon-png-white-clipart-png-download-windows" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\623-6236350_profile-icon-png-white-clipart-png-download-windows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngtree-restaurant-set-menu-background-material-image_158473" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-restaurant-set-menu-background-material-image_158473.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="623-6236350_profile-icon-png-white-clipart-png-download-windows" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\623-6236350_profile-icon-png-white-clipart-png-download-windows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="133-1331440_free-vector-graphic-create-an-account-icon-clipart7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\133-1331440_free-vector-graphic-create-an-account-icon-clipart1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

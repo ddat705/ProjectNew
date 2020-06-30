@@ -48,8 +48,10 @@
             this.btnReload = new System.Windows.Forms.Button();
             this.btnAddPicture = new System.Windows.Forms.Button();
             this.ptbImageNV = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImageNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvTaiKhoan
@@ -59,7 +61,7 @@
             this.dgvTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTaiKhoan.Location = new System.Drawing.Point(37, 99);
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(456, 300);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(456, 268);
             this.dgvTaiKhoan.TabIndex = 0;
             this.dgvTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvTaiKhoan_CellClick);
             // 
@@ -80,6 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(34, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 13);
@@ -88,7 +91,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(628, 186);
+            this.txtUsername.Location = new System.Drawing.Point(628, 160);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 3;
@@ -96,7 +99,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(628, 230);
+            this.txtPassword.Location = new System.Drawing.Point(628, 204);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
@@ -106,7 +109,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(547, 186);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(547, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 5;
@@ -115,7 +119,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(547, 233);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(547, 207);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 6;
@@ -124,7 +129,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(547, 148);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(547, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 7;
@@ -133,8 +139,9 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(650, 148);
+            this.lblID.Location = new System.Drawing.Point(650, 122);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(25, 16);
             this.lblID.TabIndex = 8;
@@ -142,22 +149,24 @@
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(535, 50);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(108, 23);
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm Tài Khoản";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.BtnThem_Click);
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(653, 344);
+            this.btnHuy.BackColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(653, 314);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
             this.btnHuy.TabIndex = 10;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.BtnHuy_Click);
             // 
             // txtsearch
@@ -169,12 +178,13 @@
             // 
             // btnsearch
             // 
+            this.btnsearch.BackColor = System.Drawing.Color.White;
             this.btnsearch.Location = new System.Drawing.Point(452, 51);
             this.btnsearch.Name = "btnsearch";
             this.btnsearch.Size = new System.Drawing.Size(61, 23);
             this.btnsearch.TabIndex = 13;
             this.btnsearch.Text = "Tìm";
-            this.btnsearch.UseVisualStyleBackColor = true;
+            this.btnsearch.UseVisualStyleBackColor = false;
             this.btnsearch.Click += new System.EventHandler(this.Btnsearch_Click);
             // 
             // cbBoxIDTen
@@ -192,18 +202,20 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(550, 344);
+            this.btnLuu.BackColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(550, 314);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
             this.btnLuu.TabIndex = 15;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.BtnLuu_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(547, 280);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(547, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 16;
@@ -216,46 +228,61 @@
             this.cbChucvu.Items.AddRange(new object[] {
             "Admin",
             "Staff"});
-            this.cbChucvu.Location = new System.Drawing.Point(628, 277);
+            this.cbChucvu.Location = new System.Drawing.Point(628, 251);
             this.cbChucvu.Name = "cbChucvu";
             this.cbChucvu.Size = new System.Drawing.Size(100, 21);
             this.cbChucvu.TabIndex = 17;
             // 
             // btnReload
             // 
-            this.btnReload.Location = new System.Drawing.Point(761, 344);
+            this.btnReload.BackColor = System.Drawing.Color.White;
+            this.btnReload.Location = new System.Drawing.Point(761, 314);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(73, 23);
             this.btnReload.TabIndex = 18;
             this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.UseVisualStyleBackColor = false;
             this.btnReload.Click += new System.EventHandler(this.BtnReload_Click);
             // 
             // btnAddPicture
             // 
-            this.btnAddPicture.Location = new System.Drawing.Point(874, 344);
+            this.btnAddPicture.BackColor = System.Drawing.Color.White;
+            this.btnAddPicture.Location = new System.Drawing.Point(860, 314);
             this.btnAddPicture.Name = "btnAddPicture";
             this.btnAddPicture.Size = new System.Drawing.Size(31, 23);
             this.btnAddPicture.TabIndex = 19;
             this.btnAddPicture.Text = "...";
-            this.btnAddPicture.UseVisualStyleBackColor = true;
+            this.btnAddPicture.UseVisualStyleBackColor = false;
             this.btnAddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
             // 
             // ptbImageNV
             // 
             this.ptbImageNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbImageNV.Location = new System.Drawing.Point(761, 114);
+            this.ptbImageNV.Location = new System.Drawing.Point(742, 111);
             this.ptbImageNV.Name = "ptbImageNV";
             this.ptbImageNV.Size = new System.Drawing.Size(149, 184);
             this.ptbImageNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbImageNV.TabIndex = 20;
             this.ptbImageNV.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::FinalProject.Properties.Resources._133_1331440_free_vector_graphic_create_an_account_icon_clipart7;
+            this.pictureBox1.Location = new System.Drawing.Point(822, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 67);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormAddAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FinalProject.Properties.Resources.qqqqs;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(922, 426);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ptbImageNV);
             this.Controls.Add(this.btnAddPicture);
             this.Controls.Add(this.btnReload);
@@ -281,6 +308,7 @@
             this.Load += new System.EventHandler(this.FormAddAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImageNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +336,6 @@
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnAddPicture;
         private System.Windows.Forms.PictureBox ptbImageNV;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

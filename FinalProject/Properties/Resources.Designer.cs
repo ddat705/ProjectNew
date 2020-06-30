@@ -63,6 +63,86 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _133_1331440_free_vector_graphic_create_an_account_icon_clipart {
+            get {
+                object obj = ResourceManager.GetObject("133-1331440_free-vector-graphic-create-an-account-icon-clipart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _133_1331440_free_vector_graphic_create_an_account_icon_clipart1 {
+            get {
+                object obj = ResourceManager.GetObject("133-1331440_free-vector-graphic-create-an-account-icon-clipart1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _133_1331440_free_vector_graphic_create_an_account_icon_clipart2 {
+            get {
+                object obj = ResourceManager.GetObject("133-1331440_free-vector-graphic-create-an-account-icon-clipart2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _133_1331440_free_vector_graphic_create_an_account_icon_clipart3 {
+            get {
+                object obj = ResourceManager.GetObject("133-1331440_free-vector-graphic-create-an-account-icon-clipart3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _133_1331440_free_vector_graphic_create_an_account_icon_clipart4 {
+            get {
+                object obj = ResourceManager.GetObject("133-1331440_free-vector-graphic-create-an-account-icon-clipart4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _133_1331440_free_vector_graphic_create_an_account_icon_clipart5 {
+            get {
+                object obj = ResourceManager.GetObject("133-1331440_free-vector-graphic-create-an-account-icon-clipart5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _133_1331440_free_vector_graphic_create_an_account_icon_clipart6 {
+            get {
+                object obj = ResourceManager.GetObject("133-1331440_free-vector-graphic-create-an-account-icon-clipart6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _133_1331440_free_vector_graphic_create_an_account_icon_clipart7 {
+            get {
+                object obj = ResourceManager.GetObject("133-1331440_free-vector-graphic-create-an-account-icon-clipart7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _623_6236350_profile_icon_png_white_clipart_png_download_windows {
             get {
                 object obj = ResourceManager.GetObject("623-6236350_profile-icon-png-white-clipart-png-download-windows", resourceCulture);
@@ -86,6 +166,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap pngtree_restaurant_set_menu_background_material_image_158473 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-restaurant-set-menu-background-material-image_158473", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap qqqqs {
+            get {
+                object obj = ResourceManager.GetObject("qqqqs", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
