@@ -10,7 +10,7 @@ namespace FinalProject.DB_Layer
 {
     class DBMain
     {
-        string ConnStr = @"Data Source = .\SQLEXPRESS;Initial Catalog=FinalProject;Integrated Security=True"; SqlConnection conn = null;
+        string ConnStr = @"Data source=KIEUVINH-PC; Initial Catalog=FinalProject;Integrated Security=true"; SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;
         public DBMain()

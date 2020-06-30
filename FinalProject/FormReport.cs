@@ -20,7 +20,7 @@ namespace FinalProject
         private void FormReport_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ReportXuatHD.BILL' table. You can move, or remove it, as needed.
-            //this.BILLTableAdapter.Fill(this.ReportXuatHD.BILL);
+            this.BILLTableAdapter.Fill(this.ReportXuatHD.BILL);
 
             this.reportViewer1.RefreshReport();
         }
